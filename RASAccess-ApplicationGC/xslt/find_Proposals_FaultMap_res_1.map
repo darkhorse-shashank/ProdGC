@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/find_Proposals_FaultMap_res_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/find_Proposals_FaultMap_res_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}proposalDetailsResponse" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findProposals_findProposalsFaultMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="in3" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="in" uri="WebService_RefundDetails"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out2" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="out5" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out4" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="out" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="extension" prefix="str" uri="http://exslt.org/strings"/>
+    </namespaces>
+    <mappingDeclaration name="find_Proposals_FaultMap_res_1">
+        <input path="body"/>
+        <output path="body"/>
+        <move>
+            <input path="proposalDetailsResponse/ProposalDetailsResponse/ProposalDetailsResult/ProposalDetails[1]/Status"/>
+            <output path="findProposalsFault1_findProposalsFault/status"/>
+        </move>
+        <move>
+            <input path="proposalDetailsResponse/ProposalDetailsResponse/ProposalDetailsResult/ProposalDetails[1]/ErrorID"/>
+            <output path="findProposalsFault1_findProposalsFault/error[1]/errorCode"/>
+        </move>
+        <move>
+            <input path="proposalDetailsResponse/ProposalDetailsResponse/ProposalDetailsResult/ProposalDetails[1]/ErrorDesc" var="ErrorDesc1"/>
+            <output path="findProposalsFault1_findProposalsFault/error[1]/message"/>
+            <test lang="xpath">$ErrorDesc1[not(contains(text(),'Please provide correct'))]</test>
+        </move>
+        <function ref="str:concat">
+            <input path="proposalDetailsResponse/ProposalDetailsResponse/ProposalDetailsResult/ProposalDetails/PolicyNo" var="PolicyNo"/>
+            <input path="proposalDetailsResponse/ProposalDetailsResponse/ProposalDetailsResult/ProposalDetails/ErrorDesc" var="ErrorDesc"/>
+            <output path="findProposalsFault1_findProposalsFault/error/message"/>
+            <param name="nl" value="(&quot;No Data Found For Policy No :&quot;,&quot; &quot;,$PolicyNo,&quot;. &quot;,$ErrorDesc)"/>
+            <test lang="xpath">$ErrorDesc[contains(text(),'Please provide correct')]</test>
+        </function>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="webServiceRASGenericPremiumCalculation">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0" name="source"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="medium"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="campaign"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="strServiceToken" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="iPolicyNo"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iReferenceNo" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iProductCode" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iEndDatOfRequest" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iMtaeffDate" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iMtaeffTime" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iRetentionAmount" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iRefundAmount" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iReasonForCanc" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iDescofCancReason" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iOptionforCancofInsurance" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="iRemarks"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="iModeofOperation" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRASGenericPremiumCalculation"
+		type="tns:webServiceRASGenericPremiumCalculation" />
+</xs:schema>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://RASAccess-ApplicationGC/xslt/FetchProductErrorMap" version="8.0.5.0" xmlns:map="http://RASAccess-ApplicationGC/xslt/FetchProductErrorMap">
+    <input correlationContext="" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}fetchPolicyResponse" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <output correlationContext="" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findProductDetails_findProductDetailsFaultMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io6" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="in" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="in2" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="out2" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="out3" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="out4" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="out5" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+    </namespaces>
+    <mappingDeclaration name="FetchProductErrorMap">
+        <input path="body"/>
+        <output path="body"/>
+        <assign value="FAILED">
+            <output path="findProductDetailsFault1_findProductDetailsFault/status"/>
+        </assign>
+        <move>
+            <input path="fetchPolicyResponse/FetchPolicyResult/errorMsg"/>
+            <output path="findProductDetailsFault1_findProductDetailsFault/data"/>
+        </move>
+        <move>
+            <input path="fetchPolicyResponse/FetchPolicyResult/errorMsg"/>
+            <output path="findProductDetailsFault1_findProductDetailsFault/error/message"/>
+        </move>
+        <move>
+            <input path="fetchPolicyResponse/FetchPolicyResult/errorMsg"/>
+            <output path="findProductDetailsFault1_findProductDetailsFault/error/errorDetail"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

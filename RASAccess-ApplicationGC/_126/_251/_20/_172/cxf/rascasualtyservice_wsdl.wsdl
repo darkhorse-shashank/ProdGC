@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASCasualtyService" targetNamespace="http://stub.tagicesb.com/wsdl/RASCasualty/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASCasualty/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASCasualty/" version="1.0" xmlns:ns1="WebService_RefundCancellationCasualty">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationCasualty"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASCasualty/webServiceRefundCancellationCasualtyResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASCasualty/webServicePremiumCalculationCasualty.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASCasualty/webServiceRefundCancellationCasualty.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASCasualty/webServicePremiumCalculationCasualtyResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationCasualty" version="1.0" xmlns:tns="WebService_RefundCancellationCasualty">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/WebService_PremiumCalculationCasualtyResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualtyResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/WebService_PremiumCalculationCasualty.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRefundCancellationCasualtyResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationCasualtyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationCasualty">
+    <wsdl:part element="tns:webServiceRefundCancellationCasualty" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationCasualty">
+    <wsdl:part element="tns:webServicePremiumCalculationCasualty" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationCasualtyResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationCasualtyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASCasualtyService">
+    <wsdl:operation name="webServiceRefundCancellationCasualty">
+      <wsdl:input message="tns:webServiceRefundCancellationCasualty" name="webServiceRefundCancellationCasualty">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationCasualtyResponse" name="webServiceRefundCancellationCasualtyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationCasualty">
+      <wsdl:input message="tns:webServicePremiumCalculationCasualty" name="webServicePremiumCalculationCasualty">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationCasualtyResponse" name="webServicePremiumCalculationCasualtyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

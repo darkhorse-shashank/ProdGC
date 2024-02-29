@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasaviationservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASAviation/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASAviation/">
+    <wsdl:import location="rasaviationservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASAviation/"/>
+  <wsdl:binding name="RASAviationServiceSoapBinding" type="tns:RASAviationService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationDtls">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationDtlsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationAviation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationAviation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationAviationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASAviationService">
+    <wsdl:port binding="tns:RASAviationServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASAviationService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

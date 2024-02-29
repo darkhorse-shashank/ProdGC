@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rashomeservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASHome/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASHome/">
+    <wsdl:import location="rashomeservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASHome/"/>
+  <wsdl:binding name="RASHomeServiceSoapBinding" type="tns:RASHomeService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServiceRefundCancellationHome">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationHome">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationHomeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASHomeService">
+    <wsdl:port binding="tns:RASHomeServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASHomeService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

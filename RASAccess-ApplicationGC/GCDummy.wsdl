@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="GCDummy" targetNamespace="http://GCDomain-v1.0.0/GCDummy" xmlns:bons1="http://RACASBO" xmlns:tns="http://GCDomain-v1.0.0/GCDummy" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <wsdl:types>
+    <xsd:schema targetNamespace="http://GCDomain-v1.0.0/GCDummy">
+      <xsd:import namespace="http://RACASBO" schemaLocation="TicketBO.xsd"/>
+      <xsd:element name="createRefundRequest">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ticketId" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="createRefundRequestResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ticketDetails" nillable="true" type="bons1:TicketBO"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelPolicy">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ticketId" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="cancelPolicyResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="proposalStatus" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="calculateRefund">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ticketId" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="calculateRefundResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ticketDetails" nillable="true" type="bons1:TicketBO"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findPolicyOrRecieptDetails">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="referenceNumber" nillable="true" type="xsd:string"/>
+            <xsd:element name="refundType" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findPolicyOrRecieptDetailsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="ticketDetails" nillable="true" type="bons1:TicketBO"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findRefundStatus">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="voucherNumber" nillable="true" type="xsd:string"/>
+            <xsd:element name="refundType" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="findRefundStatusResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="status" nillable="true" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+    <wsdl:message name="createRefundRequestRequestMsg">
+    <wsdl:part element="tns:createRefundRequest" name="createRefundRequestParameters"/>
+  </wsdl:message>
+    <wsdl:message name="createRefundRequestResponseMsg">
+    <wsdl:part element="tns:createRefundRequestResponse" name="createRefundRequestResult"/>
+  </wsdl:message>
+    <wsdl:message name="cancelPolicyRequestMsg">
+    <wsdl:part element="tns:cancelPolicy" name="cancelPolicyParameters"/>
+  </wsdl:message>
+    <wsdl:message name="cancelPolicyResponseMsg">
+    <wsdl:part element="tns:cancelPolicyResponse" name="cancelPolicyResult"/>
+  </wsdl:message>
+    <wsdl:message name="calculateRefundRequestMsg">
+    <wsdl:part element="tns:calculateRefund" name="calculateRefundParameters"/>
+  </wsdl:message>
+    <wsdl:message name="calculateRefundResponseMsg">
+    <wsdl:part element="tns:calculateRefundResponse" name="calculateRefundResult"/>
+  </wsdl:message>
+    <wsdl:message name="findPolicyOrRecieptDetailsRequestMsg">
+    <wsdl:part element="tns:findPolicyOrRecieptDetails" name="findPolicyOrRecieptDetailsParameters"/>
+  </wsdl:message>
+    <wsdl:message name="findPolicyOrRecieptDetailsResponseMsg">
+    <wsdl:part element="tns:findPolicyOrRecieptDetailsResponse" name="findPolicyOrRecieptDetailsResult"/>
+  </wsdl:message>
+    <wsdl:message name="findRefundStatusRequestMsg">
+    <wsdl:part element="tns:findRefundStatus" name="findRefundStatusParameters"/>
+  </wsdl:message>
+    <wsdl:message name="findRefundStatusResponseMsg">
+    <wsdl:part element="tns:findRefundStatusResponse" name="findRefundStatusResult"/>
+  </wsdl:message>
+    <wsdl:portType name="GCDummy">
+    <wsdl:operation name="createRefundRequest">
+      <wsdl:input message="tns:createRefundRequestRequestMsg" name="createRefundRequestRequest"/>
+      <wsdl:output message="tns:createRefundRequestResponseMsg" name="createRefundRequestResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="cancelPolicy">
+      <wsdl:input message="tns:cancelPolicyRequestMsg" name="cancelPolicyRequest"/>
+      <wsdl:output message="tns:cancelPolicyResponseMsg" name="cancelPolicyResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="calculateRefund">
+      <wsdl:input message="tns:calculateRefundRequestMsg" name="calculateRefundRequest"/>
+      <wsdl:output message="tns:calculateRefundResponseMsg" name="calculateRefundResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="findPolicyOrRecieptDetails">
+      <wsdl:input message="tns:findPolicyOrRecieptDetailsRequestMsg" name="findPolicyOrRecieptDetailsRequest"/>
+      <wsdl:output message="tns:findPolicyOrRecieptDetailsResponseMsg" name="findPolicyOrRecieptDetailsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="findRefundStatus">
+      <wsdl:input message="tns:findRefundStatusRequestMsg" name="findRefundStatusRequest"/>
+      <wsdl:output message="tns:findRefundStatusResponseMsg" name="findRefundStatusResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

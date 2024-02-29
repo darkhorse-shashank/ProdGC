@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASPropertyEnergyService" targetNamespace="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/" version="1.0" xmlns:ns1="WebService_RefundCancellationPE">
+
+
+
+
+
+
+
+
+
+
+            <xs:import namespace="WebService_RefundCancellationPE"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPropertyEnergyService/webServicePremiumCalculationPEResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPropertyEnergyService/webServicePremiumCalculationPE.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPropertyEnergyService/webServiceRefundCancellationPE.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPropertyEnergyService/webServiceRefundCancellationPEResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationPE" version="1.0" xmlns:tns="WebService_RefundCancellationPE">
+
+
+
+
+
+
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/WebService_RefundCancellationPEResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/WebService_PremiumCalculationPE.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/WebService_PremiumCalculationPEResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPE/WebService_RefundCancellationPE.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRefundCancellationPEResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationPEResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationPE">
+    <wsdl:part element="tns:webServicePremiumCalculationPE" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationPEResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationPEResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationPE">
+    <wsdl:part element="tns:webServiceRefundCancellationPE" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASPropertyEnergyService">
+    <wsdl:operation name="webServiceRefundCancellationPE">
+      <wsdl:input message="tns:webServiceRefundCancellationPE" name="webServiceRefundCancellationPE">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationPEResponse" name="webServiceRefundCancellationPEResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationPE">
+      <wsdl:input message="tns:webServicePremiumCalculationPE" name="webServicePremiumCalculationPE">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationPEResponse" name="webServicePremiumCalculationPEResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

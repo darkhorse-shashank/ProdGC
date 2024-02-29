@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="PremiumCalculation_2.xsd" />
+	<xs:complexType name="ArrayOfPremiumCalculation">
+
+		<xs:sequence>
+
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="PremiumCalculation" nillable="true"
+				type="tns:PremiumCalculation" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="ArrayOfPremiumCalculation"
+		type="tns:ArrayOfPremiumCalculation" />
+</xs:schema>

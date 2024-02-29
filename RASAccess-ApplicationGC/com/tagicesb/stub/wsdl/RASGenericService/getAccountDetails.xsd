@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:ns2="WebService_RefundDetails"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundDetails"
+		schemaLocation="../../../../../WebService_RefundDetails/AccountDetails_1.xsd" />
+	<xs:complexType name="getAccountDetails">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0" name="source"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="medium"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="campaign"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="strServiceToken" type="xs:string" />
+
+			<xs:element minOccurs="0" ref="ns2:AccountDetails" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="getAccountDetails" type="tns:getAccountDetails" />
+</xs:schema>

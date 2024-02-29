@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rascasualtyservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASCasualty/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASCasualty/">
+    <wsdl:import location="rascasualtyservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASCasualty/"/>
+  <wsdl:binding name="RASCasualtyServiceSoapBinding" type="tns:RASCasualtyService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationCasualty">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationCasualty">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationCasualtyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationCasualty">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationCasualty">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationCasualtyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASCasualtyService">
+    <wsdl:port binding="tns:RASCasualtyServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASCasualtyService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

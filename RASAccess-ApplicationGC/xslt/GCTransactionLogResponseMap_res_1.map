@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/GCTransactionLogResponseMap_res_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/GCTransactionLogResponseMap_res_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCLibrary/org/aig/access/UpdateGCTransactionLog}updateGCTransactionLogRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="wsdl.http://GCLibrary/org/aig/access/UpdateGCTransactionLog"/>
+        <namespace kind="supplement" prefix="out2" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="out" uri="http://GCLibrary/org/aig/access/UpdateGCTransactionLog"/>
+    </namespaces>
+    <mappingDeclaration name="GCTransactionLogResponseMap_res_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="context/correlation/transactionId"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/transactionId"/>
+        </move>
+        <move>
+            <input path="context/correlation/status"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/status"/>
+        </move>
+        <move>
+            <input path="context/correlation/response"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/response"/>
+        </move>
+        <move>
+            <input path="context/correlation/errorCode"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/errorCode"/>
+        </move>
+        <move>
+            <input path="context/correlation/errorDetail"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/errorDescription"/>
+        </move>
+        <move>
+            <input path="context/correlation/lastResponseOn"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/lastResponseOn"/>
+        </move>
+        <move>
+            <input path="context/correlation/isExecuting"/>
+            <output path="body/updateGCTransactionLog/transactionLogRequest/isExecuting"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundCancellationAIG"
+	xmlns:tns="WebService_RefundCancellationAIG"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="PremiumCalculationRespns">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="NetPremium"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="GST" type="xs:string" />
+
+			<xs:element minOccurs="0" name="JKGST" type="xs:string" />
+
+			<xs:element minOccurs="0" name="StampDuty" type="xs:string" />
+
+			<xs:element minOccurs="0" name="TotalPremium"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+</xs:schema>

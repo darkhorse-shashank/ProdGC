@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_AccRefundRequest"
+	xmlns:tns="WebService_AccRefundRequest"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="RefundRequest">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="UserId"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PolicyNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="ProposalNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="Product"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PayerType"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PayeeName"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PayeeBank"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PayeeIFSCcode"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PayeeBankAccNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="BeneficiaryBank"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="BeneficiaryIFSCcode"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="BeneficiaryBankAccNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="ChequeNumber"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PayeeAddress"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="ChequeType"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="CDAccountNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="EmailId"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="ContactNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="Address2"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="Address3"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="Area" type="xs:string" />
+
+				<xs:element minOccurs="0" name="City" type="xs:string" />
+
+				<xs:element minOccurs="0" name="State" type="xs:string" />
+
+				<xs:element minOccurs="0" name="Pincode"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="RefundMode"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="LAN" type="xs:string" />
+
+				<xs:element minOccurs="0" name="RASTicketNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="GCTransID"
+					type="xs:string" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

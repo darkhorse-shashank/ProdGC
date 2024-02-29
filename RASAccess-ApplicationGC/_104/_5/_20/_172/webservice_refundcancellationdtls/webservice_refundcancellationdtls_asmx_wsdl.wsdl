@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationDtls" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="WebService_RefundCancellationDtls">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationDtls">
+            <s:include schemaLocation="../../../../../WebService_RefundCancellationDtls/PremiumCalculationRespns.xsd"/>
+            <s:include schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationReq.xsd"/>
+            <s:include schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationRespns.xsd"/>
+            <s:element name="WebService_RefundCancellationDtls">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_RefundCancellationDtlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_RefundCancellationDtlsResult" type="tns:RefundCancellationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_PremiumCalculationDtls">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_PremiumCalculationDtlsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_PremiumCalculationDtlsResult" type="tns:PremiumCalculationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebService_RefundCancellationDtlsSoapIn">
+    <wsdl:part element="tns:WebService_RefundCancellationDtls" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_RefundCancellationDtlsSoapOut">
+    <wsdl:part element="tns:WebService_RefundCancellationDtlsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationDtlsSoapIn">
+    <wsdl:part element="tns:WebService_PremiumCalculationDtls" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationDtlsSoapOut">
+    <wsdl:part element="tns:WebService_PremiumCalculationDtlsResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="WebService_RefundCancellationDtlsSoap">
+    <wsdl:operation name="WebService_RefundCancellationDtls">
+      <wsdl:documentation>The service is used to generate Proposals for Motor Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_RefundCancellationDtlsSoapIn"/>
+      <wsdl:output message="tns:WebService_RefundCancellationDtlsSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationDtls">
+      <wsdl:documentation>The service is used for Refund Cancellation of Motor Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_PremiumCalculationDtlsSoapIn"/>
+      <wsdl:output message="tns:WebService_PremiumCalculationDtlsSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService_RefundCancellationDtlsHttpGet"/>
+  <wsdl:portType name="WebService_RefundCancellationDtlsHttpPost"/>
+</wsdl:definitions>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationHealth" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="WebService_RefundCancellationHealth">
+    <wsdl:import location="webservice_refundcancellationhealth_asmx_wsdl.wsdl" namespace="WebService_RefundCancellationHealth"/>
+  <wsdl:binding name="WebService_RefundCancellationHealthSoap" type="tns:WebService_RefundCancellationHealthSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationHealth">
+      <soap:operation soapAction="WebService_RefundCancellationHealth/WebService_RefundCancellationHealth" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationHealth">
+      <soap:operation soapAction="WebService_RefundCancellationHealth/WebService_PremiumCalculationHealth" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationHealthSoap12" type="tns:WebService_RefundCancellationHealthSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationHealth">
+      <soap12:operation soapAction="WebService_RefundCancellationHealth/WebService_RefundCancellationHealth" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationHealth">
+      <soap12:operation soapAction="WebService_RefundCancellationHealth/WebService_PremiumCalculationHealth" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationHealthHttpGet" type="tns:WebService_RefundCancellationHealthHttpGet">
+    <http:binding verb="GET"/>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationHealthHttpPost" type="tns:WebService_RefundCancellationHealthHttpPost">
+    <http:binding verb="POST"/>
+  </wsdl:binding>
+  <wsdl:service name="WebService_RefundCancellationHealth">
+    <wsdl:port binding="tns:WebService_RefundCancellationHealthSoap" name="WebService_RefundCancellationHealthSoap">
+      <soap:address location="http://172.20.5.104/Webservice_RefundCancellationHealth/WebService_RefundCancellationHealth.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationHealthSoap12" name="WebService_RefundCancellationHealthSoap12">
+      <soap12:address location="http://172.20.5.104/Webservice_RefundCancellationHealth/WebService_RefundCancellationHealth.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationHealthHttpGet" name="WebService_RefundCancellationHealthHttpGet">
+      <http:address location="http://172.20.5.104/Webservice_RefundCancellationHealth/WebService_RefundCancellationHealth.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationHealthHttpPost" name="WebService_RefundCancellationHealthHttpPost">
+      <http:address location="http://172.20.5.104/Webservice_RefundCancellationHealth/WebService_RefundCancellationHealth.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

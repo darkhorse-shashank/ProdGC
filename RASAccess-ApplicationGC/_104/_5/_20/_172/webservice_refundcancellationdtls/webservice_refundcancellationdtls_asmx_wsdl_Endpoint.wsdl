@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationDtls" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="WebService_RefundCancellationDtls">
+    <wsdl:import location="webservice_refundcancellationdtls_asmx_wsdl.wsdl" namespace="WebService_RefundCancellationDtls"/>
+  <wsdl:binding name="WebService_RefundCancellationDtlsSoap" type="tns:WebService_RefundCancellationDtlsSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationDtls">
+      <soap:operation soapAction="WebService_RefundCancellationDtls/WebService_RefundCancellationDtls" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationDtls">
+      <soap:operation soapAction="WebService_RefundCancellationDtls/WebService_PremiumCalculationDtls" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationDtlsSoap12" type="tns:WebService_RefundCancellationDtlsSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationDtls">
+      <soap12:operation soapAction="WebService_RefundCancellationDtls/WebService_RefundCancellationDtls" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationDtls">
+      <soap12:operation soapAction="WebService_RefundCancellationDtls/WebService_PremiumCalculationDtls" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationDtlsHttpGet" type="tns:WebService_RefundCancellationDtlsHttpGet">
+    <http:binding verb="GET"/>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationDtlsHttpPost" type="tns:WebService_RefundCancellationDtlsHttpPost">
+    <http:binding verb="POST"/>
+  </wsdl:binding>
+  <wsdl:service name="WebService_RefundCancellationDtls">
+    <wsdl:port binding="tns:WebService_RefundCancellationDtlsSoap" name="WebService_RefundCancellationDtlsSoap">
+      <soap:address location="http://172.20.5.104/WebService_RefundCancellationDtls/WebService_RefundCancellationDtls.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationDtlsSoap12" name="WebService_RefundCancellationDtlsSoap12">
+      <soap12:address location="http://172.20.5.104/WebService_RefundCancellationDtls/WebService_RefundCancellationDtls.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationDtlsHttpGet" name="WebService_RefundCancellationDtlsHttpGet">
+      <http:address location="http://172.20.5.104/WebService_RefundCancellationDtls/WebService_RefundCancellationDtls.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationDtlsHttpPost" name="WebService_RefundCancellationDtlsHttpPost">
+      <http:address location="http://172.20.5.104/WebService_RefundCancellationDtls/WebService_RefundCancellationDtls.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

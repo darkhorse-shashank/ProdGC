@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><io2:smo xmlns:io2="http://www.ibm.com/websphere/sibx/smo/v6.0.1" xmlns:io="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:io3="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0" xmlns:io4="http://www.w3.org/2003/05/soap-envelope" xmlns:io5="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0" xmlns:io6="http://www.w3.org/2005/08/addressing" xmlns:io7="http://Access-ApplicationGC" xmlns:out="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC" xmlns:out2="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC" xmlns:out3="http://RACASBO" xmlns:out4="http://GCLibrary/org/aig/access/BO" xmlns:xs4xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <body xsi:type="out2:updateDisbursement_updateDisbursementFaultMsg">
+    <out:updateDisbursementFault1_updateDisbursementFault>
+      <out3:status>FAILED</out3:status>
+      <out3:data>request</out3:data>
+      <out3:error>
+        <out3:errorCode>FAILED</out3:errorCode>
+        <out3:message>failureString</out3:message>
+        <out3:errorDetail>origin Error</out3:errorDetail>
+      </out3:error>
+    </out:updateDisbursementFault1_updateDisbursementFault>
+  </body>
+</io2:smo>

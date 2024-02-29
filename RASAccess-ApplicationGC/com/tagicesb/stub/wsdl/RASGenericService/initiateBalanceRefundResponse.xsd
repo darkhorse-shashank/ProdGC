@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:ns3="WebService_AccRefundRequest"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_AccRefundRequest"
+		schemaLocation="../../../../../WebService_AccRefundRequest/clsBalanceRefund.xsd" />
+	<xs:complexType name="initiateBalanceRefundResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="InitiateBalanceRefundResult" type="ns3:clsBalanceRefund" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="initiateBalanceRefundResponse"
+		type="tns:initiateBalanceRefundResponse" />
+</xs:schema>

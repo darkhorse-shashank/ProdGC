@@ -1,0 +1,1056 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASGenericService" targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://stub.tagicesb.com/wsdl/RASHealthService/" version="1.0" xmlns:tns="http://stub.tagicesb.com/wsdl/RASHealthService/">
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHealthService/PremiumCalculationResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/" version="1.0" xmlns:ns1="http://stub.tagicesb.com/wsdl/RASHealthService/" xmlns:ns2="WebService_RefundDetails" xmlns:ns3="WebService_AccRefundRequest" xmlns:ns4="WebService_RefundCancellationDtls">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationDtls"/>
+            <xs:import namespace="WebService_AccRefundRequest"/>
+            <xs:import namespace="WebService_RefundDetails"/>
+            <xs:import namespace="http://stub.tagicesb.com/wsdl/RASHealthService/"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/RASPolicyEndoPreviousPolicyCountDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/policyDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchReceiptDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchPolicy.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/webServicePremiumCalculationHealthResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/RASEmiDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchSubReceiptDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchRSADetailsRASResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/refundRequestStatusResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchPropReceiptsRAS.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getAccountDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/proposalDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/RASPolicyEndoDataResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/rasPolicyEndoDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/rasEmiDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/receiptEMIDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getUTRDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchCDDetailsRAS.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/premiumCalculation.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/refundRequest.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/receiptEMIDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getUTRDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchRSADetailsRAS.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/receiptDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/GetRASEmiDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/rasDataUpdateResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/policyDetailsByProposalNoResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/initiateBalanceRefundResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/tenureDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchRSADetailsRASDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/policyDetailsByProposalNo.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/RASPolicyEndoEndorsementDetDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchCDDetailsRASResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getRASEmiDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchSubReceiptDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/rasPolicyEndoData.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/rasEmiDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/proposalDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchReceiptDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getDetailsOfCDRefundResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getAccountDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/TenureDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/initiateBalanceRefund.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/refundRequestResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/ReceiptEMIDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/premiumCalculationResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchPropReceiptsRASDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/excessRefund.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/TenureDetailsDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/PolicyDetailsByProposalNoResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchRSADetailsRASResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/polEndtCancelation.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchPropReceiptsRASResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchCDDetailsRASResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getDetailsOfCDRefund.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/tenureDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/polEndtCancelationResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/excessRefundResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/PolicyDetailsByProposalNoDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/GetDetailsOfCDRefundDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/RASEmiDetailsDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchReceiptDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/ReceiptEmiDtlsDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/webServicePremiumCalculationHealth.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchPolicyResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/GetDetailsOfCDRefundResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchSubReceiptDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/policyDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/refundRequestStatus.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/webServiceGetTotalLossPolicyDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/webServiceGetTotalLossPolicyData.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/receiptDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchPropReceiptsRASResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/getRASEmiDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/fetchPolicyResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/FetchCDDetailsRASDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/rasDataUpdate.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASGenericService/EmiDetailsDataResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundDetails" version="1.0" xmlns:tns="WebService_RefundDetails">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfReceiptDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfAccount.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/FetchSubReceiptDetails_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/FetchReceiptDetails_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ProposalDetails_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/CRSDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/AccountDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/Account.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/SubRecieptDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ReceiptDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfRefundRequestStatus.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/InsuredDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfInsuredDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/RecieptDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfPolicyDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfSubRecieptDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfRecieptDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfRASDataUpdate.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/FetchReceiptDetailsResponse_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/RASDataUpdateResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/RefundRequestStatus_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/RASDataUpdate_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/PolicyDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/RefundRequestStatusResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/Proposal.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfProposalDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfPremiumCalculation.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/PolicyDetails_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/FetchSubReceiptDetailsResponse_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/AccountDetails_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ProposalDetailsResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/PremiumCalculation_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ReceiptDetails_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfCRSDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/PremiumCalculationResponse_2.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfProposal.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundDetails/ArrayOfAccountDetails.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationDtls" version="1.0" xmlns:tns="WebService_RefundCancellationDtls">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_RefundCancellationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_RefundCancellationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_GetTotalLossPolicyData.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_PremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/TotalLossPolicyData.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_PremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/TotalLossPolicyDataRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_GetTotalLossPolicyDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/ArrayOfTotalLossPolicyData.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_AccRefundRequest" version="1.0" xmlns:tns="WebService_AccRefundRequest">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/ExcessRefund_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/clsCancelVoucher.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/clsCancelPolicyEndt.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/ExcessRefundResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/clsBalanceRefund.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/CancelVoucher.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/CancelVoucherResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/UTRDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/InitiateBalanceRefundResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/RefundRequestResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/InitiateBalanceRefund_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/PolEndtCancelationResponse_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/ArrayOfClsRefundResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/UTRDetailsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/RefundRequest_1.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/clsUTRDetails.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/clsRefundResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_AccRefundRequest/PolEndtCancelation_1.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="tenureDetails">
+    <wsdl:part element="tns:tenureDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchPropReceiptsRASResponse">
+    <wsdl:part element="tns:fetchPropReceiptsRASResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="excessRefund">
+    <wsdl:part element="tns:excessRefund" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rasPolicyEndoDataResponse">
+    <wsdl:part element="tns:rasPolicyEndoDataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="tenureDetailsResponse">
+    <wsdl:part element="tns:tenureDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rasDataUpdate">
+    <wsdl:part element="tns:rasDataUpdate" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchPropReceiptsRAS">
+    <wsdl:part element="tns:fetchPropReceiptsRAS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchRSADetailsRAS">
+    <wsdl:part element="tns:fetchRSADetailsRAS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundRequestStatus">
+    <wsdl:part element="tns:refundRequestStatus" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receiptEMIDetailsResponse">
+    <wsdl:part element="tns:receiptEMIDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRASEmiDetails">
+    <wsdl:part element="tns:getRASEmiDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchSubReceiptDetails">
+    <wsdl:part element="tns:fetchSubReceiptDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDetailsOfCDRefund">
+    <wsdl:part element="tns:getDetailsOfCDRefund" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="policyDetailsResponse">
+    <wsdl:part element="tns:policyDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRASEmiDetailsResponse">
+    <wsdl:part element="tns:getRASEmiDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="policyDetailsByProposalNo">
+    <wsdl:part element="tns:policyDetailsByProposalNo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rasDataUpdateResponse">
+    <wsdl:part element="tns:rasDataUpdateResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="polEndtCancelationResponse">
+    <wsdl:part element="tns:polEndtCancelationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initiateBalanceRefundResponse">
+    <wsdl:part element="tns:initiateBalanceRefundResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundRequestStatusResponse">
+    <wsdl:part element="tns:refundRequestStatusResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="polEndtCancelation">
+    <wsdl:part element="tns:polEndtCancelation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceGetTotalLossPolicyDataResponse">
+    <wsdl:part element="tns:webServiceGetTotalLossPolicyDataResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="excessRefundResponse">
+    <wsdl:part element="tns:excessRefundResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchReceiptDetails">
+    <wsdl:part element="tns:fetchReceiptDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchCDDetailsRAS">
+    <wsdl:part element="tns:fetchCDDetailsRAS" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="proposalDetails">
+    <wsdl:part element="tns:proposalDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchPolicy">
+    <wsdl:part element="tns:fetchPolicy" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceGetTotalLossPolicyData">
+    <wsdl:part element="tns:webServiceGetTotalLossPolicyData" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUTRDetails">
+    <wsdl:part element="tns:getUTRDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccountDetails">
+    <wsdl:part element="tns:getAccountDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundRequest">
+    <wsdl:part element="tns:refundRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUTRDetailsResponse">
+    <wsdl:part element="tns:getUTRDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="proposalDetailsResponse">
+    <wsdl:part element="tns:proposalDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchRSADetailsRASResponse">
+    <wsdl:part element="tns:fetchRSADetailsRASResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receiptDetails">
+    <wsdl:part element="tns:receiptDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rasEmiDetailsResponse">
+    <wsdl:part element="tns:rasEmiDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="policyDetails">
+    <wsdl:part element="tns:policyDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="premiumCalculationResponse">
+    <wsdl:part element="tns:premiumCalculationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchReceiptDetailsResponse">
+    <wsdl:part element="tns:fetchReceiptDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getDetailsOfCDRefundResponse">
+    <wsdl:part element="tns:getDetailsOfCDRefundResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="initiateBalanceRefund">
+    <wsdl:part element="tns:initiateBalanceRefund" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchCDDetailsRASResponse">
+    <wsdl:part element="tns:fetchCDDetailsRASResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="premiumCalculation">
+    <wsdl:part element="tns:premiumCalculation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="policyDetailsByProposalNoResponse">
+    <wsdl:part element="tns:policyDetailsByProposalNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receiptEMIDetails">
+    <wsdl:part element="tns:receiptEMIDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationHealthResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationHealthResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationHealth">
+    <wsdl:part element="tns:webServicePremiumCalculationHealth" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchPolicyResponse">
+    <wsdl:part element="tns:fetchPolicyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="receiptDetailsResponse">
+    <wsdl:part element="tns:receiptDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rasPolicyEndoData">
+    <wsdl:part element="tns:rasPolicyEndoData" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="refundRequestResponse">
+    <wsdl:part element="tns:refundRequestResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchSubReceiptDetailsResponse">
+    <wsdl:part element="tns:fetchSubReceiptDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccountDetailsResponse">
+    <wsdl:part element="tns:getAccountDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="rasEmiDetails">
+    <wsdl:part element="tns:rasEmiDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASGenericService">
+    <wsdl:operation name="fetchSubReceiptDetails">
+      <wsdl:input message="tns:fetchSubReceiptDetails" name="fetchSubReceiptDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchSubReceiptDetailsResponse" name="fetchSubReceiptDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="policyDetailsByProposalNo">
+      <wsdl:input message="tns:policyDetailsByProposalNo" name="policyDetailsByProposalNo">
+    </wsdl:input>
+      <wsdl:output message="tns:policyDetailsByProposalNoResponse" name="policyDetailsByProposalNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationHealth">
+      <wsdl:input message="tns:webServicePremiumCalculationHealth" name="webServicePremiumCalculationHealth">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationHealthResponse" name="webServicePremiumCalculationHealthResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundRequestStatus">
+      <wsdl:input message="tns:refundRequestStatus" name="refundRequestStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:refundRequestStatusResponse" name="refundRequestStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiptDetails">
+      <wsdl:input message="tns:receiptDetails" name="receiptDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:receiptDetailsResponse" name="receiptDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchRSADetailsRAS">
+      <wsdl:input message="tns:fetchRSADetailsRAS" name="fetchRSADetailsRAS">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchRSADetailsRASResponse" name="fetchRSADetailsRASResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <wsdl:input message="tns:getAccountDetails" name="getAccountDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:getAccountDetailsResponse" name="getAccountDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="premiumCalculation">
+      <wsdl:input message="tns:premiumCalculation" name="premiumCalculation">
+    </wsdl:input>
+      <wsdl:output message="tns:premiumCalculationResponse" name="premiumCalculationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchCDDetailsRAS">
+      <wsdl:input message="tns:fetchCDDetailsRAS" name="fetchCDDetailsRAS">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchCDDetailsRASResponse" name="fetchCDDetailsRASResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tenureDetails">
+      <wsdl:input message="tns:tenureDetails" name="tenureDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:tenureDetailsResponse" name="tenureDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rasEmiDetails">
+      <wsdl:input message="tns:rasEmiDetails" name="rasEmiDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:rasEmiDetailsResponse" name="rasEmiDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="initiateBalanceRefund">
+      <wsdl:input message="tns:initiateBalanceRefund" name="initiateBalanceRefund">
+    </wsdl:input>
+      <wsdl:output message="tns:initiateBalanceRefundResponse" name="initiateBalanceRefundResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUTRDetails">
+      <wsdl:input message="tns:getUTRDetails" name="getUTRDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:getUTRDetailsResponse" name="getUTRDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailsOfCDRefund">
+      <wsdl:input message="tns:getDetailsOfCDRefund" name="getDetailsOfCDRefund">
+    </wsdl:input>
+      <wsdl:output message="tns:getDetailsOfCDRefundResponse" name="getDetailsOfCDRefundResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rasDataUpdate">
+      <wsdl:input message="tns:rasDataUpdate" name="rasDataUpdate">
+    </wsdl:input>
+      <wsdl:output message="tns:rasDataUpdateResponse" name="rasDataUpdateResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="proposalDetails">
+      <wsdl:input message="tns:proposalDetails" name="proposalDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:proposalDetailsResponse" name="proposalDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiptEMIDetails">
+      <wsdl:input message="tns:receiptEMIDetails" name="receiptEMIDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:receiptEMIDetailsResponse" name="receiptEMIDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchPropReceiptsRAS">
+      <wsdl:input message="tns:fetchPropReceiptsRAS" name="fetchPropReceiptsRAS">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchPropReceiptsRASResponse" name="fetchPropReceiptsRASResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="policyDetails">
+      <wsdl:input message="tns:policyDetails" name="policyDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:policyDetailsResponse" name="policyDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceGetTotalLossPolicyData">
+      <wsdl:input message="tns:webServiceGetTotalLossPolicyData" name="webServiceGetTotalLossPolicyData">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceGetTotalLossPolicyDataResponse" name="webServiceGetTotalLossPolicyDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchReceiptDetails">
+      <wsdl:input message="tns:fetchReceiptDetails" name="fetchReceiptDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchReceiptDetailsResponse" name="fetchReceiptDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundRequest">
+      <wsdl:input message="tns:refundRequest" name="refundRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:refundRequestResponse" name="refundRequestResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rasPolicyEndoData">
+      <wsdl:input message="tns:rasPolicyEndoData" name="rasPolicyEndoData">
+    </wsdl:input>
+      <wsdl:output message="tns:rasPolicyEndoDataResponse" name="rasPolicyEndoDataResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchPolicy">
+      <wsdl:input message="tns:fetchPolicy" name="fetchPolicy">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchPolicyResponse" name="fetchPolicyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="polEndtCancelation">
+      <wsdl:input message="tns:polEndtCancelation" name="polEndtCancelation">
+    </wsdl:input>
+      <wsdl:output message="tns:polEndtCancelationResponse" name="polEndtCancelationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="excessRefund">
+      <wsdl:input message="tns:excessRefund" name="excessRefund">
+    </wsdl:input>
+      <wsdl:output message="tns:excessRefundResponse" name="excessRefundResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRASEmiDetails">
+      <wsdl:input message="tns:getRASEmiDetails" name="getRASEmiDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:getRASEmiDetailsResponse" name="getRASEmiDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

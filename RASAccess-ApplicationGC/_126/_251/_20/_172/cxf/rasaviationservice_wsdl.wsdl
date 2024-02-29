@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASAviationService" targetNamespace="http://stub.tagicesb.com/wsdl/RASAviation/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASAviation/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASAviation/" version="1.0" xmlns:ns1="WebService_RefundCancellationAviation">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationAviation"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAviation/webServicePremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAviation/webServicePremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAviation/webServiceRefundCancellationAviation.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAviation/webServiceRefundCancellationAviationResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationAviation" version="1.0" xmlns:tns="WebService_RefundCancellationAviation">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/WebService_PremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/WebService_PremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/WebService_RefundCancellationAviation.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAviation/WebService_RefundCancellationAviationResponse.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServicePremiumCalculationDtls">
+    <wsdl:part element="tns:webServicePremiumCalculationDtls" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationAviation">
+    <wsdl:part element="tns:webServiceRefundCancellationAviation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationAviationResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationAviationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtlsResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationDtlsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASAviationService">
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <wsdl:input message="tns:webServicePremiumCalculationDtls" name="webServicePremiumCalculationDtls">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationDtlsResponse" name="webServicePremiumCalculationDtlsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationAviation">
+      <wsdl:input message="tns:webServiceRefundCancellationAviation" name="webServiceRefundCancellationAviation">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationAviationResponse" name="webServiceRefundCancellationAviationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

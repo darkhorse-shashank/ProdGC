@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_AccRefundRequest"
+	xmlns:tns="WebService_AccRefundRequest"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="clsUTRDetails">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="SAPdocumentnumber"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="GCDocId" type="xs:string" />
+
+			<xs:element minOccurs="0" name="UTRNo" type="xs:string" />
+
+			<xs:element minOccurs="0" name="UTRDate" type="xs:string" />
+
+			<xs:element minOccurs="0" name="UTRReturnReason"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ChequeNumber"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="VoucherNumber"
+				type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="clsUTRDetails" type="tns:clsUTRDetails" />
+</xs:schema>

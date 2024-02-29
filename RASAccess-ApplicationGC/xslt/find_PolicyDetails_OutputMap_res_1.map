@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/find_PolicyDetails_OutputMap_res_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/find_PolicyDetails_OutputMap_res_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}policyDetailsResponse" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findPolicyDetailsResponseMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="in3" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="in" uri="WebService_RefundDetails"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out2" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="out5" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out4" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="out" uri="http://GCLibrary/org/aig/access/bo"/>
+    </namespaces>
+    <mappingDeclaration name="find_PolicyDetails_OutputMap_res_1">
+        <input path="body"/>
+        <output path="body"/>
+        <foreach>
+            <input path="policyDetailsResponse/PolicyDetailsResponse/PolicyDetailsResult/PolicyDetails"/>
+            <output path="findPolicyDetailsResponse/policyDetails/payload"/>
+            <move>
+                <input path="ProposalNo"/>
+                <output path="proposalNo"/>
+            </move>
+            <move>
+                <input path="Product"/>
+                <output path="product"/>
+            </move>
+            <move>
+                <input path="PolicyStartTime"/>
+                <output path="policyStartTime"/>
+            </move>
+            <move>
+                <input path="ProposerName"/>
+                <output path="proposerName"/>
+            </move>
+            <move>
+                <input path="AadhaarNumber"/>
+                <output path="aadharNo"/>
+            </move>
+            <move>
+                <input path="CustomerName"/>
+                <output path="customerAccount/customerName"/>
+            </move>
+            <move>
+                <input path="CustomerBank"/>
+                <output path="customerAccount/customerBank"/>
+            </move>
+            <move>
+                <input path="CustomerIFSCcode"/>
+                <output path="customerAccount/customerIfscCode"/>
+            </move>
+            <move>
+                <input path="CustomerBankAccountNumber"/>
+                <output path="customerAccount/bankAccountNo"/>
+            </move>
+            <convert defaultValue="2002-01-01T11:00:00">
+                <input path="ApplicationDate"/>
+                <output path="applicationDate"/>
+            </convert>
+            <convert defaultValue="2002-01-01T11:00:00">
+                <input path="PolicyStartDate"/>
+                <output path="policyStartDate"/>
+            </convert>
+            <convert defaultValue="2002-01-01T11:00:00">
+                <input path="PolicyEndDate"/>
+                <output path="policyEndDate"/>
+            </convert>
+            <convert>
+                <input path="PolicyPremium"/>
+                <output path="policyPremium"/>
+            </convert>
+            <convert>
+                <input path="AgreedPremiumAmount"/>
+                <output path="aggreedPremiumAmount"/>
+            </convert>
+            <move>
+                <input path="ProducerCode"/>
+                <output path="producerCode"/>
+            </move>
+            <move>
+                <input path="ProducerName"/>
+                <output path="producerName"/>
+            </move>
+            <move>
+                <input path="PolicyStatus"/>
+                <output path="policyStatus"/>
+            </move>
+            <move>
+                <input path="LANNumber"/>
+                <output path="lanNumber"/>
+            </move>
+            <move>
+                <input path="DealerCode"/>
+                <output path="dealerCode"/>
+            </move>
+            <move>
+                <input path="DealerName"/>
+                <output path="dealerName"/>
+            </move>
+            <move>
+                <input path="FinancierName"/>
+                <output path="financierName"/>
+            </move>
+            <move>
+                <input path="FinancierCode"/>
+                <output path="financierCode"/>
+            </move>
+            <move>
+                <input path="RegistrationNumber"/>
+                <output path="registrationNo"/>
+            </move>
+            <move>
+                <input path="EngineNo"/>
+                <output path="engineNumber"/>
+            </move>
+            <move>
+                <input path="ChasisNo"/>
+                <output path="chasisNumber"/>
+            </move>
+            <foreach>
+                <input path="objInsuredDetails/InsuredDetails"/>
+                <output path="insuredBO"/>
+                <move>
+                    <input path="InsuredName"/>
+                    <output path="name"/>
+                </move>
+                <convert defaultValue="2002-01-01T11:00:00">
+                    <input path="InsuredDOB"/>
+                    <output path="dob"/>
+                </convert>
+                <move>
+                    <input path="InsuredContAdd"/>
+                    <output path="address"/>
+                </move>
+                <move>
+                    <input path="InsuredContNo"/>
+                    <output path="contactNo"/>
+                </move>
+            </foreach>
+            <foreach>
+                <input path="objCRSDetails/CRSDetails"/>
+                <output path="crs"/>
+                <move>
+                    <input path="CRS"/>
+                    <output path="crsNo"/>
+                </move>
+                <move>
+                    <input path="CRSPayerName"/>
+                    <output path="payeeName"/>
+                </move>
+                <move>
+                    <input path="Status"/>
+                    <output path="crsStatus"/>
+                </move>
+                <move>
+                    <input path="AuthcodeTransactionNo"/>
+                    <output path="authCode"/>
+                </move>
+                <convert>
+                    <input path="CRSAmount"/>
+                    <output path="crsAmount"/>
+                </convert>
+                <move>
+                    <input path="PaymentReceivedMethod"/>
+                    <output path="paymentReceivedMethod"/>
+                </move>
+            </foreach>
+            <move>
+                <input path="CustomerCode"/>
+                <output path="customerCode"/>
+            </move>
+            <move>
+                <input path="PolicyCoverVariant"/>
+                <output path="policyCoverType"/>
+            </move>
+            <convert defaultValue="2002-01-01T11:00:00">
+                <input path="ConversionDate"/>
+                <output path="conversionDate"/>
+            </convert>
+        </foreach>
+    </mappingDeclaration>
+</mappingRoot>

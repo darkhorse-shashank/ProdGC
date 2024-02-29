@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/find_PolicyDetails_InputMap_req_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/find_PolicyDetails_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findPolicyDetailsRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}policyDetails" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in4" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in5" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out2" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out" uri="WebService_RefundDetails"/>
+    </namespaces>
+    <mappingDeclaration name="find_PolicyDetails_InputMap_req_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="body/findPolicyDetails/policyNo"/>
+            <output path="context/correlation/policyno"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/proposalNo"/>
+            <output path="context/correlation/proposalNo"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/policyDetailsInput/source"/>
+            <output path="body/policyDetails/source"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/policyDetailsInput/medium"/>
+            <output path="body/policyDetails/medium"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/policyDetailsInput/campaign"/>
+            <output path="body/policyDetails/campaign"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/policyDetailsInput/strServiceToken"/>
+            <output path="body/policyDetails/strServiceToken"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/userId"/>
+            <output path="body/policyDetails/PolicyDetails/UserId"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/policyNo"/>
+            <output path="body/policyDetails/PolicyDetails/PolicyNo"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/proposalNo"/>
+            <output path="body/policyDetails/PolicyDetails/ProposalNo"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/certificateNo"/>
+            <output path="body/policyDetails/PolicyDetails/CertificateNo"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/lanNumber"/>
+            <output path="body/policyDetails/PolicyDetails/LoanAccNumber"/>
+        </move>
+        <move>
+            <input path="body/findPolicyDetails/customerId"/>
+            <output path="body/policyDetails/PolicyDetails/CustomerId"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

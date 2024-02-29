@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASPersonalLinesService" targetNamespace="http://stub.unotechsoft.com/wsdl/RASPersonalLines/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASPersonalLines/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/RASPersonalLines/" version="1.0" xmlns:ns1="WebService_RefundCancellationPersonalLines">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationPersonalLines"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPersonalLines/webServicePremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPersonalLines/webServiceRefundCancellationPersonalLines.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPersonalLines/webServicePremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASPersonalLines/webServiceRefundCancellationPersonalLinesResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationPersonalLines" version="1.0" xmlns:tns="WebService_RefundCancellationPersonalLines">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/WebService_PremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/WebService_RefundCancellationPersonalLines.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/WebService_RefundCancellationPersonalLinesResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/WebService_PremiumCalculationDtlsResponse.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRefundCancellationPersonalLines">
+    <wsdl:part element="tns:webServiceRefundCancellationPersonalLines" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationPersonalLinesResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationPersonalLinesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtlsResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationDtlsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtls">
+    <wsdl:part element="tns:webServicePremiumCalculationDtls" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASPersonalLinesService">
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <wsdl:input message="tns:webServicePremiumCalculationDtls" name="webServicePremiumCalculationDtls">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationDtlsResponse" name="webServicePremiumCalculationDtlsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationPersonalLines">
+      <wsdl:input message="tns:webServiceRefundCancellationPersonalLines" name="webServiceRefundCancellationPersonalLines">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationPersonalLinesResponse" name="webServiceRefundCancellationPersonalLinesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

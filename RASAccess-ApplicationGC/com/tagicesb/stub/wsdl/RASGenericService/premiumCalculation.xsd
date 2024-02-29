@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="premiumCalculation">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0" name="source"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="medium"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="campaign"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="strServiceToken" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="UserId"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="PolicyNo"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="ProposalNo"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="ProductCode" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="PeriodFromDate" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="EndDateOfRequest" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="MTAEffDate"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="MTAEffTime"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="ReasonforCanc" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="DescofCancReason" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="OptionforCancofInsurance" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="Remarks"
+				type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="premiumCalculation" type="tns:premiumCalculation" />
+</xs:schema>

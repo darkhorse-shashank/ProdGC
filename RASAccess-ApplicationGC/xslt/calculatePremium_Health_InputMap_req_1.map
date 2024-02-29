@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/calculatePremium_Health_InputMap_req_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/calculatePremium_Health_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}calculateCancellationRefundRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASHealthService/}webServicePremiumCalculationHealth" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in4" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in5" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="WebService_RefundCancellationHealth"/>
+        <namespace kind="supplement" prefix="out2" uri="wsdl.http://stub.tagicesb.com/wsdl/RASHealthService/"/>
+        <namespace kind="supplement" prefix="out" uri="http://stub.tagicesb.com/wsdl/RASHealthService/"/>
+    </namespaces>
+    <mappingDeclaration name="calculatePremium_Health_InputMap_req_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="context/correlation/endDateOfRequest"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/EndDateOfRequest"/>
+        </move>
+        <move>
+            <input path="context/correlation/effectiveDate"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/MTAEffDate"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/source"/>
+            <output path="body/webServicePremiumCalculationHealth/source"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/medium"/>
+            <output path="body/webServicePremiumCalculationHealth/medium"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/campaign"/>
+            <output path="body/webServicePremiumCalculationHealth/campaign"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/strServiceToken"/>
+            <output path="body/webServicePremiumCalculationHealth/strServiceToken"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/userId"/>
+            <output path="body/webServicePremiumCalculationHealth/UserId"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/policyNo"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/PolicyNo"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/proposalNo"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/ProposalNo"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/product"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/ProductCode"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/cancellationOption"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/OptionforCancofInsurance"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/cancellationReason"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/ReasonforCanc"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/cancellationDescription"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/DescofCancReason"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/remarks"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/Remarks"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/effectiveTime"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/MTAEffTime"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/retainMinPrem"/>
+            <output path="body/webServicePremiumCalculationHealth/RefundCancellation/RetentionAmount"/>
+        </move>
+        <move>
+            <input path="context/correlation"/>
+            <output path="context/correlation"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasfinanciallinesservice_wsdl_Endpoint" targetNamespace="http://stub.unotechsoft.com/wsdl/RASFinancialLines/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASFinancialLines/">
+    <wsdl:import location="rasfinanciallinesservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASFinancialLines/"/>
+  <wsdl:binding name="RASFinancialLinesServiceSoapBinding" type="tns:RASFinancialLinesService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationDtls">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationDtlsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationFinancialLines">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationFinancialLines">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationFinancialLinesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASFinancialLinesService">
+    <wsdl:port binding="tns:RASFinancialLinesServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASFinancialLinesService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

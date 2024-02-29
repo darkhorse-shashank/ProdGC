@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASAIGService" targetNamespace="http://stub.tagicesb.com/wsdl/RASAIGService/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASAIGService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASAIGService/" version="1.0" xmlns:ns1="WebService_RefundCancellationAIG">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationAIG"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAIGService/webServicePremiumCalculationAIGResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAIGService/webServiceRefundCancellationAIG.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAIGService/webServicePremiumCalculationAIG.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASAIGService/webServiceRefundCancellationAIGResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationAIG" version="1.0" xmlns:tns="WebService_RefundCancellationAIG">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/WebService_RefundCancellationAIG.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/WebService_RefundCancellationAIGResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/WebService_PremiumCalculationAIG.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/WebService_PremiumCalculationAIGResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationAIG/RefundCancellationRespns.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServicePremiumCalculationAIGResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationAIGResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationAIG">
+    <wsdl:part element="tns:webServiceRefundCancellationAIG" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationAIGResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationAIGResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationAIG">
+    <wsdl:part element="tns:webServicePremiumCalculationAIG" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASAIGService">
+    <wsdl:operation name="webServiceRefundCancellationAIG">
+      <wsdl:input message="tns:webServiceRefundCancellationAIG" name="webServiceRefundCancellationAIG">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationAIGResponse" name="webServiceRefundCancellationAIGResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationAIG">
+      <wsdl:input message="tns:webServicePremiumCalculationAIG" name="webServicePremiumCalculationAIG">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationAIGResponse" name="webServicePremiumCalculationAIGResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

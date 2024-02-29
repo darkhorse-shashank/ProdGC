@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasmotorservice_wsdl_Endpoint" targetNamespace="http://stub.unotechsoft.com/wsdl/RASMotor/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASMotor/">
+    <wsdl:import location="rasmotorservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASMotor/"/>
+  <wsdl:binding name="RASMotorServiceSoapBinding" type="tns:RASMotorService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationDtls">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationDtlsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationDtls">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationDtls">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationDtlsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASMotorService">
+    <wsdl:port binding="tns:RASMotorServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://10.35.4.11:8182/cxf/RASMotorService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

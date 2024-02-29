@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasgenericservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/">
+    <wsdl:import location="rasgenericservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+  <wsdl:binding name="RASGenericServiceSoapBinding" type="tns:RASGenericService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="fetchSubReceiptDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchSubReceiptDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchSubReceiptDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="policyDetailsByProposalNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="policyDetailsByProposalNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="policyDetailsByProposalNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationHealth">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationHealth">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationHealthResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundRequestStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="refundRequestStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refundRequestStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchRSADetailsRAS">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchRSADetailsRAS">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchRSADetailsRASResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiptDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="receiptDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="receiptDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAccountDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAccountDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="premiumCalculation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="premiumCalculation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="premiumCalculationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchCDDetailsRAS">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchCDDetailsRAS">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchCDDetailsRASResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rasEmiDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rasEmiDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="rasEmiDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="tenureDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="tenureDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="tenureDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="initiateBalanceRefund">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="initiateBalanceRefund">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="initiateBalanceRefundResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUTRDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getUTRDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getUTRDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDetailsOfCDRefund">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getDetailsOfCDRefund">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getDetailsOfCDRefundResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rasDataUpdate">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rasDataUpdate">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="rasDataUpdateResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="proposalDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="proposalDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="proposalDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchPropReceiptsRAS">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchPropReceiptsRAS">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchPropReceiptsRASResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="receiptEMIDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="receiptEMIDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="receiptEMIDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="policyDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="policyDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="policyDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceGetTotalLossPolicyData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceGetTotalLossPolicyData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceGetTotalLossPolicyDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchReceiptDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchReceiptDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchReceiptDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="rasPolicyEndoData">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="rasPolicyEndoData">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="rasPolicyEndoDataResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="refundRequest">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="refundRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="refundRequestResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchPolicy">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchPolicy">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchPolicyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="polEndtCancelation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="polEndtCancelation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="polEndtCancelationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="excessRefund">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="excessRefund">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="excessRefundResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getRASEmiDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRASEmiDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRASEmiDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASGenericService">
+    <wsdl:port binding="tns:RASGenericServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASGenericService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="raspropertyenergyservice_wsdl_Endpoint" targetNamespace="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/">
+    <wsdl:import location="raspropertyenergyservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/"/>
+  <wsdl:binding name="RASPropertyEnergyServiceSoapBinding" type="tns:RASPropertyEnergyService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationPE">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationPE">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationPEResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationPE">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationPE">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationPEResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASPropertyEnergyService">
+    <wsdl:port binding="tns:RASPropertyEnergyServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASPropertyEnergyService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

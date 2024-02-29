@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="raspaservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASPAService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASPAService/">
+    <wsdl:import location="raspaservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASPAService/"/>
+  <wsdl:binding name="RASPAServiceSoapBinding" type="tns:RASPAService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServiceRefundCancellationPA">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationPA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationPAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationPA">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationPA">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationPAResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASPAService">
+    <wsdl:port binding="tns:RASPAServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASPAService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="DBService" targetNamespace="http://stub.unotechsoft.com/wsdl/DBService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.unotechsoft.com/wsdl/DBService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/DBService/" version="1.0">
+
+  <xs:element name="AccountStatusResponse" type="tns:AccountStatusResponse"/>
+
+  <xs:element name="PaymentDetailsResponse" type="tns:PaymentDetailsResponse"/>
+
+  <xs:element name="ProposalNoRequest" type="tns:ProposalNoRequest"/>
+
+  <xs:element name="ProposalNoResponse" type="tns:ProposalNoResponse"/>
+
+  <xs:element name="ProposalStatusResponse" type="tns:ProposalStatusResponse"/>
+
+  <xs:element name="QuotationNoRequest" type="tns:QuotationNoRequest"/>
+
+  <xs:element name="WorkflowIdResponce" type="tns:WorkflowIdResponce"/>
+
+  <xs:element name="getAccountStatus" type="tns:getAccountStatus"/>
+
+  <xs:element name="getAccountStatusResponse" type="tns:getAccountStatusResponse"/>
+
+  <xs:element name="getPaymentDetails" type="tns:getPaymentDetails"/>
+
+  <xs:element name="getPaymentDetailsResponse" type="tns:getPaymentDetailsResponse"/>
+
+  <xs:element name="getProposalNoFromQuotationNoRequest" type="tns:getProposalNoFromQuotationNoRequest"/>
+
+  <xs:element name="getProposalNoFromQuotationNoResponse" type="tns:getProposalNoFromQuotationNoResponse"/>
+
+  <xs:element name="getProposalStatus" type="tns:getProposalStatus"/>
+
+  <xs:element name="getProposalStatusResponse" type="tns:getProposalStatusResponse"/>
+
+  <xs:element name="getWorkFlowIdFromProposalNoRequest" type="tns:getWorkFlowIdFromProposalNoRequest"/>
+
+  <xs:element name="getWorkFlowIdFromProposalNoResponse" type="tns:getWorkFlowIdFromProposalNoResponse"/>
+
+  <xs:complexType name="getProposalStatus">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="Source" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="Medium" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="Campaign" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="AuthenticationToken" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="ReferenceNumber" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getProposalStatusResponse">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="GetProposalStatusResult" type="tns:ProposalStatusResponse"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="ProposalStatusResponse">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="PolicyNo" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="Status" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getPaymentDetails">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="Source" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="Medium" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="Campaign" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="AuthenticationToken" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="RecieptNumber" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getPaymentDetailsResponse">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="GetPaymentDetailsResult" type="tns:PaymentDetailsResponse"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="PaymentDetailsResponse">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="Status" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="PaymentMode" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="ChequeNumber" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="ChequeDate" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="ChequeRcvdDate" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="BankCode" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="BankName" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getProposalNoFromQuotationNoRequest">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="getProposalNoFromQuotationNoRequest" type="tns:QuotationNoRequest"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="QuotationNoRequest">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="Source" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="Medium" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="Campaign" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="AuthenticationToken" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="QuotationNo" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getProposalNoFromQuotationNoResponse">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="GetProposalNoFromQuotationNoResult" type="tns:ProposalNoResponse"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="ProposalNoResponse">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="OutPutResult" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getWorkFlowIdFromProposalNoRequest">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="getWorkFlowIdFromProposalNoRequest" type="tns:ProposalNoRequest"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="ProposalNoRequest">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="Source" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="Medium" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="Campaign" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="AuthenticationToken" type="xs:string"/>
+      
+      <xs:element minOccurs="0" name="ProposalNo" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getWorkFlowIdFromProposalNoResponse">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="GetWorkFlowIdFromProposalNoResult" type="tns:WorkflowIdResponce"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="WorkflowIdResponce">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="OutPutResult" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getAccountStatus">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="Source" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="Medium" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="Campaign" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="AuthenticationToken" type="xs:string"/>
+      
+      <xs:element form="qualified" minOccurs="0" name="IntermediatoryId" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="getAccountStatusResponse">
+    
+    <xs:sequence>
+      
+      <xs:element form="qualified" minOccurs="0" name="GetAccountStatus" type="tns:AccountStatusResponse"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+  <xs:complexType name="AccountStatusResponse">
+    
+    <xs:sequence>
+      
+      <xs:element minOccurs="0" name="Status" type="xs:string"/>
+    
+    </xs:sequence>
+  
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="getProposalStatus">
+    <wsdl:part element="tns:getProposalStatus" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccountStatus">
+    <wsdl:part element="tns:getAccountStatus" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProposalStatusResponse">
+    <wsdl:part element="tns:getProposalStatusResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPaymentDetailsResponse">
+    <wsdl:part element="tns:getPaymentDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getWorkFlowIdFromProposalNo">
+    <wsdl:part element="tns:getWorkFlowIdFromProposalNoRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPaymentDetails">
+    <wsdl:part element="tns:getPaymentDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProposalNoFromQuotationNoResponse">
+    <wsdl:part element="tns:getProposalNoFromQuotationNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAccountStatusResponse">
+    <wsdl:part element="tns:getAccountStatusResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getProposalNoFromQuotationNo">
+    <wsdl:part element="tns:getProposalNoFromQuotationNoRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getWorkFlowIdFromProposalNoResponse">
+    <wsdl:part element="tns:getWorkFlowIdFromProposalNoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="DBService">
+    <wsdl:operation name="getProposalStatus">
+      <wsdl:input message="tns:getProposalStatus" name="getProposalStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:getProposalStatusResponse" name="getProposalStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPaymentDetails">
+      <wsdl:input message="tns:getPaymentDetails" name="getPaymentDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:getPaymentDetailsResponse" name="getPaymentDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProposalNoFromQuotationNo">
+      <wsdl:input message="tns:getProposalNoFromQuotationNo" name="getProposalNoFromQuotationNo">
+    </wsdl:input>
+      <wsdl:output message="tns:getProposalNoFromQuotationNoResponse" name="getProposalNoFromQuotationNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWorkFlowIdFromProposalNo">
+      <wsdl:input message="tns:getWorkFlowIdFromProposalNo" name="getWorkFlowIdFromProposalNo">
+    </wsdl:input>
+      <wsdl:output message="tns:getWorkFlowIdFromProposalNoResponse" name="getWorkFlowIdFromProposalNoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountStatus">
+      <wsdl:input message="tns:getAccountStatus" name="getAccountStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:getAccountStatusResponse" name="getAccountStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DBServiceSoapBinding" type="tns:DBService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getProposalStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProposalStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProposalStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPaymentDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getPaymentDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getPaymentDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getProposalNoFromQuotationNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getProposalNoFromQuotationNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getProposalNoFromQuotationNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAccountStatus">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAccountStatus">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAccountStatusResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWorkFlowIdFromProposalNo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getWorkFlowIdFromProposalNo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getWorkFlowIdFromProposalNoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DBService">
+    <wsdl:port binding="tns:DBServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/DataBaseFetchService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

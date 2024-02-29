@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/findPolicyStatus_DummyImpl" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/findPolicyStatus_DummyImpl">
+    <input correlationContext="" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findPolicyStatusRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <output correlationContext="" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findPolicyStatusResponseMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io5" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io4" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io10" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="io8" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io9" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io6" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="io7" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="extension" prefix="str" uri="http://exslt.org/strings"/>
+    </namespaces>
+    <mappingDeclaration name="findPolicyStatus_DummyImpl">
+        <input path="body"/>
+        <output path="body"/>
+        <assign value="ACTIVE">
+            <output path="findPolicyStatusResponse/response/status"/>
+        </assign>
+        <function ref="str:concat">
+            <input path="findPolicyStatus/policyNo" var="policyNo"/>
+            <input path="findPolicyStatus/proposalNo" var="proposalNo"/>
+            <output path="findPolicyStatusResponse/response/data"/>
+            <param name="nl" value="($policyNo,&quot; with Proposal No &quot;,$proposalNo,&quot; is Active&quot;)"/>
+        </function>
+    </mappingDeclaration>
+</mappingRoot>

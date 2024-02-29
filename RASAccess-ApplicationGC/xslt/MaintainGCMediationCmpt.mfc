@@ -1,0 +1,2802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mediationFlow xmlns="http://www.ibm.com/xmlns/prod/websphere/2010/MediationFlow" xmlns:RASAIGService="http://stub.tagicesb.com/wsdl/RASAIGService/" xmlns:RASAviationService="http://stub.tagicesb.com/wsdl/RASAviation/" xmlns:RASCasualtyService="http://stub.tagicesb.com/wsdl/RASCasualty/" xmlns:RASFinancialLinesService="http://stub.unotechsoft.com/wsdl/RASFinancialLines/" xmlns:RASGenericService="http://stub.tagicesb.com/wsdl/RASGenericService/" xmlns:RASHealthService="http://stub.tagicesb.com/wsdl/RASHealthService/" xmlns:RASHomeService="http://stub.tagicesb.com/wsdl/RASHome/" xmlns:RASLTAService="http://stub.unotechsoft.com/wsdl/RASLTAService/" xmlns:RASMarineService="http://stub.tagicesb.com/wsdl/RASMarineService/" xmlns:RASMotorService="http://stub.unotechsoft.com/wsdl/RASMotor/" xmlns:RASPAService="http://stub.tagicesb.com/wsdl/RASPAService/" xmlns:RASPersonalLinesService="http://stub.unotechsoft.com/wsdl/RASPersonalLines/" xmlns:RASPropertyEnergyService="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/" xmlns:RASTradeCreditService="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/" xmlns:UpdateGCTransactionLog="http://GCLibrary/org/aig/access/UpdateGCTransactionLog" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:mfcex="http://www.ibm.com/xmlns/prod/websphere/2010/MediationFlowExtension" xmlns:ns3="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC" xmlns:ns34="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/" name="MaintainGCMediationCmpt" targetNamespace="http://Access-ApplicationGC/xslt/MaintainGCMediationCmpt">
+  <import location="org/aig/access/MaintainAccessGC.wsdl" namespace="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+  <import location="_126/_251/_20/_172/cxf/rasgenericservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+  <import location="_11/_4/_35/_10/cxf/rasmotorservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASMotor/"/>
+  <import location="_126/_251/_20/_172/cxf/rashealthservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASHealthService/"/>
+  <import location="_126/_251/_20/_172/cxf/rashomeservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASHome/"/>
+  <import location="_126/_251/_20/_172/cxf/rasltaservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASLTAService/"/>
+  <import location="_126/_251/_20/_172/cxf/raspaservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASPAService/"/>
+  <import location="_126/_251/_20/_172/cxf/rasfinanciallinesservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASFinancialLines/"/>
+  <import location="_126/_251/_20/_172/cxf/raspersonallinesservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASPersonalLines/"/>
+  <import location="_126/_251/_20/_172/cxf/rastradecreditservice_wsdl.wsdl" namespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/"/>
+  <import location="_126/_251/_20/_172/cxf/rasmarineservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASMarineService/"/>
+  <import location="_126/_251/_20/_172/cxf/rasaigservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASAIGService/"/>
+  <import location="_126/_251/_20/_172/cxf/rasaviationservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASAviation/"/>
+  <import location="_126/_251/_20/_172/cxf/rascasualtyservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASCasualty/"/>
+  <import location="_126/_251/_20/_172/cxf/raspropertyenergyservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/"/>
+  <import location="org/aig/access/UpdateGCTransactionLog.wsdl" namespace="http://GCLibrary/org/aig/access/UpdateGCTransactionLog"/>
+  <import location="_126/_251/_20/_172/cxf/rasrefundcancellationkhokaservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"/>
+  <promotedProperty name="updateDisbursementRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="updateDisbursementRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="updateDisbursementResponseLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="updateDisbursementResponseLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="updateDisbursementFaultLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="updateDisbursementFaultLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="updateDisbursementErrorLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="updateDisbursementErrorLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="createCancellationRefundRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createCancellationRefundRequestLogger.file1" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="IIDLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn8" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount8" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay8" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryOn3" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount3" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay3" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="createCancellationRefundFaultLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createCancellationRefundFaultLogger.file" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="IIDLogs.txt"/>
+  <promotedProperty name="createCancellationRefundResponseLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createCancellationRefundResponseLogger.file" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="IIDLogs.txt"/>
+  <promotedProperty name="ServiceInvoke1.retryOn5" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount5" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay5" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="createCancellationRefundErrorLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createCancellationRefundErrorLogger.file1" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="IIDLogs.txt"/>
+  <promotedProperty name="ServiceInvoke1.retryOn9" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount9" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay9" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyMotorRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyMotorRequestLogger.file1" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+  <promotedProperty name="cancelPolicyHealthRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyHealthRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout.retryOn" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout.retryCount" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout.retryDelay" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyTravel_LTARequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyTravel_LTARequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout.retryOn" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout.retryCount" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout.retryDelay" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyHomeRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyHomeRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="RASHomeServicePartner_webServiceRefundCancellationHome_Callout.retryOn" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASHomeServicePartner_webServiceRefundCancellationHome_Callout.retryCount" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASHomeServicePartner_webServiceRefundCancellationHome_Callout.retryDelay" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyPersonalAccidentRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyPersonalAccidentRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn10" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount10" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay10" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryOn" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryOn2" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount2" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay2" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryOn3" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount3" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay3" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyFinancalLinesRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyFinancalLinesRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="cancelPolicyPersonalLinesRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyPersonalLinesRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn5" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount5" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay5" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyMarineCargoRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyMarineCargoRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout.retryOn" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout.retryCount" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout.retryDelay" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyAigCombinedRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyAigCombinedRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyAviationRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyAviationRequestLogger.file1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn4" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount4" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay4" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyLiabilityRequestLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyLiabilityRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn6" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount6" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay6" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyPropertyandEnergyRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyPropertyandEnergyRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn7" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount7" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay7" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyTradeCreditRequestLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyTradeCreditRequestLogger.file" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="ServiceInvoke1.retryOn" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryOn11" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount11" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay11" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="CancelPolicyInputLoggerKhoKha.file" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="RASLog.txt"/>
+  <promotedProperty name="Callout1.retryOn13" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount13" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay13" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="BalanceRefundCancelpolicyRequestLogger.file" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="RASBalanceRefundLog.txt"/>
+  <promotedProperty name="cancelPolicyResponseLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyResponseLogger.file1" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+  <promotedProperty name="cancelPolicyFaultLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyFaultLogger.file1" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+  <promotedProperty name="ServiceInvoke1.retryOn1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="cancelPolicyErrorLogger.enabled" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="cancelPolicyErrorLogger.file1" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+  <promotedProperty name="CancelPolicyGCTransactionErrorLogService.retryOn" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="CancelPolicyGCTransactionErrorLogService.retryCount" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="CancelPolicyGCTransactionErrorLogService.retryDelay" group="RASAccess-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="createExcessRefundRequestLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createExcessRefundRequestLogger.file1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="Callout1.retryOn9" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryCount9" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="Callout1.retryDelay9" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryOn4" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount4" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay4" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="createExcessRefundResponseLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createExcessRefundResponseLogger.file1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="createExcessRefundFaultLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createExcessRefundFaultLogger.file1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="ServiceInvoke1.retryOn10" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount10" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay10" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="createExcessRefundErrorLogger.enabled1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="true"/>
+  <promotedProperty name="createExcessRefundErrorLogger.file1" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+  <promotedProperty name="ServiceInvoke1.retryOn11" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryCount11" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <promotedProperty name="ServiceInvoke1.retryDelay11" group="Access-ApplicationGC.MaintainGCMediationCmpt" value="0"/>
+  <reference name="RASGenericServicePartner" portType="RASGenericService:RASGenericService"/>
+  <reference name="RASMotorServicePartner" portType="RASMotorService:RASMotorService"/>
+  <reference name="RASHealthServicePartner" portType="RASHealthService:RASHealthService"/>
+  <reference name="RASHomeServicePartner" portType="RASHomeService:RASHomeService"/>
+  <reference name="RASLTAServicePartner" portType="RASLTAService:RASLTAService"/>
+  <reference name="RASPAServicePartner" portType="RASPAService:RASPAService"/>
+  <reference name="RASFinancialLinesServicePartner" portType="RASFinancialLinesService:RASFinancialLinesService"/>
+  <reference name="RASPersonalLinesServicePartner" portType="RASPersonalLinesService:RASPersonalLinesService"/>
+  <reference name="RASTradeCreditServicePartner" portType="RASTradeCreditService:RASTradeCreditService"/>
+  <reference name="RASMarineServicePartner" portType="RASMarineService:RASMarineService"/>
+  <reference name="RASAIGServicePartner" portType="RASAIGService:RASAIGService"/>
+  <reference name="RASAviationServicePartner" portType="RASAviationService:RASAviationService"/>
+  <reference name="RASCasualtyServicePartner" portType="RASCasualtyService:RASCasualtyService"/>
+  <reference name="RASPropertyEnergyServicePartner" portType="RASPropertyEnergyService:RASPropertyEnergyService"/>
+  <reference name="UpdateGCTransactionLogPartner" portType="UpdateGCTransactionLog:UpdateGCTransactionLog"/>
+  <reference name="RASRefundCancellationKhokaServicePartner" portType="ns34:RASRefundCancellationKhokaService"/>
+  <interface portType="ns3:MaintainAccessGC">
+    <operation name="updateDisbursement">
+      <requestFlow mfcex:showInputResponse="false" mfcex:showInputFault="false">
+        <node displayName="updateDisbursement : MaintainAccessGC" name="MaintainAccessGC_updateDisbursement_Input" type="Input">
+          <property name="correlationContext" value="{http://Access-ApplicationGC}correlationBO"/>
+          <outputTerminal type="ns3:updateDisbursementRequestMsg">
+            <wire targetNode="update_Disbursement_InputMap"/>
+          </outputTerminal>
+        </node>
+        <node name="update_Disbursement_InputMap" type="XSLTransformation">
+          <property name="root" value="/body"/>
+          <property name="XSLTransform" value="xslt/update_Disbursement_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/update_Disbursement_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:updateDisbursementRequestMsg"/>
+          <outputTerminal type="RASGenericService:rasDataUpdate">
+            <wire targetNode="updateDisbursementRequestLogger"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="Save Request Structure" name="Save_Request_Structure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+		    	String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+		    	 System.out.println("serialized----->"+output);
+		    	 
+		    	 smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1579515277743"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="com.ibm.websphere.sca.ServiceManager;com.ibm.websphere.bo.BOFactory;commonj.sdo.DataObject;org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASGenericService:rasDataUpdate">
+            <wire targetNode="RASGenericServicePartner_rasDataUpdate_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="updateDisbursementRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="Save_Request_Structure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="rasDataUpdate : RASGenericServicePartner" name="RASGenericServicePartner_rasDataUpdate_Callout" type="Callout">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="rasDataUpdate"/>
+          <property name="invocationStyle" value="6"/>
+          <inputTerminal type="RASGenericService:rasDataUpdate"/>
+        </node>
+      </requestFlow>
+      <responseFlow>
+        <node displayName="rasDataUpdate : RASGenericServicePartner" name="RASGenericServicePartner_rasDataUpdate_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="rasDataUpdate"/>
+          <outputTerminal type="RASGenericService:rasDataUpdateResponse">
+            <wire targetNode="Status_Filter"/>
+          </outputTerminal>
+          <failTerminal type="RASGenericService:rasDataUpdate"/>
+        </node>
+        <node displayName="updateDisbursement : MaintainAccessGC" name="MaintainAccessGC_updateDisbursement_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:updateDisbursementResponseMsg"/>
+        </node>
+        <node displayName="updateDisbursement : MaintainAccessGC" name="MaintainAccessGC_updateDisbursement_InputFault" type="InputFault">
+          <inputTerminal name="updateDisbursement_updateDisbursementFaultMsg" type="ns3:updateDisbursement_updateDisbursementFaultMsg"/>
+        </node>
+        <node displayName="Status Filter" name="Status_Filter" type="MessageFilter">
+          <table name="filters">
+            <row>
+              <property name="pattern" value="/body/rasDataUpdateResponse/RASDataUpdateResult/RASDataUpdate/Status = 'SUCCESS'"/>
+              <property name="terminalName" value="match1"/>
+            </row>
+          </table>
+          <inputTerminal/>
+          <outputTerminal name="default">
+            <wire targetNode="update_Disbursement_FaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Success" name="match1">
+            <wire targetNode="update_Disbursement_OutputMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="update_Disbursement_OutputMap" type="XSLTransformation">
+          <property name="root" value="/body"/>
+          <property name="XSLTransform" value="xslt/update_Disbursement_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/update_Disbursement_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:rasDataUpdateResponse"/>
+          <outputTerminal type="ns3:updateDisbursementResponseMsg">
+            <wire targetNode="updateDisbursementResponseLogger"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="updateDisbursementResponseLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementResponseLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementResponseLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_updateDisbursement_InputResponse"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="update_Disbursement_FaultMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/update_Disbursement_FaultMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/update_Disbursement_FaultMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:rasDataUpdateResponse"/>
+          <outputTerminal type="ns3:updateDisbursement_updateDisbursementFaultMsg">
+            <wire targetNode="updateDisbursementFaultLogger"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="updateDisbursementFaultLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementFaultLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementFaultLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_updateDisbursement_InputFault" targetTerminal="updateDisbursement_updateDisbursementFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+      </responseFlow>
+      <errorFlow>
+        <node displayName="updateDisbursement : MaintainAccessGC" name="MaintainAccessGC_updateDisbursement_ErrorInput" type="ErrorInput">
+          <outputTerminal name="catchAll" type="XMLSchema:anyType">
+            <wire targetNode="update_Disbursement_ErrorMap"/>
+          </outputTerminal>
+        </node>
+        <node displayName="updateDisbursement : MaintainAccessGC" name="MaintainAccessGC_updateDisbursement_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:updateDisbursementResponseMsg"/>
+        </node>
+        <node displayName="updateDisbursement : MaintainAccessGC" name="MaintainAccessGC_updateDisbursement_InputFault" type="InputFault">
+          <inputTerminal name="updateDisbursement_updateDisbursementFaultMsg" type="ns3:updateDisbursement_updateDisbursementFaultMsg"/>
+        </node>
+        <node name="update_Disbursement_ErrorMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/update_Disbursement_ErrorMap_err_1.xsl"/>
+          <property name="XMXMap" value="xslt/update_Disbursement_ErrorMap_err_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="ns3:updateDisbursement_updateDisbursementFaultMsg">
+            <wire targetNode="updateDisbursementErrorLogger"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="updateDisbursementErrorLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementErrorLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="updateDisbursementErrorLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_updateDisbursement_InputFault" targetTerminal="updateDisbursement_updateDisbursementFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+      </errorFlow>
+    </operation>
+    <operation name="createCancellationRefund">
+      <requestFlow mfcex:showInputResponse="false" mfcex:showInputFault="false">
+        <node displayName="createCancellationRefund : MaintainAccessGC" name="MaintainAccessGC_createCancellationRefund_Input" type="Input">
+          <property name="correlationContext" value="{http://Access-ApplicationGC}correlationBO"/>
+          <outputTerminal type="ns3:createCancellationRefundRequestMsg">
+            <wire targetNode="AssignTransactionId"/>
+          </outputTerminal>
+        </node>
+        <node name="createCancellationRefundInputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_CancellationRefund_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_CancellationRefund_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal/>
+          <outputTerminal type="RASGenericService:refundRequest">
+            <wire targetNode="createCancellationRefundRequestLogger"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createCancellationRefundRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundRequestLogger.file1" value="IIDLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="SaveRequestStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveRequestStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);	*/	            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+smo.setString("/context/correlation/request",output);
+smo.setString("/context/correlation/response","");
+smo.setDate("/context/correlation/lastRequestedOn",new Date());
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597072101685"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASGenericService:refundRequest">
+            <wire targetNode="RASGenericServicePartner_refundRequest_Callout"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="refundRequest : RASGenericServicePartner" name="RASGenericServicePartner_refundRequest_Callout" type="Callout">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="refundRequest"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn8"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount8"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay8"/>
+          <inputTerminal type="RASGenericService:refundRequest"/>
+        </node>
+        <node name="AssignTransactionId" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+ System.out.println("Cancellation refund Callout error handler");
+try{
+smo.setInt("/context/correlation/transactionId",smo.getInt("/body/createCancellationRefund/transactionId"));
+smo.setInt("/context/correlation/isExecuting",1);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+}
+catch(Exception e){
+e.printStackTrace();
+}
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597072249509"/>
+          <property name="version" value="6.1.0"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="createCancellationRefundInputMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogRequestMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogRequestMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogRequestMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CreateCancellationRefundGCTransactionRequestLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CreateCancellationRefundGCTransactionRequestLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn3"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount3"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay3"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+      </requestFlow>
+      <responseFlow>
+        <node displayName="createCancellationRefund : MaintainAccessGC" name="MaintainAccessGC_createCancellationRefund_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:createCancellationRefundResponseMsg"/>
+        </node>
+        <node displayName="createCancellationRefund : MaintainAccessGC" name="MaintainAccessGC_createCancellationRefund_InputFault" type="InputFault">
+          <inputTerminal name="createCancellationRefund_createCancellationRefundFaultMsg" type="ns3:createCancellationRefund_createCancellationRefundFaultMsg"/>
+        </node>
+        <node displayName="refundRequest : RASGenericServicePartner" name="RASGenericServicePartner_refundRequest_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="refundRequest"/>
+          <outputTerminal type="RASGenericService:refundRequestResponse">
+            <wire targetNode="StatusFilter"/>
+          </outputTerminal>
+          <failTerminal type="RASGenericService:refundRequest">
+            <wire targetNode="Mapping"/>
+          </failTerminal>
+        </node>
+        <node displayName="Status Filter" name="StatusFilter" type="MessageFilter">
+          <table name="filters">
+            <row>
+              <property name="pattern" value="/body/refundRequestResponse/RefundRequestResult/clsRefundResponse/Voucherno = 'NA'"/>
+              <property name="terminalName" value="match3"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/refundRequestResponse/RefundRequestResult/clsRefundResponse/VoucherAmt = 'NA'"/>
+              <property name="terminalName" value="match4"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/refundRequestResponse/RefundRequestResult/clsRefundResponse/Status = 'SUCCESS'"/>
+              <property name="terminalName" value="match1"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/refundRequestResponse/RefundRequestResult/clsRefundResponse/ErrorID = '11'"/>
+              <property name="terminalName" value="match2"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/refundRequestResponse/RefundRequestResult/clsRefundResponse/VoucherAmt = '0'"/>
+              <property name="terminalName" value="match5"/>
+            </row>
+          </table>
+          <inputTerminal/>
+          <outputTerminal name="default">
+            <wire targetNode="createCancellationRefundFaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="VoucherNoNotAvailable" name="match3">
+            <wire targetNode="createCancellationRefundFaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="VoucherAmtNotAvailable" name="match4">
+            <wire targetNode="createCancellationRefundFaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Success" name="match1">
+            <wire targetNode="createCancellationRefundOutputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="ErrorId11Failed" name="match2">
+            <wire targetNode="createCancellationRefundOutputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="VoucherAmount0" name="match5">
+            <wire targetNode="createCancellationRefundFaultMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createCancellationRefundFaultMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_CancellationRefund_FaultMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_CancellationRefund_FaultMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:refundRequestResponse"/>
+          <outputTerminal type="ns3:createCancellationRefund_createCancellationRefundFaultMsg">
+            <wire targetNode="SaveFailedResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createCancellationRefundOutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_CancellationRefund_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_CancellationRefund_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:refundRequestResponse"/>
+          <outputTerminal type="ns3:createCancellationRefundResponseMsg">
+            <wire targetNode="SaveSuccessResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createCancellationRefundFaultLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundFaultLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundFaultLogger.file" value="IIDLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_createCancellationRefund_InputFault" targetTerminal="createCancellationRefund_createCancellationRefundFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createCancellationRefundResponseLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundResponseLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundResponseLogger.file" value="IIDLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_createCancellationRefund_InputResponse"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveFailedResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*
+BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);	*/	            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","FAILED");
+smo.setInt("/context/correlation/isExecuting",2);
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+if(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorCode")!=null && !"".equalsIgnoreCase(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorCode")))
+smo.setString("/context/correlation/errorCode",smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorCode"));
+else
+smo.setString("/context/correlation/errorCode","");
+if(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorDetail")!=null && !"".equalsIgnoreCase(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorDetail")))
+smo.setString("/context/correlation/errorDetail",smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorDetail"));
+else
+smo.setString("/context/correlation/errorDetail","");
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597072939398"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createCancellationRefund_createCancellationRefundFaultMsg">
+            <wire targetNode="createCancellationRefundFaultLogger"/>
+            <wire targetNode="GCTransactionLogResponseMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveSuccessResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","SUCCESS");
+smo.setInt("/context/correlation/isExecuting",0);
+smo.setString("/context/correlation/errorCode","");
+smo.setString("/context/correlation/errorDetail","");
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597072941109"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createCancellationRefundResponseMsg">
+            <wire targetNode="createCancellationRefundResponseLogger"/>
+            <wire targetNode="GCTransactionLogResponseMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogResponseMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogResponseMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogResponseMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CreateCancellationRefundGCTransactionResponseLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CreateCancellationRefundGCTransactionResponseLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn5"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount5"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay5"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+        <node name="Mapping" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/CalloutErrorHandlerCancellationRefundRequest.xsl"/>
+          <property name="XMXMap" value="xslt/CalloutErrorHandlerCancellationRefundRequest.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:refundRequest"/>
+          <outputTerminal type="ns3:createCancellationRefund_createCancellationRefundFaultMsg">
+            <wire targetNode="MaintainAccessGC_createCancellationRefund_InputFault" targetTerminal="createCancellationRefund_createCancellationRefundFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+      </responseFlow>
+      <errorFlow>
+        <node displayName="createCancellationRefund : MaintainAccessGC" name="MaintainAccessGC_createCancellationRefund_ErrorInput" type="ErrorInput">
+          <outputTerminal name="catchAll" type="XMLSchema:anyType">
+            <wire targetNode="createCancellationRefundErrorMap"/>
+          </outputTerminal>
+        </node>
+        <node displayName="createCancellationRefund : MaintainAccessGC" name="MaintainAccessGC_createCancellationRefund_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:createCancellationRefundResponseMsg"/>
+        </node>
+        <node displayName="createCancellationRefund : MaintainAccessGC" name="MaintainAccessGC_createCancellationRefund_InputFault" type="InputFault">
+          <inputTerminal name="createCancellationRefund_createCancellationRefundFaultMsg" type="ns3:createCancellationRefund_createCancellationRefundFaultMsg"/>
+        </node>
+        <node name="createCancellationRefundErrorMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_CancellationRefund_ErrorMap_err_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_CancellationRefund_ErrorMap_err_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="ns3:createCancellationRefund_createCancellationRefundFaultMsg">
+            <wire targetNode="SaveErrorResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveErrorResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","FAILED");
+smo.setInt("/context/correlation/isExecuting",2);
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+if(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorCode")!=null && !"".equalsIgnoreCase(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorCode")))
+smo.setString("/context/correlation/errorCode",smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorCode"));
+else
+smo.setString("/context/correlation/errorCode","");
+if(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorDetail")!=null && !"".equalsIgnoreCase(smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorDetail")))
+smo.setString("/context/correlation/errorDetail",smo.getString("/body/createCancellationRefundFault1_createCancellationRefundFault/error[0]/errorDetail"));
+else
+smo.setString("/context/correlation/errorDetail","");
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597073481567"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createCancellationRefund_createCancellationRefundFaultMsg">
+            <wire targetNode="createCancellationRefundErrorLogger"/>
+            <wire targetNode="GCTransactionLogErrorMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createCancellationRefundErrorLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundErrorLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createCancellationRefundErrorLogger.file1" value="IIDLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_createCancellationRefund_InputFault" targetTerminal="createCancellationRefund_createCancellationRefundFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogErrorMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogResponseMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogResponseMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CreateCancellationRefundGCTransactionErrorLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CreateCancellationRefundGCTransactionErrorLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn9"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount9"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay9"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+      </errorFlow>
+    </operation>
+    <operation name="cancelPolicy">
+      <requestFlow>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_Input" type="Input">
+          <property name="correlationContext" value="{http://Access-ApplicationGC}correlationBO"/>
+          <outputTerminal type="ns3:cancelPolicyRequestMsg">
+            <wire targetNode="formatDates"/>
+          </outputTerminal>
+        </node>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:cancelPolicyResponseMsg"/>
+        </node>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_InputFault" type="InputFault">
+          <inputTerminal name="cancelPolicy_cancelPolicyFaultMsg" type="ns3:cancelPolicy_cancelPolicyFaultMsg"/>
+        </node>
+        <node name="formatDates" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+ try{
+ smo.setInt("/context/correlation/transactionId",smo.getInt("/body/cancelPolicy/transactionId"));
+ smo.setInt("/context/correlation/isExecuting",1);
+ smo.setString("/context/correlation/response","");
+smo.setDate("/context/correlation/lastRequestedOn",new Date());
+  if("Motor".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/LOB"))){
+          if(smo.getString("/body/cancelPolicy/cancPolicyData/cancellationReason").equalsIgnoreCase("Request At Insurer Discretion-Misdeclaration of Facts"))
+          smo.setString("/body/cancelPolicy/cancPolicyData/cancellationDescription","Misdeclaration of Facts");
+          if(smo.getString("/body/cancelPolicy/cancPolicyData/cancellationReason").equalsIgnoreCase("Request At Insurer Discretion - PL Rule Book"))
+          smo.setString("/body/cancelPolicy/cancPolicyData/cancellationDescription","PL Rule Book");
+  }
+  if("Aig Combined".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/LOB"))){
+
+     smo.setString("/body/cancelPolicy/cancPolicyData/cancellationDescription",smo.getString("/body/cancelPolicy/cancPolicyData/cancellationOption"));
+     smo.setString("/body/cancelPolicy/cancPolicyData/cancellationReason","Others");
+     if("".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/agreedPremiumAmount")) || smo.getString("/body/cancelPolicy/cancPolicyData/agreedPremiumAmount")==null)
+     smo.setString("/body/cancelPolicy/cancPolicyData/agreedPremiumAmount","0");
+  }
+  
+   if("Property and Energy".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/LOB"))){
+ if("Others".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/cancellationReason"))){
+     smo.setString("/body/cancelPolicy/cancPolicyData/cancellationDescription",smo.getString("/body/cancelPolicy/cancPolicyData/cancellationOption"));
+  }   
+  }
+  
+  if("Liability".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/LOB"))){
+  if("Others".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/cancellationReason"))){
+     smo.setString("/body/cancelPolicy/cancPolicyData/cancellationDescription",smo.getString("/body/cancelPolicy/cancPolicyData/cancellationOption"));
+  } 
+  else
+  {
+  smo.setString("/body/cancelPolicy/cancPolicyData/cancellationDescription",smo.getString("/body/cancelPolicy/cancPolicyData/remarks"));
+  }  
+  }
+   if("Trade Credit".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/LOB"))){
+
+     if("".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/retainMinPrem")) || smo.getString("/body/cancelPolicy/cancPolicyData/retainMinPrem")==null)
+     smo.setString("/body/cancelPolicy/cancPolicyData/retainMinPrem","0");
+  }
+
+  Date oldDate = null; 
+  String formattedDate = null;
+  SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+  
+   oldDate = smo.getDate("/body/cancelPolicy/cancPolicyData/policyStartDate");
+   if(oldDate!=null){
+   formattedDate = dateFormat.format(oldDate);
+   smo.setString("/context/correlation/policyStartDate",formattedDate);
+   }
+   
+    oldDate = smo.getDate("/body/cancelPolicy/cancPolicyData/cancRequestDate");
+    if(oldDate!=null){
+    formattedDate = dateFormat.format(oldDate);
+    smo.setString("/context/correlation/endDateOfRequest",formattedDate);
+    }
+   
+ 
+   SimpleDateFormat getTime = new SimpleDateFormat("HH:mm");
+   Date date = new Date();
+   smo.setString("/body/cancelPolicy/cancPolicyData/effectiveTime",smo.getString("/body/cancelPolicy/cancPolicyData/effectiveTime"));
+   out.fire(smo);
+   
+   oldDate = smo.getDate("/body/cancelPolicy/cancPolicyData/peroidFromDate");
+    if(oldDate!=null){
+    formattedDate = dateFormat.format(oldDate);
+    smo.setString("/context/correlation/periodFromDate",formattedDate);
+    }
+    
+    oldDate = smo.getDate("/body/cancelPolicy/cancPolicyData/periodToDate");
+    if(oldDate!=null){
+    formattedDate = dateFormat.format(oldDate);
+    smo.setString("/context/correlation/periodToDate",formattedDate);
+    }
+   
+   Date ncbDate = smo.getDate("/body/cancelPolicy/cancPolicyData/ncbReservingEffectiveDate");
+   if(ncbDate!=null){
+    formattedDate = dateFormat.format(ncbDate);
+    smo.setString("/context/correlation/ncbReservingDate",formattedDate);
+   }
+   String lob  = smo.getString("/body/cancelPolicy/cancPolicyData/LOB");
+   if(lob.equalsIgnoreCase("Health")|| lob.equalsIgnoreCase("Personal Accident")||"LTA".equalsIgnoreCase(lob)){
+   smo.setString("/body/cancelPolicy/cancPolicyData/remarks",smo.getString("/body/cancelPolicy/cancPolicyData/cancellationReason"));
+   smo.setString("/body/cancelPolicy/cancPolicyData/cancellationReason","");
+   }
+   
+  }
+  catch(Exception e){
+  e.printStackTrace();
+  } // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1537767614607"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="java.text.SimpleDateFormat;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:cancelPolicyRequestMsg">
+            <wire targetNode="LOBFilter"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="LOBFilter" type="MessageFilter">
+          <table name="filters">
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Health'"/>
+              <property name="terminalName" value="match3"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Motor'"/>
+              <property name="terminalName" value="match2"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Travel'"/>
+              <property name="terminalName" value="match1"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'LTA'"/>
+              <property name="terminalName" value="match4"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Home'"/>
+              <property name="terminalName" value="match5"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Aig Combined'"/>
+              <property name="terminalName" value="match6"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Marine Cargo'"/>
+              <property name="terminalName" value="match7"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Personal Accident'"/>
+              <property name="terminalName" value="match8"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Property and Energy'"/>
+              <property name="terminalName" value="match9"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Liability'"/>
+              <property name="terminalName" value="match10"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Financial Line'"/>
+              <property name="terminalName" value="match11"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Trade Credit'"/>
+              <property name="terminalName" value="match12"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Aviation'"/>
+              <property name="terminalName" value="match13"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Rural'"/>
+              <property name="terminalName" value="match14"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/LOB = 'Personal Lines'"/>
+              <property name="terminalName" value="match15"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/KhokhaFlag = 'Y'"/>
+              <property name="terminalName" value="match16"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/cancelPolicy/cancPolicyData/refundType = 'BALANCE REFUND'"/>
+              <property name="terminalName" value="match17"/>
+            </row>
+          </table>
+          <inputTerminal/>
+          <outputTerminal name="default"/>
+          <outputTerminal displayName="Motor" name="match2">
+            <wire targetNode="cancelPolicy_Motor_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Health" name="match3">
+            <wire targetNode="cancelPolicy_Health_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Travel" name="match1">
+            <wire targetNode="cancelPolicy_Travel_LTA_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="LTA" name="match4">
+            <wire targetNode="cancelPolicy_Travel_LTA_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Home" name="match5">
+            <wire targetNode="cancelPolicy_Home_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="AIG" name="match6">
+            <wire targetNode="cancelPolicy_AigCombined_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Marine" name="match7">
+            <wire targetNode="cancelPolicy_MarineCargo_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="PA" name="match8">
+            <wire targetNode="cancelPolicy_PersonalAccident_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="PE" name="match9">
+            <wire targetNode="cancelPolicy_PropertyandEnergy_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Liability" name="match10">
+            <wire targetNode="cancelPolicy_Liability_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Financial Line" name="match11">
+            <wire targetNode="cancelPolicy_FinancialLines_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Trade credit" name="match12">
+            <wire targetNode="cancelPolicy_TradeCredit_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Aviation" name="match13">
+            <wire targetNode="cancelPolicy_Aviation_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Rural" name="match14"/>
+          <outputTerminal displayName="Personal Lines" name="match15">
+            <wire targetNode="cancelPolicy_PersonalLines_InputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Khokha" name="match16">
+            <wire targetNode="CancelPolicy_KhokhaInput"/>
+          </outputTerminal>
+          <outputTerminal displayName="BALANCE REFUND" name="match17">
+            <wire targetNode="Check_Certificate_Number"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyHealth" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+
+/**
+ * GENERATED COMMENT - DO NOT MODIFY
+ * Variables:  for output terminals - out (com.ibm.wsspi.sibx.mediation.OutputTerminal)
+ *             for user properties - <No user properties defined>
+ * Inputs:     inputTerminal (com.ibm.wsspi.sibx.mediation.InputTerminal), smo (com.ibm.websphere.sibx.smobo.ServiceMessageObject)
+ * Exceptions: com.ibm.wsspi.sibx.mediation.MediationConfigurationException, com.ibm.wsspi.sibx.mediation.MediationBusinessException
+ */
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1537779935053"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASHealthService:webServiceRefundCancellationHealth">
+            <wire targetNode="cancelPolicyHealthRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyMotor" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+
+/**
+ * GENERATED COMMENT - DO NOT MODIFY
+ * Variables:  for output terminals - out (com.ibm.wsspi.sibx.mediation.OutputTerminal)
+ *             for user properties - <No user properties defined>
+ * Inputs:     inputTerminal (com.ibm.wsspi.sibx.mediation.InputTerminal), smo (com.ibm.websphere.sibx.smobo.ServiceMessageObject)
+ * Exceptions: com.ibm.wsspi.sibx.mediation.MediationConfigurationException, com.ibm.wsspi.sibx.mediation.MediationBusinessException
+ */
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1537781115011"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASMotorService:webServiceRefundCancellationDtls">
+            <wire targetNode="cancelPolicyMotorRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="saverequestStructureCancelPolicyTravel&amp;LTA" name="saverequestStructureCancelPolicyTravel_LTA" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+
+/**
+ * GENERATED COMMENT - DO NOT MODIFY
+ * Variables:  for output terminals - out (com.ibm.wsspi.sibx.mediation.OutputTerminal)
+ *             for user properties - <No user properties defined>
+ * Inputs:     inputTerminal (com.ibm.wsspi.sibx.mediation.InputTerminal), smo (com.ibm.websphere.sibx.smobo.ServiceMessageObject)
+ * Exceptions: com.ibm.wsspi.sibx.mediation.MediationConfigurationException, com.ibm.wsspi.sibx.mediation.MediationBusinessException
+ */
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1537781638916"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASLTAService:webServiceRefundCancellationLTA">
+            <wire targetNode="cancelPolicyTravel_LTARequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyHome" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+
+/**
+ * GENERATED COMMENT - DO NOT MODIFY
+ * Variables:  for output terminals - out (com.ibm.wsspi.sibx.mediation.OutputTerminal)
+ *             for user properties - <No user properties defined>
+ * Inputs:     inputTerminal (com.ibm.wsspi.sibx.mediation.InputTerminal), smo (com.ibm.websphere.sibx.smobo.ServiceMessageObject)
+ * Exceptions: com.ibm.wsspi.sibx.mediation.MediationConfigurationException, com.ibm.wsspi.sibx.mediation.MediationBusinessException
+ */
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1538126587928"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal type="RASHomeService:webServiceRefundCancellationHome"/>
+          <outputTerminal type="RASHomeService:webServiceRefundCancellationHome">
+            <wire targetNode="cancelPolicyHomeRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyPersonalAccident" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+
+/**
+ * GENERATED COMMENT - DO NOT MODIFY
+ * Variables:  for output terminals - out (com.ibm.wsspi.sibx.mediation.OutputTerminal)
+ *             for user properties - <No user properties defined>
+ * Inputs:     inputTerminal (com.ibm.wsspi.sibx.mediation.InputTerminal), smo (com.ibm.websphere.sibx.smobo.ServiceMessageObject)
+ * Exceptions: com.ibm.wsspi.sibx.mediation.MediationConfigurationException, com.ibm.wsspi.sibx.mediation.MediationBusinessException
+ */
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1538126676422"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal type="RASPAService:webServiceRefundCancellationPA"/>
+          <outputTerminal type="RASPAService:webServiceRefundCancellationPA">
+            <wire targetNode="cancelPolicyPersonalAccidentRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_Motor_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Motor_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Motor_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtls">
+            <wire targetNode="saverequestStructureCancelPolicyMotor"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyMotorRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyMotorRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyMotorRequestLogger.file1" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASMotorServicePartner_webServiceRefundCancellationDtls_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_Health_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Health_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Health_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASHealthService:webServiceRefundCancellationHealth">
+            <wire targetNode="saverequestStructureCancelPolicyHealth"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyHealthRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyHealthRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyHealthRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationHealth : RASHealthServicePartner" name="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout" type="Callout">
+          <property name="referenceName" value="RASHealthServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationHealth"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASHealthServicePartner_webServiceRefundCancellationHealth_Callout.retryDelay"/>
+          <inputTerminal type="RASHealthService:webServiceRefundCancellationHealth"/>
+        </node>
+        <node displayName="cancelPolicy_Travel&amp;LTA_InputMap" name="cancelPolicy_Travel_LTA_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Travel_LTA_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Travel_LTA_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASLTAService:webServiceRefundCancellationLTA">
+            <wire targetNode="saverequestStructureCancelPolicyTravel_LTA"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="cancelPolicyTravel&amp;LTARequestLogger" name="cancelPolicyTravel_LTARequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyTravel_LTARequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyTravel_LTARequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationLTA : RASLTAServicePartner" name="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout" type="Callout">
+          <property name="referenceName" value="RASLTAServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationLTA"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASLTAServicePartner_webServiceRefundCancellationLTA_Callout.retryDelay"/>
+          <inputTerminal type="RASLTAService:webServiceRefundCancellationLTA"/>
+        </node>
+        <node name="cancelPolicy_Home_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Home_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Home_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASHomeService:webServiceRefundCancellationHome">
+            <wire targetNode="saverequestStructureCancelPolicyHome"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyHomeRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyHomeRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyHomeRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASHomeServicePartner_webServiceRefundCancellationHome_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationHome : RASHomeServicePartner" name="RASHomeServicePartner_webServiceRefundCancellationHome_Callout" type="Callout">
+          <property name="referenceName" value="RASHomeServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationHome"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASHomeServicePartner_webServiceRefundCancellationHome_Callout.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASHomeServicePartner_webServiceRefundCancellationHome_Callout.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASHomeServicePartner_webServiceRefundCancellationHome_Callout.retryDelay"/>
+          <inputTerminal type="RASHomeService:webServiceRefundCancellationHome"/>
+        </node>
+        <node name="cancelPolicy_PersonalAccident_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_PersonalAccident_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_PersonalAccident_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASPAService:webServiceRefundCancellationPA">
+            <wire targetNode="saverequestStructureCancelPolicyPersonalAccident"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyPersonalAccidentRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyPersonalAccidentRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyPersonalAccidentRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASPAServicePartner_webServiceRefundCancellationPA_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationPA : RASPAServicePartner" name="RASPAServicePartner_webServiceRefundCancellationPA_Callout" type="Callout">
+          <property name="referenceName" value="RASPAServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationPA"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn10"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount10"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay10"/>
+          <inputTerminal type="RASPAService:webServiceRefundCancellationPA"/>
+        </node>
+        <node displayName="webServiceRefundCancellationDtls : RASMotorServicePartner" name="RASMotorServicePartner_webServiceRefundCancellationDtls_Callout" type="Callout">
+          <property name="referenceName" value="RASMotorServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationDtls"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay"/>
+          <inputTerminal type="RASMotorService:webServiceRefundCancellationDtls"/>
+        </node>
+        <node name="cancelPolicy_FinancialLines_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_FinancialLines_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_FinancialLines_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASFinancialLinesService:webServiceRefundCancellationFinancialLines">
+            <wire targetNode="saverequestStructureCancelPolicyFinancialLines"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyFinancialLines" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+ 
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1583840628570"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASFinancialLinesService:webServiceRefundCancellationFinancialLines">
+            <wire targetNode="cancelPolicyFinancialLinesRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_TradeCredit_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_TradeCredit_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_TradeCredit_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASTradeCreditService:webServiceRefundCancellationTradeCredit">
+            <wire targetNode="saverequestStructureCancelPolicyTradeCredit"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyTradeCredit" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1583841195235"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASTradeCreditService:webServiceRefundCancellationTradeCredit">
+            <wire targetNode="cancelPolicyTradeCreditRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationTradeCredit : RASTradeCreditServicePartner" name="RASTradeCreditServicePartner_webServiceRefundCancellationTradeCredit_Callout" type="Callout">
+          <property name="referenceName" value="RASTradeCreditServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationTradeCredit"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn2"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount2"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay2"/>
+          <inputTerminal type="RASTradeCreditService:webServiceRefundCancellationTradeCredit"/>
+        </node>
+        <node displayName="webServiceRefundCancellationFinancialLines : RASFinancialLinesServicePartner" name="RASFinancialLinesServicePartner_webServiceRefundCancellationFinancialLines_Callout" type="Callout">
+          <property name="referenceName" value="RASFinancialLinesServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationFinancialLines"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn3"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount3"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay3"/>
+          <inputTerminal type="RASFinancialLinesService:webServiceRefundCancellationFinancialLines"/>
+        </node>
+        <node name="cancelPolicyFinancialLinesRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyFinancalLinesRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyFinancalLinesRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASFinancialLinesServicePartner_webServiceRefundCancellationFinancialLines_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_PersonalLines_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_PersonalLines_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_PersonalLines_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASPersonalLinesService:webServiceRefundCancellationPersonalLines">
+            <wire targetNode="saverequestStructureCancelPolicyPersonalLines"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyPersonalLines" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1583842174475"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASPersonalLinesService:webServiceRefundCancellationPersonalLines">
+            <wire targetNode="cancelPolicyPersonalLinesRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyPersonalLinesRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyPersonalLinesRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyPersonalLinesRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASPersonalLinesServicePartner_webServiceRefundCancellationPersonalLines_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationPersonalLines : RASPersonalLinesServicePartner" name="RASPersonalLinesServicePartner_webServiceRefundCancellationPersonalLines_Callout" type="Callout">
+          <property name="referenceName" value="RASPersonalLinesServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationPersonalLines"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn5"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount5"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay5"/>
+          <inputTerminal type="RASPersonalLinesService:webServiceRefundCancellationPersonalLines"/>
+        </node>
+        <node name="cancelPolicy_MarineCargo_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_MarineCargo_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_MarineCargo_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASMarineService:webServiceRefundCancellationMarine">
+            <wire targetNode="saverequestStructureCancelPolicyMarineCargo"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyMarineCargo" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1584782058476"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASMarineService:webServiceRefundCancellationMarine">
+            <wire targetNode="cancelPolicyMarineCargoRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyMarineCargoRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyMarineCargoRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyMarineCargoRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationMarine : RASMarineServicePartner" name="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout" type="Callout">
+          <property name="referenceName" value="RASMarineServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationMarine"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="RASMarineServicePartner_webServiceRefundCancellationMarine_Callout.retryDelay"/>
+          <inputTerminal type="RASMarineService:webServiceRefundCancellationMarine"/>
+        </node>
+        <node name="cancelPolicy_AigCombined_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_AigCombined_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_AigCombined_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASAIGService:webServiceRefundCancellationAIG">
+            <wire targetNode="saverequestStructureCancelPolicyAigCombined"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyAigCombined" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1584782792779"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASAIGService:webServiceRefundCancellationAIG">
+            <wire targetNode="cancelPolicyAigCombinedRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyAigCombinedRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyAigCombinedRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyAigCombinedRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASAIGServicePartner_webServiceRefundCancellationAIG_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationAIG : RASAIGServicePartner" name="RASAIGServicePartner_webServiceRefundCancellationAIG_Callout" type="Callout">
+          <property name="referenceName" value="RASAIGServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationAIG"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn1"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount1"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay1"/>
+          <inputTerminal type="RASAIGService:webServiceRefundCancellationAIG"/>
+        </node>
+        <node name="cancelPolicy_Aviation_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Aviation_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Aviation_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASAviationService:webServiceRefundCancellationAviation">
+            <wire targetNode="saverequestStructureCancelPolicyAviation"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyAviation" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1584783409891"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASAviationService:webServiceRefundCancellationAviation">
+            <wire targetNode="cancelPolicyAviationRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyAviationRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyAviationRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyAviationRequestLogger.file1" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASAviationServicePartner_webServiceRefundCancellationAviation_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationAviation : RASAviationServicePartner" name="RASAviationServicePartner_webServiceRefundCancellationAviation_Callout" type="Callout">
+          <property name="referenceName" value="RASAviationServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationAviation"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn4"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount4"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay4"/>
+          <inputTerminal type="RASAviationService:webServiceRefundCancellationAviation"/>
+        </node>
+        <node name="cancelPolicy_Liability_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Liability_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Liability_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASCasualtyService:webServiceRefundCancellationCasualty">
+            <wire targetNode="saverequestStructureCancelPolicyLiability"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyLiability" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1585044192062"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASCasualtyService:webServiceRefundCancellationCasualty">
+            <wire targetNode="cancelPolicyLiabilityRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyLiabilityRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyLiabilityRequestLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyLiabilityRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASCasualtyServicePartner_webServiceRefundCancellationCasualty_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationCasualty : RASCasualtyServicePartner" name="RASCasualtyServicePartner_webServiceRefundCancellationCasualty_Callout" type="Callout">
+          <property name="referenceName" value="RASCasualtyServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationCasualty"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn6"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount6"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay6"/>
+          <inputTerminal type="RASCasualtyService:webServiceRefundCancellationCasualty"/>
+        </node>
+        <node name="cancelPolicy_PropertyandEnergy_InputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_PropertyandEnergy_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_PropertyandEnergy_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASPropertyEnergyService:webServiceRefundCancellationPE">
+            <wire targetNode="saverequestStructureCancelPolicyPropertyandEnergy"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saverequestStructureCancelPolicyPropertyandEnergy" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1585303073382"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASPropertyEnergyService:webServiceRefundCancellationPE">
+            <wire targetNode="cancelPolicyPropertyandEnergyRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyPropertyandEnergyRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyPropertyandEnergyRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyPropertyandEnergyRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASPropertyEnergyServicePartner_webServiceRefundCancellationPE_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationPE : RASPropertyEnergyServicePartner" name="RASPropertyEnergyServicePartner_webServiceRefundCancellationPE_Callout" type="Callout">
+          <property name="referenceName" value="RASPropertyEnergyServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationPE"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn7"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount7"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay7"/>
+          <inputTerminal type="RASPropertyEnergyService:webServiceRefundCancellationPE"/>
+        </node>
+        <node name="cancelPolicyTradeCreditRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyTradeCreditRequestLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyTradeCreditRequestLogger.file" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASTradeCreditServicePartner_webServiceRefundCancellationTradeCredit_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogRequestMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogRequestMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogRequestMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal explicitType="false" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CancelPolicyGCTransactionRequestLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CancelPolicyGCTransactionRequestLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+        <node displayName="webServiceRefundCancellationKhoka : RASRefundCancellationKhokaServicePartner" name="RASRefundCancellationKhokaServicePartner_webServiceRefundCancellationKhoka_Callout" type="Callout">
+          <property name="referenceName" value="RASRefundCancellationKhokaServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationKhoka"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn11"/>
+          <property name="retryCount" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount11"/>
+          <property name="retryDelay" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay11"/>
+          <inputTerminal type="ns34:webServiceRefundCancellationKhoka"/>
+        </node>
+        <node name="CancelPolicy_KhokhaInput" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/CancelPolicy_KhokhaInput.xsl"/>
+          <property name="XMXMap" value="xslt/CancelPolicy_KhokhaInput.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="ns34:webServiceRefundCancellationKhoka">
+            <wire targetNode="SaveRequestCancelPolicyKhokha"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveRequestCancelPolicyKhokha" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1695792096266"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns34:webServiceRefundCancellationKhoka">
+            <wire targetNode="CancelPolicyInputLoggerKhoKha"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CancelPolicyInputLoggerKhoKha" type="Trace">
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="CancelPolicyInputLoggerKhoKha.file" value="RASLog.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASRefundCancellationKhokaServicePartner_webServiceRefundCancellationKhoka_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="initiateBalanceRefund : RASGenericServicePartner" name="RASGenericServicePartner_initiateBalanceRefund_Callout" type="Callout">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="initiateBalanceRefund"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn13"/>
+          <property name="retryCount" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount13"/>
+          <property name="retryDelay" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay13"/>
+          <inputTerminal type="RASGenericService:initiateBalanceRefund"/>
+        </node>
+        <node displayName="Check Certificate Number" name="Check_Certificate_Number" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+ 
+ System.out.println("Certificate Number --> "+ smo.getString("/body/cancelPolicy/cancPolicyData/certificateNumber"));
+ System.out.println("".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/certificateNumber")) || 
+ smo.getString("/body/cancelPolicy/cancPolicyData/certificateNumber")==null);
+ if("".equalsIgnoreCase(smo.getString("/body/cancelPolicy/cancPolicyData/certificateNumber")) || 
+ smo.getString("/body/cancelPolicy/cancPolicyData/certificateNumber")==null ){
+    smo.setString("/body/cancelPolicy/cancPolicyData/certificateNumber","");
+ }
+ 
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1703738978541"/>
+          <property name="version" value="6.1.0"/>
+          <inputTerminal/>
+          <outputTerminal type="ns3:cancelPolicyRequestMsg">
+            <wire targetNode="Mapping"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Mapping" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/BalanceRefundInputMapper.xsl"/>
+          <property name="XMXMap" value="xslt/BalanceRefundInputMapper.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:cancelPolicyRequestMsg"/>
+          <outputTerminal type="RASGenericService:initiateBalanceRefund">
+            <wire targetNode="SaveRequestBalanceRefundCancelPolicy"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveRequestBalanceRefundCancelPolicy" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1703738987626"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASGenericService:initiateBalanceRefund">
+            <wire targetNode="BalanceRefundCancelpolicyRequestLogger"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="BalanceRefundCancelpolicyRequestLogger" type="Trace">
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="BalanceRefundCancelpolicyRequestLogger.file" value="RASBalanceRefundLog.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="RASGenericServicePartner_initiateBalanceRefund_Callout"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+      </requestFlow>
+      <responseFlow>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:cancelPolicyResponseMsg"/>
+        </node>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_InputFault" type="InputFault">
+          <inputTerminal name="cancelPolicy_cancelPolicyFaultMsg" type="ns3:cancelPolicy_cancelPolicyFaultMsg"/>
+        </node>
+        <node name="STATUS" type="MessageFilter">
+          <table name="filters">
+            <row>
+              <property name="pattern" value="/body/webServiceRefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/Status = 'SUCCESS'"/>
+              <property name="terminalName" value="match1"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/webServiceRefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ErrorDesc = '...Policy is already cancelled.Please find the cancelled proposal Number.'"/>
+              <property name="terminalName" value="match2"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/webServiceRefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ErrorDesc = 'Unsuccessful ...Policy is already cancelled.Please find the cancelled proposal Number.'"/>
+              <property name="terminalName" value="match3"/>
+            </row>
+          </table>
+          <inputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse"/>
+          <outputTerminal name="default" type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="cancelPolicy_FaultMap1"/>
+          </outputTerminal>
+          <outputTerminal displayName="Success" name="match1" type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="cancelPolicy_OutputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="ErrorId1005Failed" name="match2">
+            <wire targetNode="cancelPolicy_OutputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="ErrorId1009Failed" name="match3">
+            <wire targetNode="cancelPolicy_OutputMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationHealth : RASHealthServicePartner" name="RASHealthServicePartner_webServiceRefundCancellationHealth_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASHealthServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationHealth"/>
+          <outputTerminal type="RASHealthService:webServiceRefundCancellationHealthResponse">
+            <wire targetNode="cancelPolicy_Health_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASHealthService:webServiceRefundCancellationHealth"/>
+        </node>
+        <node displayName="webServiceRefundCancellationLTA : RASLTAServicePartner" name="RASLTAServicePartner_webServiceRefundCancellationLTA_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASLTAServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationLTA"/>
+          <outputTerminal type="RASLTAService:webServiceRefundCancellationLTAResponse">
+            <wire targetNode="cancelPolicy_Travel_LTA_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASLTAService:webServiceRefundCancellationLTA"/>
+        </node>
+        <node displayName="webServiceRefundCancellationHome : RASHomeServicePartner" name="RASHomeServicePartner_webServiceRefundCancellationHome_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASHomeServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationHome"/>
+          <outputTerminal type="RASHomeService:webServiceRefundCancellationHomeResponse">
+            <wire targetNode="cancelPolicy_Home_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASHomeService:webServiceRefundCancellationHome"/>
+        </node>
+        <node displayName="webServiceRefundCancellationPA : RASPAServicePartner" name="RASPAServicePartner_webServiceRefundCancellationPA_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASPAServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationPA"/>
+          <outputTerminal type="RASPAService:webServiceRefundCancellationPAResponse">
+            <wire targetNode="cancelPolicy_PersonalAccident_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASPAService:webServiceRefundCancellationPA"/>
+        </node>
+        <node name="cancelPolicyResponseLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyResponseLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyResponseLogger.file1" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_cancelPolicy_InputResponse"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="cancelPolicy_FaultMap" name="cancelPolicy_FaultMap1" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_FaultMap1_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_FaultMap1_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse"/>
+          <outputTerminal type="ns3:cancelPolicy_cancelPolicyFaultMsg">
+            <wire targetNode="saveFailedResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyFaultLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyFaultLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyFaultLogger.file1" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_cancelPolicy_InputFault" targetTerminal="cancelPolicy_cancelPolicyFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_Health_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Health_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Health_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASHealthService:webServiceRefundCancellationHealthResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="cancelPolicy_Travel&amp;LTA_OutputMap" name="cancelPolicy_Travel_LTA_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Travel_LTA_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Travel_LTA_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASLTAService:webServiceRefundCancellationLTAResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_Home_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Home_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Home_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASHomeService:webServiceRefundCancellationHomeResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_PersonalAccident_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_PersonalAccident_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_PersonalAccident_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASPAService:webServiceRefundCancellationPAResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationDtls : RASMotorServicePartner" name="RASMotorServicePartner_webServiceRefundCancellationDtls_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASMotorServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationDtls"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal type="RASMotorService:webServiceRefundCancellationDtls"/>
+        </node>
+        <node displayName="webServiceRefundCancellationTradeCredit : RASTradeCreditServicePartner" name="RASTradeCreditServicePartner_webServiceRefundCancellationTradeCredit_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASTradeCreditServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationTradeCredit"/>
+          <outputTerminal type="RASTradeCreditService:webServiceRefundCancellationTradeCreditResponse">
+            <wire targetNode="cancelPolicy_TradeCredit_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASTradeCreditService:webServiceRefundCancellationTradeCredit"/>
+        </node>
+        <node displayName="webServiceRefundCancellationFinancialLines : RASFinancialLinesServicePartner" name="RASFinancialLinesServicePartner_webServiceRefundCancellationFinancialLines_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASFinancialLinesServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationFinancialLines"/>
+          <outputTerminal type="RASFinancialLinesService:webServiceRefundCancellationFinancialLinesResponse">
+            <wire targetNode="cancelPolicy_FinancialLines_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASFinancialLinesService:webServiceRefundCancellationFinancialLines"/>
+        </node>
+        <node displayName="webServiceRefundCancellationPersonalLines : RASPersonalLinesServicePartner" name="RASPersonalLinesServicePartner_webServiceRefundCancellationPersonalLines_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASPersonalLinesServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationPersonalLines"/>
+          <outputTerminal type="RASPersonalLinesService:webServiceRefundCancellationPersonalLinesResponse">
+            <wire targetNode="cancelPolicy_PersonalLines_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASPersonalLinesService:webServiceRefundCancellationPersonalLines"/>
+        </node>
+        <node name="cancelPolicy_TradeCredit_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_TradeCredit_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_TradeCredit_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASTradeCreditService:webServiceRefundCancellationTradeCreditResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_FinancialLines_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_FinancialLines_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_FinancialLines_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASFinancialLinesService:webServiceRefundCancellationFinancialLinesResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_PersonalLines_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_PersonalLines_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_PersonalLines_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASPersonalLinesService:webServiceRefundCancellationPersonalLinesResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationMarine : RASMarineServicePartner" name="RASMarineServicePartner_webServiceRefundCancellationMarine_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASMarineServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationMarine"/>
+          <outputTerminal type="RASMarineService:webServiceRefundCancellationMarineResponse">
+            <wire targetNode="cancelPolicy_MarineCargo_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASMarineService:webServiceRefundCancellationMarine"/>
+        </node>
+        <node name="cancelPolicy_MarineCargo_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_MarineCargo_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_MarineCargo_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASMarineService:webServiceRefundCancellationMarineResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationAIG : RASAIGServicePartner" name="RASAIGServicePartner_webServiceRefundCancellationAIG_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASAIGServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationAIG"/>
+          <outputTerminal type="RASAIGService:webServiceRefundCancellationAIGResponse">
+            <wire targetNode="cancelPolicy_AigCombined_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASAIGService:webServiceRefundCancellationAIG"/>
+        </node>
+        <node displayName="webServiceRefundCancellationAviation : RASAviationServicePartner" name="RASAviationServicePartner_webServiceRefundCancellationAviation_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASAviationServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationAviation"/>
+          <outputTerminal type="RASAviationService:webServiceRefundCancellationAviationResponse">
+            <wire targetNode="cancelPolicy_Aviation_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASAviationService:webServiceRefundCancellationAviation"/>
+        </node>
+        <node name="cancelPolicy_AigCombined_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_AigCombined_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_AigCombined_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASAIGService:webServiceRefundCancellationAIGResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicy_Aviation_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Aviation_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Aviation_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASAviationService:webServiceRefundCancellationAviationResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationCasualty : RASCasualtyServicePartner" name="RASCasualtyServicePartner_webServiceRefundCancellationCasualty_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASCasualtyServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationCasualty"/>
+          <outputTerminal type="RASCasualtyService:webServiceRefundCancellationCasualtyResponse">
+            <wire targetNode="cancelPolicy_Liability_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASCasualtyService:webServiceRefundCancellationCasualty"/>
+        </node>
+        <node name="cancelPolicy_Liability_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_Liability_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_Liability_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASCasualtyService:webServiceRefundCancellationCasualtyResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationPE : RASPropertyEnergyServicePartner" name="RASPropertyEnergyServicePartner_webServiceRefundCancellationPE_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASPropertyEnergyServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationPE"/>
+          <outputTerminal type="RASPropertyEnergyService:webServiceRefundCancellationPEResponse">
+            <wire targetNode="cancelPolicy_PropertyandEnergy_OutputMap"/>
+          </outputTerminal>
+          <failTerminal type="RASPropertyEnergyService:webServiceRefundCancellationPE"/>
+        </node>
+        <node name="cancelPolicy_PropertyandEnergy_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_PropertyandEnergy_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_PropertyandEnergy_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASPropertyEnergyService:webServiceRefundCancellationPEResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saveFailedResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*
+BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);	*/	            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","FAILED");
+smo.setInt("/context/correlation/isExecuting",2);
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+if(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorCode")!=null && !"".equalsIgnoreCase(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorCode")))
+smo.setString("/context/correlation/errorCode",smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorCode"));
+else
+smo.setString("/context/correlation/errorCode","");
+if(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorDetail")!=null && !"".equalsIgnoreCase(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorDetail")))
+smo.setString("/context/correlation/errorDetail",smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorDetail"));
+else
+smo.setString("/context/correlation/errorDetail","");
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1596518435818"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:cancelPolicy_cancelPolicyFaultMsg">
+            <wire targetNode="cancelPolicyFaultLogger"/>
+            <wire targetNode="GCTransactionLogResponseMap1"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saveSuccessResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","SUCCESS");
+smo.setInt("/context/correlation/isExecuting",0);
+smo.setString("/context/correlation/errorCode","");
+smo.setString("/context/correlation/errorDetail","");
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1596518527088"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:cancelPolicyResponseMsg">
+            <wire targetNode="cancelPolicyResponseLogger"/>
+            <wire targetNode="GCTransactionLogResponseMap1"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="GCTransactionLogResponseMap" name="GCTransactionLogResponseMap1" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogResponseMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogResponseMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CancelPolicyGCTransactionResponseLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CancelPolicyGCTransactionResponseLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn1"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount1"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay1"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+        <node name="cancelPolicy_OutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse"/>
+          <outputTerminal type="ns3:cancelPolicyResponseMsg">
+            <wire targetNode="saveSuccessResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="webServiceRefundCancellationKhoka : RASRefundCancellationKhokaServicePartner" name="RASRefundCancellationKhokaServicePartner_webServiceRefundCancellationKhoka_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASRefundCancellationKhokaServicePartner"/>
+          <property name="operationName" value="webServiceRefundCancellationKhoka"/>
+          <outputTerminal type="ns34:webServiceRefundCancellationKhokaResponse">
+            <wire targetNode="Mapping"/>
+          </outputTerminal>
+          <failTerminal type="ns34:webServiceRefundCancellationKhoka"/>
+        </node>
+        <node name="Mapping" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/CancelPolicy_KhokhaOutputMap.xsl"/>
+          <property name="XMXMap" value="xslt/CancelPolicy_KhokhaOutputMap.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns34:webServiceRefundCancellationKhokaResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="initiateBalanceRefund : RASGenericServicePartner" name="RASGenericServicePartner_initiateBalanceRefund_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="initiateBalanceRefund"/>
+          <outputTerminal type="RASGenericService:initiateBalanceRefundResponse">
+            <wire targetNode="BalanceRefundCancelPolicyOutput"/>
+          </outputTerminal>
+          <failTerminal type="RASGenericService:initiateBalanceRefund"/>
+        </node>
+        <node name="BalanceRefundCancelPolicyOutput" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/BalanceRefundCancelPolicyOutput.xsl"/>
+          <property name="XMXMap" value="xslt/BalanceRefundCancelPolicyOutput.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:initiateBalanceRefundResponse"/>
+          <outputTerminal type="RASMotorService:webServiceRefundCancellationDtlsResponse">
+            <wire targetNode="STATUS"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+      </responseFlow>
+      <errorFlow>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_ErrorInput" type="ErrorInput">
+          <outputTerminal name="catchAll" type="XMLSchema:anyType">
+            <wire targetNode="cancelPolicy_ErrorMap"/>
+          </outputTerminal>
+        </node>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:cancelPolicyResponseMsg"/>
+        </node>
+        <node displayName="cancelPolicy : MaintainAccessGC" name="MaintainAccessGC_cancelPolicy_InputFault" type="InputFault">
+          <inputTerminal name="cancelPolicy_cancelPolicyFaultMsg" type="ns3:cancelPolicy_cancelPolicyFaultMsg"/>
+        </node>
+        <node name="cancelPolicy_ErrorMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/cancelPolicy_ErrorMap_err_1.xsl"/>
+          <property name="XMXMap" value="xslt/cancelPolicy_ErrorMap_err_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="ns3:cancelPolicy_cancelPolicyFaultMsg">
+            <wire targetNode="saveErrorResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="cancelPolicyErrorLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyErrorLogger.enabled"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="cancelPolicyErrorLogger.file1" value="D:\Sasidhar\RAS\Developments\CR-RAS-74\log.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_cancelPolicy_InputFault" targetTerminal="cancelPolicy_cancelPolicyFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saveErrorResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);	*/	            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","FAILED");
+smo.setInt("/context/correlation/isExecuting",2);
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+if(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorCode")!=null && !"".equalsIgnoreCase(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorCode")))
+smo.setString("/context/correlation/errorCode",smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorCode"));
+else
+smo.setString("/context/correlation/errorCode","");
+if(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorDetail")!=null && !"".equalsIgnoreCase(smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorDetail")))
+smo.setString("/context/correlation/errorDetail",smo.getString("/body/cancelPolicyFault1_cancelPolicyFault/error[0]/errorDetail"));
+else
+smo.setString("/context/correlation/errorDetail","");
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1596519264634"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:cancelPolicy_cancelPolicyFaultMsg">
+            <wire targetNode="cancelPolicyErrorLogger"/>
+            <wire targetNode="GCTransactionLogErrorMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogErrorMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogResponseMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogResponseMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CancelPolicyGCTransactionErrorLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CancelPolicyGCTransactionErrorLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="CancelPolicyGCTransactionErrorLogService.retryOn"/>
+          <property name="retryCount" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="CancelPolicyGCTransactionErrorLogService.retryCount"/>
+          <property name="retryDelay" promotedPropertyGroup="RASAccess-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="CancelPolicyGCTransactionErrorLogService.retryDelay"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+      </errorFlow>
+    </operation>
+    <operation name="createExcessRefund">
+      <requestFlow mfcex:showInputResponse="false" mfcex:showInputFault="false">
+        <node displayName="createExcessRefund : MaintainAccessGC" name="MaintainAccessGC_createExcessRefund_Input" type="Input">
+          <property name="correlationContext" value="{http://Access-ApplicationGC}correlationBO"/>
+          <outputTerminal type="ns3:createExcessRefundRequestMsg">
+            <wire targetNode="AssignTransactionId"/>
+          </outputTerminal>
+        </node>
+        <node name="createExcessRefundInputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_ExcessRefund_InputMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_ExcessRefund_InputMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="ns3:createExcessRefundRequestMsg"/>
+          <outputTerminal type="RASGenericService:excessRefund">
+            <wire targetNode="createExcessRefundRequestLogger"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createExcessRefundRequestLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundRequestLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundRequestLogger.file1" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="SaveRequestStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveRequestStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);	*/	            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/request",output);
+smo.setString("/context/correlation/response","");
+smo.setDate("/context/correlation/lastRequestedOn",new Date());
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597078457028"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="RASGenericService:excessRefund">
+            <wire targetNode="RASGenericServicePartner_excessRefund_Callout"/>
+            <wire targetNode="GCTransactionLogRequestMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node displayName="excessRefund : RASGenericServicePartner" name="RASGenericServicePartner_excessRefund_Callout" type="Callout">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="excessRefund"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryOn9"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryCount9"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="Callout1.retryDelay9"/>
+          <inputTerminal type="RASGenericService:excessRefund"/>
+        </node>
+        <node name="AssignTransactionId" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+ System.out.println("Callout error handler Excess refund request");
+try{
+smo.setInt("/context/correlation/transactionId",smo.getInt("/body/createExcessRefund/transactionId"));
+smo.setInt("/context/correlation/isExecuting",1);
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+}
+catch(Exception e){
+e.printStackTrace();
+}
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597078619916"/>
+          <property name="version" value="6.1.0"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createExcessRefundRequestMsg">
+            <wire targetNode="createExcessRefundInputMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogRequestMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogRequestMap_req_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogRequestMap_req_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CreateExcessRefundGCTransactionRequestLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CreateExcessRefundGCTransactionRequestLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn4"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount4"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay4"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+      </requestFlow>
+      <responseFlow>
+        <node displayName="createExcessRefund : MaintainAccessGC" name="MaintainAccessGC_createExcessRefund_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:createExcessRefundResponseMsg"/>
+        </node>
+        <node displayName="createExcessRefund : MaintainAccessGC" name="MaintainAccessGC_createExcessRefund_InputFault" type="InputFault">
+          <inputTerminal name="createExcessRefund_createExcessRefundFaultMsg" type="ns3:createExcessRefund_createExcessRefundFaultMsg"/>
+        </node>
+        <node displayName="excessRefund : RASGenericServicePartner" name="RASGenericServicePartner_excessRefund_CalloutResponse" type="CalloutResponse">
+          <property name="referenceName" value="RASGenericServicePartner"/>
+          <property name="operationName" value="excessRefund"/>
+          <outputTerminal type="RASGenericService:excessRefundResponse">
+            <wire targetNode="StatusFilter"/>
+          </outputTerminal>
+          <failTerminal type="RASGenericService:excessRefund">
+            <wire targetNode="Mapping"/>
+          </failTerminal>
+        </node>
+        <node displayName="Status Filter" name="StatusFilter" type="MessageFilter">
+          <table name="filters">
+            <row>
+              <property name="pattern" value="/body/excessRefundResponse/ExcessRefundResult/clsRefundResponse/Voucherno = 'NA'"/>
+              <property name="terminalName" value="match3"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/excessRefundResponse/ExcessRefundResult/clsRefundResponse/VoucherAmt = '0'"/>
+              <property name="terminalName" value="match5"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/excessRefundResponse/ExcessRefundResult/clsRefundResponse/VoucherAmt = 'NA'"/>
+              <property name="terminalName" value="match4"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/excessRefundResponse/ExcessRefundResult/clsRefundResponse/Status = 'SUCCESS'"/>
+              <property name="terminalName" value="match1"/>
+            </row>
+            <row>
+              <property name="pattern" value="/body/excessRefundResponse/ExcessRefundResult/clsRefundResponse/Status = '0'"/>
+              <property name="terminalName" value="match2"/>
+            </row>
+          </table>
+          <inputTerminal/>
+          <outputTerminal name="default">
+            <wire targetNode="createExcessRefundFaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="VoucherNoNotAvailable" name="match3">
+            <wire targetNode="createExcessRefundFaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="VoucherAmtNotAvailable" name="match4">
+            <wire targetNode="createExcessRefundFaultMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="Success" name="match1">
+            <wire targetNode="createExcessRefundOutputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="SuccessWith0Value" name="match2">
+            <wire targetNode="createExcessRefundOutputMap"/>
+          </outputTerminal>
+          <outputTerminal displayName="VoucherAmount0" name="match5">
+            <wire targetNode="createExcessRefundFaultMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createExcessRefundFaultMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_ExcessRefund_FaultMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_ExcessRefund_FaultMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:excessRefundResponse"/>
+          <outputTerminal type="ns3:createExcessRefund_createExcessRefundFaultMsg">
+            <wire targetNode="saveFailedResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createExcessRefundOutputMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_ExcessRefund_OutputMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_ExcessRefund_OutputMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal/>
+          <outputTerminal type="ns3:createExcessRefundResponseMsg">
+            <wire targetNode="SaveSuccessResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="saveFailedResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*
+BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);	*/	            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","FAILED");
+smo.setInt("/context/correlation/isExecuting",2);
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+if(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorCode")!=null && !"".equalsIgnoreCase(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorCode")))
+smo.setString("/context/correlation/errorCode",smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorCode"));
+else
+smo.setString("/context/correlation/errorCode","");
+if(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorDetail")!=null && !"".equalsIgnoreCase(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorDetail")))
+smo.setString("/context/correlation/errorDetail",smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorDetail"));
+else
+smo.setString("/context/correlation/errorDetail","");
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597079050451"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createExcessRefund_createExcessRefundFaultMsg">
+            <wire targetNode="createExcessRefundFaultLogger"/>
+            <wire targetNode="GCTransactionLogResponseMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveSuccessResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","SUCCESS");
+smo.setInt("/context/correlation/isExecuting",0);
+smo.setString("/context/correlation/errorCode","");
+smo.setString("/context/correlation/errorDetail","");
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597079052275"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createExcessRefundResponseMsg">
+            <wire targetNode="createExcessRefundResponseLogger"/>
+            <wire targetNode="GCTransactionLogResponseMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createExcessRefundResponseLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundResponseLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundResponseLogger.file1" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_createExcessRefund_InputResponse"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createExcessRefundFaultLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundFaultLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundFaultLogger.file1" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_createExcessRefund_InputFault" targetTerminal="createExcessRefund_createExcessRefundFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogResponseMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogResponseMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogResponseMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CreateExcessRefundGCTransactionResponseLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CreateExcessRefundGCTransactionResponseLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn10"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount10"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay10"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+        <node name="Mapping" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/CalloutErrorHandlerExcessRefundRequest.xsl"/>
+          <property name="XMXMap" value="xslt/CalloutErrorHandlerExcessRefundRequest.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="RASGenericService:excessRefund"/>
+          <outputTerminal type="ns3:createExcessRefund_createExcessRefundFaultMsg">
+            <wire targetNode="MaintainAccessGC_createExcessRefund_InputFault" targetTerminal="createExcessRefund_createExcessRefundFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+      </responseFlow>
+      <errorFlow>
+        <node displayName="createExcessRefund : MaintainAccessGC" name="MaintainAccessGC_createExcessRefund_ErrorInput" type="ErrorInput">
+          <outputTerminal name="catchAll" type="XMLSchema:anyType">
+            <wire targetNode="createExcessRefundErrorMap"/>
+          </outputTerminal>
+        </node>
+        <node displayName="createExcessRefund : MaintainAccessGC" name="MaintainAccessGC_createExcessRefund_InputResponse" type="InputResponse">
+          <inputTerminal type="ns3:createExcessRefundResponseMsg"/>
+        </node>
+        <node displayName="createExcessRefund : MaintainAccessGC" name="MaintainAccessGC_createExcessRefund_InputFault" type="InputFault">
+          <inputTerminal name="createExcessRefund_createExcessRefundFaultMsg" type="ns3:createExcessRefund_createExcessRefundFaultMsg"/>
+        </node>
+        <node name="createExcessRefundErrorMap" type="XSLTransformation">
+          <property name="root" value="/"/>
+          <property name="XSLTransform" value="xslt/create_ExcessRefund_ErrorMap_err_1.xsl"/>
+          <property name="XMXMap" value="xslt/create_ExcessRefund_ErrorMap_err_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal type="XMLSchema:anyType"/>
+          <outputTerminal type="ns3:createExcessRefund_createExcessRefundFaultMsg">
+            <wire targetNode="SaveErrorResponseStructure"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="SaveErrorResponseStructure" type="CustomMediation">
+          <property name="javaCode"><![CDATA[
+/*BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);*/            
+String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+System.out.println("serialized----->"+output);
+smo.setString("/context/correlation/response",output);
+smo.setString("/context/correlation/status","FAILED");
+smo.setInt("/context/correlation/isExecuting",2);
+smo.setDate("/context/correlation/lastResponseOn",new Date());
+if(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorCode")!=null && !"".equalsIgnoreCase(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorCode")))
+smo.setString("/context/correlation/errorCode",smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorCode"));
+else
+smo.setString("/context/correlation/errorCode","");
+if(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorDetail")!=null && !"".equalsIgnoreCase(smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorDetail")))
+smo.setString("/context/correlation/errorDetail",smo.getString("/body/createExcessRefundFault1_createExcessRefundFault/error[0]/errorDetail"));
+else
+smo.setString("/context/correlation/errorDetail","");
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+          <property name="javaClass" value="sca.component.mediation.java.Custom1597079594954"/>
+          <property name="version" value="6.1.0"/>
+          <property name="javaImports" value="org.aig.impl.CustomSerializer;java.util.*"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="ns3:createExcessRefund_createExcessRefundFaultMsg">
+            <wire targetNode="createExcessRefundErrorLogger"/>
+            <wire targetNode="GCTransactionLogErrorMap"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="createExcessRefundErrorLogger" type="Trace">
+          <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundErrorLogger.enabled1"/>
+          <property name="destination" value="2"/>
+          <property name="file" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="createExcessRefundErrorLogger.file1" value="C:\Users\kmandad\Desktop\RACAS\Logger\GCLogs.txt"/>
+          <inputTerminal/>
+          <outputTerminal>
+            <wire targetNode="MaintainAccessGC_createExcessRefund_InputFault" targetTerminal="createExcessRefund_createExcessRefundFaultMsg"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="GCTransactionLogErrorMap" type="XSLTransformation">
+          <property name="root" value="%xslt.root.default"/>
+          <property name="XSLTransform" value="xslt/GCTransactionLogResponseMap_res_1.xsl"/>
+          <property name="XMXMap" value="xslt/GCTransactionLogResponseMap_res_1.map"/>
+          <property name="SMOVersion" value="SMO61"/>
+          <inputTerminal/>
+          <outputTerminal explicitType="false" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="CreateExcessRefundGCTransactionErrorLogService"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="CreateExcessRefundGCTransactionErrorLogService" type="ServiceInvoke">
+          <property name="referenceName" value="UpdateGCTransactionLogPartner"/>
+          <property name="operationName" value="updateGCTransactionLog"/>
+          <property name="invocationStyle" value="6"/>
+          <property name="retryOn" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryOn11"/>
+          <property name="retryCount" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryCount11"/>
+          <property name="retryDelay" promotedPropertyGroup="Access-ApplicationGC.MaintainGCMediationCmpt" promotedPropertyName="ServiceInvoke1.retryDelay11"/>
+          <inputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg"/>
+          <outputTerminal name="timeout" type="UpdateGCTransactionLog:updateGCTransactionLogRequestMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <outputTerminal type="UpdateGCTransactionLog:updateGCTransactionLogResponseMsg">
+            <wire targetNode="Stop"/>
+          </outputTerminal>
+          <failTerminal/>
+        </node>
+        <node name="Stop" type="Stop">
+          <inputTerminal type="XMLSchema:anyType"/>
+        </node>
+      </errorFlow>
+    </operation>
+  </interface>
+</mediationFlow>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><io2:smo xmlns:io2="http://www.ibm.com/websphere/sibx/smo/v6.0.1" xmlns:in="WebService_RefundDetails" xmlns:in2="wsdl.WebService_RefundDetails" xmlns:io="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:io3="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0" xmlns:io4="http://www.w3.org/2003/05/soap-envelope" xmlns:io5="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0" xmlns:io6="http://www.w3.org/2005/08/addressing" xmlns:io7="http://Access-ApplicationGC" xmlns:out="http://RACASBO" xmlns:out2="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC" xmlns:out3="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC" xmlns:out4="http://GCLibrary/org/aig/access/BO" xmlns:xs4xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <body xsi:type="out2:findReceiptDetailResponseMsg">
+    <out3:findReceiptDetailResponse>
+      <receiptDetails>
+        <out:payload>
+          <out:crsNo>crsno</out:crsNo>
+          <out:authCode>tns1:AuthCDTransDtls</out:authCode>
+          <out:crsStatus>tns1:CRSStatus</out:crsStatus>
+          <out:crsAmount>234.0</out:crsAmount>
+          <out:totalAmount>0</out:totalAmount>
+          <out:balanceAmount>23.0</out:balanceAmount>
+        </out:payload>
+      </receiptDetails>
+    </out3:findReceiptDetailResponse>
+  </body>
+</io2:smo>

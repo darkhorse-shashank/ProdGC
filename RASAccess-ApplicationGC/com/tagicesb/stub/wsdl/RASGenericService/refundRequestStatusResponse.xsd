@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:ns2="WebService_RefundDetails"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundDetails"
+		schemaLocation="../../../../../WebService_RefundDetails/RefundRequestStatusResponse_1.xsd" />
+	<xs:complexType name="refundRequestStatusResponse">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0"
+				ref="ns2:RefundRequestStatusResponse" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="refundRequestStatusResponse"
+		type="tns:refundRequestStatusResponse" />
+</xs:schema>

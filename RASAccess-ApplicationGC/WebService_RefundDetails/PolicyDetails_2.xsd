@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="ArrayOfCRSDetails.xsd" />
+	<xs:include schemaLocation="ArrayOfInsuredDetails.xsd" />
+	<xs:complexType name="PolicyDetails">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="ProposalNo"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="Product" type="xs:string" />
+
+			<xs:element minOccurs="0" name="NoOfClaims"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="PolicyStartTime"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ProposerName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="AadhaarNumber"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="CustomerName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="CustomerCode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="CustomerBank"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="CustomerIFSCcode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="CustomerBankAccountNumber"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ApplicationDate"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="PolicyStartDate"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="PolicyEndDate"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="PolicyCoverVariant"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="PolicyPremium"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="AgreedPremiumAmount"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ProducerCode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ProducerName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="PolicyStatus"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="LANNumber" type="xs:string" />
+
+			<xs:element minOccurs="0" name="DealerCode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="DealerName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="FinancierName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="FinancierCode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="RegistrationNumber"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="EngineNo" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ChasisNo" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ConversionDate"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="objInsuredDetails"
+				type="tns:ArrayOfInsuredDetails" />
+
+			<xs:element minOccurs="0" name="objCRSDetails"
+				type="tns:ArrayOfCRSDetails" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="PolicyDetails">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="UserId"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PolicyNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="ProposalNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="CertificateNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="LoanAccNumber"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="CustomerId"
+					type="xs:string" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

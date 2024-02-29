@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASAIGService/"
+	xmlns:ns1="WebService_RefundCancellationAIG"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASAIGService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationAIG"
+		schemaLocation="../../../../../WebService_RefundCancellationAIG/RefundCancellationRespns.xsd" />
+	<xs:complexType name="webServiceRefundCancellationAIGResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationAIGResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationAIGResponse"
+		type="tns:webServiceRefundCancellationAIGResponse" />
+</xs:schema>

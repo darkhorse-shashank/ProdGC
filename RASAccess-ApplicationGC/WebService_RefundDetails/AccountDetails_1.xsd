@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="ArrayOfAccount.xsd" />
+	<xs:complexType name="AccountDetails">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="TXT_CUSTOMER_ID"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="objAccountDetails"
+				type="tns:ArrayOfAccount" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="AccountDetails">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="TXT_CUSTOMER_ID"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="UserId"
+					type="xs:string" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

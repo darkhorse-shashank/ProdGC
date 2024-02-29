@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationFinancialLines" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="WebService_RefundCancellationFinancialLines">
+    <wsdl:import location="webservice_refundcancellationfinanciallines_asmx_wsdl.wsdl" namespace="WebService_RefundCancellationFinancialLines"/>
+  <wsdl:binding name="WebService_RefundCancellationFinancialLinesSoap" type="tns:WebService_RefundCancellationFinancialLinesSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationFinancialLines">
+      <soap:operation soapAction="WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationDtls">
+      <soap:operation soapAction="WebService_RefundCancellationFinancialLines/WebService_PremiumCalculationDtls" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationFinancialLinesSoap12" type="tns:WebService_RefundCancellationFinancialLinesSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationFinancialLines">
+      <soap12:operation soapAction="WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationDtls">
+      <soap12:operation soapAction="WebService_RefundCancellationFinancialLines/WebService_PremiumCalculationDtls" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationFinancialLinesHttpGet" type="tns:WebService_RefundCancellationFinancialLinesHttpGet">
+    <http:binding verb="GET"/>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationFinancialLinesHttpPost" type="tns:WebService_RefundCancellationFinancialLinesHttpPost">
+    <http:binding verb="POST"/>
+  </wsdl:binding>
+  <wsdl:service name="WebService_RefundCancellationFinancialLines">
+    <wsdl:port binding="tns:WebService_RefundCancellationFinancialLinesSoap" name="WebService_RefundCancellationFinancialLinesSoap">
+      <soap:address location="http://172.20.5.104/WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationFinancialLinesSoap12" name="WebService_RefundCancellationFinancialLinesSoap12">
+      <soap12:address location="http://172.20.5.104/WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationFinancialLinesHttpGet" name="WebService_RefundCancellationFinancialLinesHttpGet">
+      <http:address location="http://172.20.5.104/WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationFinancialLinesHttpPost" name="WebService_RefundCancellationFinancialLinesHttpPost">
+      <http:address location="http://172.20.5.104/WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundCancellationTradeCredit">
+	<include schemaLocation="RefundCancellationReq.xsd" />
+	<include schemaLocation="../_126/_251/_20/_172/cxf/UserId.xsd" />
+</schema>

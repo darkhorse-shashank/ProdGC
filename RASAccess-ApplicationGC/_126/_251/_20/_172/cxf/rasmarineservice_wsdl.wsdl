@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASMarineService" targetNamespace="http://stub.tagicesb.com/wsdl/RASMarineService/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASMarineService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASMarineService/" version="1.0" xmlns:ns1="WebService_RefundCancellationMarine">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationMarine"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASMarineService/webServicePremiumCalculationMarineResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASMarineService/webServicePremiumCalculationMarine.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASMarineService/webServiceRefundCancellationMarine.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASMarineService/webServiceRefundCancellationMarineResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationMarine" version="1.0" xmlns:tns="WebService_RefundCancellationMarine">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/WebService_RefundCancellationMarineResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/WebService_PremiumCalculationMarine.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/WebService_PremiumCalculationMarineResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/WebService_RefundCancellationMarine.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationMarine/PremiumCalculationRespns.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServicePremiumCalculationMarine">
+    <wsdl:part element="tns:webServicePremiumCalculationMarine" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationMarine">
+    <wsdl:part element="tns:webServiceRefundCancellationMarine" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationMarineResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationMarineResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationMarineResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationMarineResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASMarineService">
+    <wsdl:operation name="webServiceRefundCancellationMarine">
+      <wsdl:input message="tns:webServiceRefundCancellationMarine" name="webServiceRefundCancellationMarine">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationMarineResponse" name="webServiceRefundCancellationMarineResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationMarine">
+      <wsdl:input message="tns:webServicePremiumCalculationMarine" name="webServicePremiumCalculationMarine">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationMarineResponse" name="webServicePremiumCalculationMarineResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

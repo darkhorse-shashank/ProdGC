@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundCancellationPersonalLines"
+	xmlns:tns="WebService_RefundCancellationPersonalLines"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="PremiumCalculationRespns.xsd" />
+	<xs:element name="WebService_PremiumCalculationDtlsResponse">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0"
+					name="WebService_PremiumCalculationDtlsResult"
+					type="tns:PremiumCalculationRespns" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

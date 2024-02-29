@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASMarineService/"
+	xmlns:ns1="WebService_RefundCancellationMarine"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASMarineService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationMarine"
+		schemaLocation="../../../../../WebService_RefundCancellationMarine/PremiumCalculationRespns.xsd" />
+	<xs:complexType name="webServicePremiumCalculationMarineResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_PremiumCalculationMarineResult"
+				type="ns1:PremiumCalculationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServicePremiumCalculationMarineResponse"
+		type="tns:webServicePremiumCalculationMarineResponse" />
+</xs:schema>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationCasualty" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="WebService_RefundCancellationCasualty">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationCasualty">
+      <s:element name="WebService_RefundCancellationCasualty">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RefundCancellationReq">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="PolicyNo" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ProposalNo" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ProductCode" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="EndDateOfRequest" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MTAEffDate" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MTAEffTime" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ReasonforCanc" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="DescofCancReason" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OptionforCancofInsurance" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="CancellationDate" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="RetainMinPrem" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ERFPrem" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="EndtPrem" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ExchangeRate" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Remarks" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WebService_RefundCancellationCasualtyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_RefundCancellationCasualtyResult" type="tns:RefundCancellationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RefundCancellationRespns">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="ProposalNo" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ProposalStatus" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ApprovalFlow" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Status" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorDesc" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WebService_PremiumCalculationCasualty">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_PremiumCalculationCasualtyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_PremiumCalculationCasualtyResult" type="tns:PremiumCalculationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PremiumCalculationRespns">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="NetPremium" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="GST" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="JKGST" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="StampDuty" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="TotalPremium" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Status" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorDesc" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebService_RefundCancellationCasualtySoapIn">
+    <wsdl:part element="tns:WebService_RefundCancellationCasualty" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_RefundCancellationCasualtySoapOut">
+    <wsdl:part element="tns:WebService_RefundCancellationCasualtyResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationCasualtySoapIn">
+    <wsdl:part element="tns:WebService_PremiumCalculationCasualty" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationCasualtySoapOut">
+    <wsdl:part element="tns:WebService_PremiumCalculationCasualtyResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="WebService_RefundCancellationCasualtySoap">
+    <wsdl:operation name="WebService_RefundCancellationCasualty">
+      <wsdl:documentation>The service is used for Refund Cancellation of Casualty Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_RefundCancellationCasualtySoapIn"/>
+      <wsdl:output message="tns:WebService_RefundCancellationCasualtySoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationCasualty">
+      <wsdl:documentation>The service is used for Refund Cancellation of Casualty Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_PremiumCalculationCasualtySoapIn"/>
+      <wsdl:output message="tns:WebService_PremiumCalculationCasualtySoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService_RefundCancellationCasualtyHttpGet"/>
+  <wsdl:portType name="WebService_RefundCancellationCasualtyHttpPost"/>
+  <wsdl:binding name="WebService_RefundCancellationCasualtySoap" type="tns:WebService_RefundCancellationCasualtySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationCasualty">
+      <soap:operation soapAction="WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationCasualty">
+      <soap:operation soapAction="WebService_RefundCancellationCasualty/WebService_PremiumCalculationCasualty" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationCasualtySoap12" type="tns:WebService_RefundCancellationCasualtySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationCasualty">
+      <soap12:operation soapAction="WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationCasualty">
+      <soap12:operation soapAction="WebService_RefundCancellationCasualty/WebService_PremiumCalculationCasualty" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationCasualtyHttpGet" type="tns:WebService_RefundCancellationCasualtyHttpGet">
+    <http:binding verb="GET"/>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationCasualtyHttpPost" type="tns:WebService_RefundCancellationCasualtyHttpPost">
+    <http:binding verb="POST"/>
+  </wsdl:binding>
+  <wsdl:service name="WebService_RefundCancellationCasualty">
+    <wsdl:port binding="tns:WebService_RefundCancellationCasualtySoap" name="WebService_RefundCancellationCasualtySoap">
+      <soap:address location="http://172.20.5.104/WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationCasualtySoap12" name="WebService_RefundCancellationCasualtySoap12">
+      <soap12:address location="http://172.20.5.104/WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationCasualtyHttpGet" name="WebService_RefundCancellationCasualtyHttpGet">
+      <http:address location="http://172.20.5.104/WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationCasualtyHttpPost" name="WebService_RefundCancellationCasualtyHttpPost">
+      <http:address location="http://172.20.5.104/WebService_RefundCancellationCasualty/WebService_RefundCancellationCasualty.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

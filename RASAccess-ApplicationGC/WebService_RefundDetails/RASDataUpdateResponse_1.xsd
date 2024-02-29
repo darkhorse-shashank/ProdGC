@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="ArrayOfRASDataUpdate.xsd" />
+	<xs:element name="RASDataUpdateResponse">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="RASDataUpdateResult"
+					type="tns:ArrayOfRASDataUpdate" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

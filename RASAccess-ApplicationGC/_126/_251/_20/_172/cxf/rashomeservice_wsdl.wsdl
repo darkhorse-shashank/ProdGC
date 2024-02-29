@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASHomeService" targetNamespace="http://stub.tagicesb.com/wsdl/RASHome/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASHome/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASHome/" version="1.0" xmlns:ns1="WebService_RefundCancellationHome">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationHome"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHome/webServicePremiumCalculation.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHome/webServiceRefundCancellationHomeResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHome/webServiceRefundCancellationHome.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHome/webServicePremiumCalculationResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationHome" version="1.0" xmlns:tns="WebService_RefundCancellationHome">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/WebService_PremiumCalculation.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/WebService_PremiumCalculationResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/WebService_RefundCancellationHome.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHome/WebService_RefundCancellationHomeResponse.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServicePremiumCalculationResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationHome">
+    <wsdl:part element="tns:webServiceRefundCancellationHome" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationHomeResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationHomeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculation">
+    <wsdl:part element="tns:webServicePremiumCalculation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASHomeService">
+    <wsdl:operation name="webServiceRefundCancellationHome">
+      <wsdl:input message="tns:webServiceRefundCancellationHome" name="webServiceRefundCancellationHome">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationHomeResponse" name="webServiceRefundCancellationHomeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculation">
+      <wsdl:input message="tns:webServicePremiumCalculation" name="webServicePremiumCalculation">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationResponse" name="webServicePremiumCalculationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

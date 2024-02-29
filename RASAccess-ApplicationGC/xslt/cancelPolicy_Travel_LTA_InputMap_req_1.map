@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/cancelPolicy_Travel_LTA_InputMap_req_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/cancelPolicy_Travel_LTA_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC}cancelPolicyRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.unotechsoft.com/wsdl/RASLTAService/}webServiceRefundCancellationLTA" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in4" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in5" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="WebService_RefundCancellationLTA"/>
+        <namespace kind="supplement" prefix="out2" uri="http://stub.unotechsoft.com/wsdl/RASLTAService/"/>
+        <namespace kind="supplement" prefix="out" uri="wsdl.http://stub.unotechsoft.com/wsdl/RASLTAService/"/>
+    </namespaces>
+    <mappingDeclaration name="cancelPolicy_Travel_LTA_InputMap_req_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="context/correlation/endDateOfRequest"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/EndDateOfRequest"/>
+        </move>
+        <move>
+            <input path="context/correlation/endDateOfRequest"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/MTAEffDate"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancellationRefundInput/source"/>
+            <output path="body/webServiceRefundCancellationLTA/source"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancellationRefundInput/medium"/>
+            <output path="body/webServiceRefundCancellationLTA/medium"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancellationRefundInput/campaign"/>
+            <output path="body/webServiceRefundCancellationLTA/campaign"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancellationRefundInput/strServiceToken"/>
+            <output path="body/webServiceRefundCancellationLTA/strServiceToken"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/userId"/>
+            <output path="body/webServiceRefundCancellationLTA/UserId"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/policyNo"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/PolicyNo"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/proposalNo"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/ProposalNo"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/productCode"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/ProductCode"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/cancellationReason"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/ReasonforCanc"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/cancellationOption"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/OptionforCancofInsurance"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/remarks"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/Remarks"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/effectiveTime"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/MTAEffTime"/>
+        </move>
+        <move>
+            <input path="body/cancelPolicy/cancPolicyData/balanceDays"/>
+            <output path="body/webServiceRefundCancellationLTA/RefundCancellation/BalanceDays"/>
+        </move>
+        <move>
+            <input path="context/correlation"/>
+            <output path="context/correlation"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASCasualty/"
+	xmlns:ns1="WebService_RefundCancellationCasualty"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASCasualty/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationCasualty"
+		schemaLocation="../../../../../WebService_RefundCancellationCasualty/PremiumCalculationRespns.xsd" />
+	<xs:complexType
+		name="webServicePremiumCalculationCasualtyResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_PremiumCalculationCasualtyResult"
+				type="ns1:PremiumCalculationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServicePremiumCalculationCasualtyResponse"
+		type="tns:webServicePremiumCalculationCasualtyResponse" />
+</xs:schema>

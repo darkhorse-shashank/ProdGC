@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://Access-ApplicationGC">
+	<xsd:complexType name="correlationBO">
+		<xsd:sequence>
+			<xsd:element minOccurs="0" name="crsno" type="xsd:string"></xsd:element>
+			<xsd:element minOccurs="0" name="policyno"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="request"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="response"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="proposalNo"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="totalAmount"
+				type="xsd:double">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="policyStartDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="endDateOfRequest"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="effectiveDate"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="ncbReservingDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="periodFromDate"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="periodToDate"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="transactionId"
+				type="xsd:int">
+			</xsd:element>
+
+
+			<xsd:element minOccurs="0" name="status"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="errorCode"
+				type="xsd:string">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="errorDetail"
+				type="xsd:string">
+			</xsd:element>
+
+			<xsd:element minOccurs="0" name="isExecuting"
+				type="xsd:int">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastRequestedOn"
+				type="xsd:dateTime">
+			</xsd:element>
+			<xsd:element minOccurs="0" name="lastResponseOn"
+				type="xsd:dateTime">
+			</xsd:element>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

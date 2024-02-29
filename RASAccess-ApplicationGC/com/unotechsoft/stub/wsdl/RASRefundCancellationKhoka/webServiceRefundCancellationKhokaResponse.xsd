@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:ns1="WebService_RefundCancellationKhoka"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationKhoka"
+		schemaLocation="../../../../../WebService_RefundCancellationKhoka/RefundCancellationRespns.xsd" />
+	<xs:complexType name="webServiceRefundCancellationKhokaResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationKhokaResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationKhokaResponse"
+		type="tns:webServiceRefundCancellationKhokaResponse" />
+</xs:schema>

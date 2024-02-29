@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASGenericService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="GetDetailsOfCDRefundDataResponse.xsd" />
+	<xs:complexType name="GetDetailsOfCDRefundResponse">
+
+		<xs:sequence>
+
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="GetDetailsOfCDRefundData" nillable="true"
+				type="tns:GetDetailsOfCDRefundDataResponse" />
+
+			<xs:element minOccurs="0" name="errorMessage"
+				type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="GetDetailsOfCDRefundResponse"
+		type="tns:GetDetailsOfCDRefundResponse" />
+</xs:schema>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/"
+	xmlns:ns1="WebService_RefundCancellationTradeCredit"
+	xmlns:tns="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationTradeCredit"
+		schemaLocation="../../../../../../WebService_RefundCancellationTradeCredit/RefundCancellationRespns.xsd" />
+	<xs:complexType
+		name="webServiceRefundCancellationTradeCreditResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationTradeCreditResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationTradeCreditResponse"
+		type="tns:webServiceRefundCancellationTradeCreditResponse" />
+</xs:schema>

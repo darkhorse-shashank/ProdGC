@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASMotor/"
+	xmlns:ns1="WebService_RefundCancellationDtls"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASMotor/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationDtls"
+		schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationRespns.xsd" />
+	<xs:complexType name="webServiceRefundCancellationDtlsResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationDtlsResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationDtlsResponse"
+		type="tns:webServiceRefundCancellationDtlsResponse" />
+</xs:schema>

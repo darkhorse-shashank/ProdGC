@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasrefundcancellationkhokaservice_wsdl_Endpoint" targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/">
+    <wsdl:import location="rasrefundcancellationkhokaservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"/>
+  <wsdl:binding name="RASRefundCancellationKhokaServiceSoapBinding" type="tns:RASRefundCancellationKhokaService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationKhoka">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationKhoka">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationKhokaResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRASGenericPremiumCalculation">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRASGenericPremiumCalculation">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRASGenericPremiumCalculationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASRefundCancellationKhokaService">
+    <wsdl:port binding="tns:RASRefundCancellationKhokaServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASRefundCancellationKhokaService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

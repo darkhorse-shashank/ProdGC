@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/find_Receipts_InputMap_req_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/find_Receipts_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findReceiptsRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}receiptDetails" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="in4" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out2" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="in5" uri="http://GCLibrary/org/aig/access/bo"/>
+    </namespaces>
+    <mappingDeclaration name="find_Receipts_InputMap_req_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="body/findReceipts/userId"/>
+            <output path="body/receiptDetails/UserId"/>
+        </move>
+        <move>
+            <input path="body/findReceipts/receiptNo"/>
+            <output path="body/receiptDetails/CRSNo"/>
+        </move>
+        <move>
+            <input path="body/findReceipts/receiptNo"/>
+            <output path="context/correlation/crsno"/>
+        </move>
+        <move>
+            <input path="body/findReceipts/receiptsInput/source"/>
+            <output path="body/receiptDetails/source"/>
+        </move>
+        <move>
+            <input path="body/findReceipts/receiptsInput/medium"/>
+            <output path="body/receiptDetails/medium"/>
+        </move>
+        <move>
+            <input path="body/findReceipts/receiptsInput/campaign"/>
+            <output path="body/receiptDetails/campaign"/>
+        </move>
+        <move>
+            <input path="body/findReceipts/receiptsInput/strServiceToken"/>
+            <output path="body/receiptDetails/strServiceToken"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/find_MainReceipt_Details_OutputMap_res_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/find_MainReceipt_Details_OutputMap_res_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}fetchReceiptDetailsResponse" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findMainReceiptDetailsResponseMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="in3" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="io7" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="in" uri="WebService_RefundDetails"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out2" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="out5" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out4" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="out" uri="http://GCLibrary/org/aig/access/bo"/>
+    </namespaces>
+    <mappingDeclaration name="find_MainReceipt_Details_OutputMap_res_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="context/correlation/crsno"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/crsNo"/>
+        </move>
+        <move>
+            <input path="context/correlation/totalAmount"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/totalAmount"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/payerName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payeeName"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/payerID"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/CRSPayerID"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/payerAddress1"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/addressLine1"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/payerAddress2"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/addressLine2"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/payerAddress3"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/addressLine3"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/state"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/state"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/city"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/city"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/area"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/area"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/pincode"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/pincode"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/bankAccNo"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/bankAccountNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/bankAccNo"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payeeBankAccountNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/bankName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/customerBank"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/bankName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payeeBank"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/bankIFSC"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/customerIfscCode"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/bankIFSC"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payeeIfscCode"/>
+        </move>
+        <convert>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/balanceAmt"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/balanceAmount"/>
+        </convert>
+        <convert>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/taggedAmt"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/taggedAmount"/>
+        </convert>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/txtStatus"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/crsStatus"/>
+        </move>
+        <convert>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/instrumentAmt"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/crsAmount"/>
+        </convert>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/paymentSource"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payementSource"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/paymentModeCd"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/paymentReceivedMethod"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/housebankAccno"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/houseBankAccountNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/paymentMode"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payementMode"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/housebankname"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/houseBankName"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/policyNumbers"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/policyNumbers"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/email"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/emailId"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/contact"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/contactNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/transactionNum"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/authCode"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/subReceiptNumbers"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/subreceiptNumbers"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/drawerName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/drawerName"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptLAN"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/receiptLANNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptAppNo"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/receiptApplicationNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptAccNo"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/receiptAccountNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptIFSC"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/receiptIFSCCode"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/lob"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/lob"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/cdNumber"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/cdAcccountNumber"/>
+        </move>
+        <convert defaultValue="2002-01-01T11:00:00">
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptDate"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/receiptDate"/>
+        </convert>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptPayerType"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/payerType"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/receiptPayerName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/receiptPayerName"/>
+        </move>
+        <convert defaultValue="2002-01-01T11:00:00">
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/instrumentDate"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/instrumentDate"/>
+        </convert>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/claimIFSCCode"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/claimIFSCCode"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/claimAcctNo"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/claimAccountNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/claimBankName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/claimBankName"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/claimEmailID"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/claimEmailID"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/claimMobileNo"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/claimMobileNo"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/claimClaimantName"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/claimantName"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/landmark"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/landmark"/>
+        </move>
+        <move>
+            <input path="body/fetchReceiptDetailsResponse/FetchReceiptDetailsResult/district"/>
+            <output path="body/findMainReceiptDetailsResponse/recieptDtls/payload/accountDetails/district"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

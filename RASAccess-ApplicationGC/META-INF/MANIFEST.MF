@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Class-Path: GCLibrary.jar 
+ GCDomain-v1.0.0.jar 
+ RefundAndCancellationAutomationSystemBO_Library.jar
+Created-By: 1.5.0 (IBM Corporation)
+

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASHealthService/"
+	xmlns:ns1="WebService_RefundCancellationHealth"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASHealthService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationHealth"
+		schemaLocation="../../../../../WebService_RefundCancellationHealth/RefundCancellationRespns.xsd" />
+	<xs:complexType name="webServiceRefundCancellationHealthResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationHealthResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationHealthResponse"
+		type="tns:webServiceRefundCancellationHealthResponse" />
+</xs:schema>

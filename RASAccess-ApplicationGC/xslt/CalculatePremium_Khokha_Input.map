@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://RASAccess-ApplicationGC/xslt/CalculatePremium_Khokha_Input" version="8.0.5.0" xmlns:map="http://RASAccess-ApplicationGC/xslt/CalculatePremium_Khokha_Input">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}calculateCancellationRefundRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/}webServiceRASGenericPremiumCalculation" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="in5" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="io" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io3" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="in2" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="in4" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="out2" uri="wsdl.http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"/>
+        <namespace kind="supplement" prefix="out" uri="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"/>
+    </namespaces>
+    <mappingDeclaration name="CalculatePremium_Khokha_Input">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="context/correlation"/>
+            <output path="context/correlation"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/source"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/source"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/medium"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/medium"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/cancellationRefundInput/campaign"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/campaign"/>
+        </move>
+        <assign>
+            <output path="body/webServiceRASGenericPremiumCalculation/strServiceToken"/>
+        </assign>
+        <move>
+            <input path="body/calculateCancellationRefund/input/policyNo"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iPolicyNo"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/proposalNo"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iReferenceNo"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/product"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iProductCode"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/cancellationOption"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iOptionforCancofInsurance"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/cancellationReason"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iReasonForCanc"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/cancellationDescription"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iDescofCancReason"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/remarks"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iRemarks"/>
+        </move>
+        <move>
+            <input path="body/calculateCancellationRefund/input/effectiveTime"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iMtaeffTime"/>
+        </move>
+        <move>
+            <input path="context/correlation/endDateOfRequest"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iEndDatOfRequest"/>
+        </move>
+        <move>
+            <input path="context/correlation/effectiveDate"/>
+            <output path="body/webServiceRASGenericPremiumCalculation/iMtaeffDate"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

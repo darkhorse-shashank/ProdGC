@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASRefundCancellationKhokaService" targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/" version="1.0" xmlns:ns1="WebService_RefundCancellationKhoka">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationKhoka"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/webServiceRASGenericPremiumCalculationResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/webServiceRASGenericPremiumCalculation.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/rasGenericPremiumCalculationResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/webServiceRefundCancellationKhokaResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/webServiceRefundCancellationKhoka.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/webServicePremiumCalculationResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASRefundCancellationKhoka/webServicePremiumCalculation.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationKhoka" version="1.0" xmlns:tns="WebService_RefundCancellationKhoka">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/WebService_RefundCancellationKhokaResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/WebService_RefundCancellationKhoka.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/WebService_PremiumCalculationResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/WebService_PremiumCalculation.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationKhoka/RefundCancellationRespns.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRASGenericPremiumCalculationResponse">
+    <wsdl:part element="tns:webServiceRASGenericPremiumCalculationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculation">
+    <wsdl:part element="tns:webServicePremiumCalculation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationKhokaResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationKhokaResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRASGenericPremiumCalculation">
+    <wsdl:part element="tns:webServiceRASGenericPremiumCalculation" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationKhoka">
+    <wsdl:part element="tns:webServiceRefundCancellationKhoka" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASRefundCancellationKhokaService">
+    <wsdl:operation name="webServicePremiumCalculation">
+      <wsdl:input message="tns:webServicePremiumCalculation" name="webServicePremiumCalculation">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationResponse" name="webServicePremiumCalculationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationKhoka">
+      <wsdl:input message="tns:webServiceRefundCancellationKhoka" name="webServiceRefundCancellationKhoka">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationKhokaResponse" name="webServiceRefundCancellationKhokaResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRASGenericPremiumCalculation">
+      <wsdl:input message="tns:webServiceRASGenericPremiumCalculation" name="webServiceRASGenericPremiumCalculation">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRASGenericPremiumCalculationResponse" name="webServiceRASGenericPremiumCalculationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

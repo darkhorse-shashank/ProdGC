@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mediationFlow xmlns="http://www.ibm.com/xmlns/prod/websphere/2010/MediationFlow" xmlns:WebService_RefundCancellationHealth="WebService_RefundCancellationHealth" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" name="cancelPolicyRequest" targetNamespace="http://Access-ApplicationGC">
+  <promotedProperty name="cancelPolicyRequestLogger.enabled" group="Access-ApplicationGC.cancelPolicyRequest" value="true"/>
+  <promotedProperty name="cancelPolicyRequestLogger.file" group="Access-ApplicationGC.cancelPolicyRequest" value="C:\Users\sareddy1\Desktop\RACAS\Logger\log.txt"/>
+  <subflow>
+    <node name="in" type="In">
+      <outputTerminal explicitType="false" type="WebService_RefundCancellationHealth:WebService_RefundCancellationHealthSoapIn">
+        <wire targetNode="cancelPolicyRequestLogger"/>
+      </outputTerminal>
+    </node>
+    <node name="out" type="Out">
+      <inputTerminal/>
+    </node>
+    <node name="cancelPolicyRequestLogger" type="Trace">
+      <property name="enabled" promotedPropertyGroup="Access-ApplicationGC.cancelPolicyRequest" promotedPropertyName="cancelPolicyRequestLogger.enabled"/>
+      <property name="destination" value="2"/>
+      <property name="file" promotedPropertyGroup="Access-ApplicationGC.cancelPolicyRequest" promotedPropertyName="cancelPolicyRequestLogger.file" value="C:\Users\sareddy1\Desktop\RACAS\Logger\log.txt"/>
+      <inputTerminal type="XMLSchema:anyType"/>
+      <outputTerminal>
+        <wire targetNode="saveRequestStructure"/>
+      </outputTerminal>
+      <failTerminal/>
+    </node>
+    <node name="saveRequestStructure" type="CustomMediation">
+      <property name="javaCode"><![CDATA[
+  /**
+ * GENERATED COMMENT - DO NOT MODIFY
+ * Variables:  for output terminals - out (com.ibm.wsspi.sibx.mediation.OutputTerminal)
+ *             for user properties - <No user properties defined>
+ * Inputs:     inputTerminal (com.ibm.wsspi.sibx.mediation.InputTerminal), smo (com.ibm.websphere.sibx.smobo.ServiceMessageObject)
+ * Exceptions: com.ibm.wsspi.sibx.mediation.MediationConfigurationException, com.ibm.wsspi.sibx.mediation.MediationBusinessException
+ */
+BOFactory boFactory = (BOFactory) ServiceManager.INSTANCE
+.locateService("com/ibm/websphere/bo/BOFactory");
+DataObject correlation = boFactory.create("http://Access-ApplicationGC","correlationBO");          
+smo.setDataObject("/context/correlation",correlation);		            
+	            
+
+		    	
+		    	String output =CustomSerializer.transformation(smo.getDataObject("/body"));
+		    	
+		    
+
+		    	
+		    
+		    	 System.out.println("serialized----->"+output);
+		    	 
+		    	 smo.setString("/context/correlation/request",output);
+		    	
+ 
+out.fire(smo); // propagate the service message object to the primitive that is wired to the 'out' terminal
+]]></property>
+      <property name="javaClass" value="sca.component.mediation.java.Custom1537768925449"/>
+      <property name="version" value="6.1.0"/>
+      <property name="javaImports" value="com.ibm.websphere.sca.ServiceManager;com.ibm.websphere.bo.BOFactory;commonj.sdo.DataObject;org.aig.impl.CustomSerializer"/>
+      <inputTerminal/>
+      <outputTerminal type="WebService_RefundCancellationHealth:WebService_RefundCancellationHealthSoapIn">
+        <wire targetNode="out"/>
+      </outputTerminal>
+      <failTerminal/>
+    </node>
+  </subflow>
+</mediationFlow>

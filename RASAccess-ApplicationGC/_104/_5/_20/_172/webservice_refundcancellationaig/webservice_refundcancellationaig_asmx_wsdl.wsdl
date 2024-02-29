@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationAIG" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="WebService_RefundCancellationAIG">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationAIG">
+      <s:element name="WebService_RefundCancellationAIG">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RefundCancellationReq">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="PolicyNo" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ProposalNo" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ProductCode" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="EndDateOfRequest" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MTAEffDate" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="MTAEffTime" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ReasonforCanc" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="DescofCancReason" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="OptionforCancofInsurance" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Remarks" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Agreedpremiumamount" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WebService_RefundCancellationAIGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_RefundCancellationAIGResult" type="tns:RefundCancellationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="RefundCancellationRespns">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="ProposalNo" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ProposalStatus" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ApprovalFlow" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Status" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorDesc" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:element name="WebService_PremiumCalculationAIG">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_PremiumCalculationAIGResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_PremiumCalculationAIGResult" type="tns:PremiumCalculationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="PremiumCalculationRespns">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="NetPremium" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="GST" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="JKGST" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="StampDuty" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="TotalPremium" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Status" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ErrorDesc" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebService_RefundCancellationAIGSoapIn">
+    <wsdl:part element="tns:WebService_RefundCancellationAIG" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_RefundCancellationAIGSoapOut">
+    <wsdl:part element="tns:WebService_RefundCancellationAIGResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationAIGSoapIn">
+    <wsdl:part element="tns:WebService_PremiumCalculationAIG" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationAIGSoapOut">
+    <wsdl:part element="tns:WebService_PremiumCalculationAIGResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="WebService_RefundCancellationAIGSoap">
+    <wsdl:operation name="WebService_RefundCancellationAIG">
+      <wsdl:documentation>The service is used for Refund Cancellation of AIGC Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_RefundCancellationAIGSoapIn"/>
+      <wsdl:output message="tns:WebService_RefundCancellationAIGSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationAIG">
+      <wsdl:documentation>The service is used for Refund Cancellation of AIGC Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_PremiumCalculationAIGSoapIn"/>
+      <wsdl:output message="tns:WebService_PremiumCalculationAIGSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService_RefundCancellationAIGHttpGet"/>
+  <wsdl:portType name="WebService_RefundCancellationAIGHttpPost"/>
+  <wsdl:binding name="WebService_RefundCancellationAIGSoap" type="tns:WebService_RefundCancellationAIGSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationAIG">
+      <soap:operation soapAction="WebService_RefundCancellationAIG/WebService_RefundCancellationAIG" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationAIG">
+      <soap:operation soapAction="WebService_RefundCancellationAIG/WebService_PremiumCalculationAIG" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationAIGSoap12" type="tns:WebService_RefundCancellationAIGSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="WebService_RefundCancellationAIG">
+      <soap12:operation soapAction="WebService_RefundCancellationAIG/WebService_RefundCancellationAIG" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationAIG">
+      <soap12:operation soapAction="WebService_RefundCancellationAIG/WebService_PremiumCalculationAIG" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationAIGHttpGet" type="tns:WebService_RefundCancellationAIGHttpGet">
+    <http:binding verb="GET"/>
+  </wsdl:binding>
+  <wsdl:binding name="WebService_RefundCancellationAIGHttpPost" type="tns:WebService_RefundCancellationAIGHttpPost">
+    <http:binding verb="POST"/>
+  </wsdl:binding>
+  <wsdl:service name="WebService_RefundCancellationAIG">
+    <wsdl:port binding="tns:WebService_RefundCancellationAIGSoap" name="WebService_RefundCancellationAIGSoap">
+      <soap:address location="http://172.20.5.104/Webservice_RefundCancellationAIG/WebService_RefundCancellationAIG.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationAIGSoap12" name="WebService_RefundCancellationAIGSoap12">
+      <soap12:address location="http://172.20.5.104/Webservice_RefundCancellationAIG/WebService_RefundCancellationAIG.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationAIGHttpGet" name="WebService_RefundCancellationAIGHttpGet">
+      <http:address location="http://172.20.5.104/Webservice_RefundCancellationAIG/WebService_RefundCancellationAIG.asmx"/>
+    </wsdl:port>
+    <wsdl:port binding="tns:WebService_RefundCancellationAIGHttpPost" name="WebService_RefundCancellationAIGHttpPost">
+      <http:address location="http://172.20.5.104/Webservice_RefundCancellationAIG/WebService_RefundCancellationAIG.asmx"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

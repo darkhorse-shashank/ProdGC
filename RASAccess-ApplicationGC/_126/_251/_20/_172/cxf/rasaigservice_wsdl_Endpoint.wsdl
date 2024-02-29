@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasaigservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASAIGService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASAIGService/">
+    <wsdl:import location="rasaigservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASAIGService/"/>
+  <wsdl:binding name="RASAIGServiceSoapBinding" type="tns:RASAIGService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServiceRefundCancellationAIG">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationAIG">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationAIGResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationAIG">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationAIG">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationAIGResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASAIGService">
+    <wsdl:port binding="tns:RASAIGServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASAIGService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

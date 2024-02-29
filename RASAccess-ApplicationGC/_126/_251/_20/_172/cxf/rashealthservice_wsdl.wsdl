@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASHealthService" targetNamespace="http://stub.tagicesb.com/wsdl/RASHealthService/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASHealthService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.tagicesb.com/wsdl/RASHealthService/" version="1.0" xmlns:ns1="WebService_RefundCancellationHealth">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationHealth"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHealthService/webServicePremiumCalculationHealth.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHealthService/webServicePremiumCalculationHealthResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHealthService/webServiceRefundCancellationHealthResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/tagicesb/stub/wsdl/RASHealthService/webServiceRefundCancellationHealth.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationHealth" version="1.0" xmlns:tns="WebService_RefundCancellationHealth">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/WebService_RefundCancellationHealth.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/WebService_RefundCancellationHealthResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/WebService_PremiumCalculationHealth.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/WebService_PremiumCalculationHealthResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationHealth/PremiumCalculationRespns.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServicePremiumCalculationHealthResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationHealthResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationHealth">
+    <wsdl:part element="tns:webServicePremiumCalculationHealth" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationHealth">
+    <wsdl:part element="tns:webServiceRefundCancellationHealth" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationHealthResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationHealthResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASHealthService">
+    <wsdl:operation name="webServiceRefundCancellationHealth">
+      <wsdl:input message="tns:webServiceRefundCancellationHealth" name="webServiceRefundCancellationHealth">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationHealthResponse" name="webServiceRefundCancellationHealthResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationHealth">
+      <wsdl:input message="tns:webServicePremiumCalculationHealth" name="webServicePremiumCalculationHealth">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationHealthResponse" name="webServicePremiumCalculationHealthResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

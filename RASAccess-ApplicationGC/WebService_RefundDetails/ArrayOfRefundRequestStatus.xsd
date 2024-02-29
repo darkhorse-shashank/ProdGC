@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="RefundRequestStatus_2.xsd" />
+	<xs:complexType name="ArrayOfRefundRequestStatus">
+
+		<xs:sequence>
+
+			<xs:element maxOccurs="unbounded" minOccurs="0"
+				name="RefundRequestStatus" nillable="true"
+				type="tns:RefundRequestStatus" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="ArrayOfRefundRequestStatus"
+		type="tns:ArrayOfRefundRequestStatus" />
+</xs:schema>

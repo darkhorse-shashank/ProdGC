@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="ArrayOfProposal.xsd" />
+	<xs:complexType name="ProposalDetails">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="PolicyNo" type="xs:string" />
+
+			<xs:element minOccurs="0" name="objProposalDetails"
+				type="tns:ArrayOfProposal" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="ProposalDetails">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="UserId"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PolicyNo"
+					type="xs:string" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

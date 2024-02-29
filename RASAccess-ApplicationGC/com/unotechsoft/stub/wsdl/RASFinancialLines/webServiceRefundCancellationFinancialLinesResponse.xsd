@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASFinancialLines/"
+	xmlns:ns1="WebService_RefundCancellationFinancialLines"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASFinancialLines/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationFinancialLines"
+		schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/RefundCancellationRespns.xsd" />
+	<xs:complexType
+		name="webServiceRefundCancellationFinancialLinesResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationFinancialLinesResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element
+		name="webServiceRefundCancellationFinancialLinesResponse"
+		type="tns:webServiceRefundCancellationFinancialLinesResponse" />
+</xs:schema>

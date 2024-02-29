@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASPersonalLines/"
+	xmlns:ns1="WebService_RefundCancellationPersonalLines"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASPersonalLines/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationPersonalLines"
+		schemaLocation="../../../../../WebService_RefundCancellationPersonalLines/PremiumCalculationRespns.xsd" />
+	<xs:complexType name="webServicePremiumCalculationDtlsResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_PremiumCalculationDtlsResult"
+				type="ns1:PremiumCalculationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServicePremiumCalculationDtlsResponse"
+		type="tns:webServicePremiumCalculationDtlsResponse" />
+</xs:schema>

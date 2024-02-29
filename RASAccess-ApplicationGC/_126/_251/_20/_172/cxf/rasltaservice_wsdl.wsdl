@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASLTAService" targetNamespace="http://stub.unotechsoft.com/wsdl/RASLTAService/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASLTAService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/RASLTAService/" version="1.0" xmlns:ns1="WebService_RefundCancellationLTA">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationLTA"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASLTAService/webServicePremiumCalculationLTAResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASLTAService/webServiceRefundCancellationLTA.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASLTAService/webServiceRefundCancellationLTAResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASLTAService/webServicePremiumCalculationLTA.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationLTA" version="1.0" xmlns:tns="WebService_RefundCancellationLTA">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/WebService_PremiumCalculationLTAResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/WebService_RefundCancellationLTA.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/WebService_RefundCancellationLTAResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationLTA/WebService_PremiumCalculationLTA.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServicePremiumCalculationLTA">
+    <wsdl:part element="tns:webServicePremiumCalculationLTA" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationLTA">
+    <wsdl:part element="tns:webServiceRefundCancellationLTA" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationLTAResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationLTAResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationLTAResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationLTAResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASLTAService">
+    <wsdl:operation name="webServicePremiumCalculationLTA">
+      <wsdl:input message="tns:webServicePremiumCalculationLTA" name="webServicePremiumCalculationLTA">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationLTAResponse" name="webServicePremiumCalculationLTAResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationLTA">
+      <wsdl:input message="tns:webServiceRefundCancellationLTA" name="webServiceRefundCancellationLTA">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationLTAResponse" name="webServiceRefundCancellationLTAResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

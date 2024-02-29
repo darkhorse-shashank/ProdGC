@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/"
+	xmlns:ns1="WebService_RefundCancellationTradeCredit"
+	xmlns:tns="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationTradeCredit"
+		schemaLocation="../../../../../../WebService_RefundCancellationTradeCredit/webServiceRefundCancellationTradeCredit_imports_1.xsd" />
+	<xs:complexType name="webServiceRefundCancellationTradeCredit">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0" name="source"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="medium"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="campaign"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="strServiceToken" type="xs:string" />
+
+			<xs:element minOccurs="0" ref="ns1:UserId" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="RefundCancellation" type="ns1:RefundCancellationReq" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationTradeCredit"
+		type="tns:webServiceRefundCancellationTradeCredit" />
+</xs:schema>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/create_CancellationRefund_InputMap_req_1" version="8.0.5.0" xmlns:map="http://Access-ApplicationGC/xslt/create_CancellationRefund_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC}createCancellationRefundRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}refundRequest" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in4" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in5" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out2" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out3" uri="WebService_AccRefundRequest"/>
+        <namespace kind="supplement" prefix="out4" uri="http://stub.tagicesb.com/wsdl/RASHealthService/"/>
+        <namespace kind="supplement" prefix="out5" uri="WebService_RefundDetails"/>
+        <namespace kind="supplement" prefix="out6" uri="WebService_RefundCancellationDtls"/>
+    </namespaces>
+    <mappingDeclaration name="create_CancellationRefund_InputMap_req_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="context/correlation"/>
+            <output path="context/correlation"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/refundRequestInput/source"/>
+            <output path="body/refundRequest/source"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/refundRequestInput/medium"/>
+            <output path="body/refundRequest/medium"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/refundRequestInput/campaign"/>
+            <output path="body/refundRequest/campaign"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/refundRequestInput/strServiceToken"/>
+            <output path="body/refundRequest/strServiceToken"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/userId"/>
+            <output path="body/refundRequest/UserId"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/policyNo"/>
+            <output path="body/refundRequest/PolicyNo"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/proposalNo"/>
+            <output path="body/refundRequest/ProposalNo"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/product"/>
+            <output path="body/refundRequest/Product"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/payerType"/>
+            <output path="body/refundRequest/PayerType"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/payeeName"/>
+            <output path="body/refundRequest/PayeeName"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/payeeIfscCode"/>
+            <output path="body/refundRequest/PayeeIFSCcode"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/payeeBankAccNo"/>
+            <output path="body/refundRequest/PayeeBankAccNo"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/chequeNo"/>
+            <output path="body/refundRequest/ChequeNumber"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/payeeBank"/>
+            <output path="body/refundRequest/PayeeBank"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/payeeAddress"/>
+            <output path="body/refundRequest/PayeeAddress"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/chequeType"/>
+            <output path="body/refundRequest/ChequeType"/>
+        </move>
+        <function lang="xpath" ref="substring-after">
+            <input path="body/createCancellationRefund/cancellationRefundData/RASTicketNo" var="RASTicketNo3"/>
+            <output path="body/refundRequest/GCTransID"/>
+            <param name="string1" value="$RASTicketNo3"/>
+            <param name="string2" value="'RAS-'"/>
+        </function>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/cdAccountNo"/>
+            <output path="body/refundRequest/CDAccountNo"/>
+        </move>
+        <move>
+            <input path="body/createCancellationRefund/cancellationRefundData/RASTicketNo"/>
+            <output path="body/refundRequest/RASTicketNo"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

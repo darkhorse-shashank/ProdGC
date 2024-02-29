@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/find_SubReceipt_Details_InputMap_req_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/find_SubReceipt_Details_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findSubReceiptDetailsRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}fetchSubReceiptDetails" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in4" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in5" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out2" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+    </namespaces>
+    <mappingDeclaration name="find_SubReceipt_Details_InputMap_req_1">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move>
+            <input path="body/findSubReceiptDetails/subReceiptsInput/source"/>
+            <output path="body/fetchSubReceiptDetails/source"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/subReceiptsInput/medium"/>
+            <output path="body/fetchSubReceiptDetails/medium"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/subReceiptsInput/campaign"/>
+            <output path="body/fetchSubReceiptDetails/campaign"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/subReceiptsInput/strServiceToken"/>
+            <output path="body/fetchSubReceiptDetails/strServiceToken"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/userId"/>
+            <output path="body/fetchSubReceiptDetails/UserId"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/proposalNumber"/>
+            <output path="body/fetchSubReceiptDetails/ProposalNumber"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/subReceiptNumber"/>
+            <output path="body/fetchSubReceiptDetails/SubReceiptNumber"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/proposalNumber"/>
+            <output path="context/correlation/proposalNo"/>
+        </move>
+        <move>
+            <input path="body/findSubReceiptDetails/subReceiptNumber"/>
+            <output path="context/correlation/crsno"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

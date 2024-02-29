@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/cancelPolicyHomeResponse" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/cancelPolicyHomeResponse">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{WebService_RefundCancellationHome}WebService_RefundCancellationHomeSoapOut" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{WebService_RefundCancellationDtls}WebService_RefundCancellationDtlsSoapOut" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="WebService_RefundCancellationHome"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="io7" uri="http://Access-ApplicationGC"/>
+        <namespace kind="supplement" prefix="in" uri="wsdl.WebService_RefundCancellationHome"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out2" uri="WebService_RefundCancellationDtls"/>
+        <namespace kind="supplement" prefix="out" uri="wsdl.WebService_RefundCancellationDtls"/>
+    </namespaces>
+    <mappingDeclaration name="cancelPolicyHomeResponse">
+        <input namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <output namespace="http://www.ibm.com/websphere/sibx/smo/v6.0.1" path="smo"/>
+        <move automap="true">
+            <input path="context/correlation/request"/>
+            <output path="context/correlation/request"/>
+        </move>
+        <move automap="true">
+            <input path="body/WebService_RefundCancellationHomeResponse/WebService_RefundCancellationHomeResult/ProposalNo"/>
+            <output path="body/WebService_RefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ProposalNo"/>
+        </move>
+        <move automap="true">
+            <input path="body/WebService_RefundCancellationHomeResponse/WebService_RefundCancellationHomeResult/ProposalStatus"/>
+            <output path="body/WebService_RefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ProposalStatus"/>
+        </move>
+        <move automap="true">
+            <input path="body/WebService_RefundCancellationHomeResponse/WebService_RefundCancellationHomeResult/ApprovalFlow"/>
+            <output path="body/WebService_RefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ApprovalFlow"/>
+        </move>
+        <move automap="true">
+            <input path="body/WebService_RefundCancellationHomeResponse/WebService_RefundCancellationHomeResult/Status"/>
+            <output path="body/WebService_RefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/Status"/>
+        </move>
+        <move automap="true">
+            <input path="body/WebService_RefundCancellationHomeResponse/WebService_RefundCancellationHomeResult/ErrorID"/>
+            <output path="body/WebService_RefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ErrorID"/>
+        </move>
+        <move automap="true">
+            <input path="body/WebService_RefundCancellationHomeResponse/WebService_RefundCancellationHomeResult/ErrorDesc"/>
+            <output path="body/WebService_RefundCancellationDtlsResponse/WebService_RefundCancellationDtlsResult/ErrorDesc"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

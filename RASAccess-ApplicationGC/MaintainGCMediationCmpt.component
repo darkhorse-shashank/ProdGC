@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<scdl:component xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:mfc="http://www.ibm.com/xmlns/prod/websphere/scdl/mfc/6.0.0" xmlns:ns1="http://TicketDomain-v1.0.0/MaintainGC" xmlns:ns10="WebService_RefundCancellationPA" xmlns:ns11="WebService_RefundCancellationHome" xmlns:ns12="WebService_RefundCancellationPE" xmlns:ns13="WebService_RefundCancellationCasualty" xmlns:ns14="WebService_RefundCancellationFinancialLines" xmlns:ns15="WebService_RefundCancellationTradeCredit" xmlns:ns16="WebService_RefundCancellationAviation" xmlns:ns17="http://stub.tagicesb.com/wsdl/RASGenericService/" xmlns:ns18="http://stub.unotechsoft.com/wsdl/RASMotor/" xmlns:ns19="http://stub.tagicesb.com/wsdl/RASHealthService/" xmlns:ns2="WebService_RefundDetails" xmlns:ns20="http://stub.unotechsoft.com/wsdl/RASLTAService/" xmlns:ns21="http://stub.tagicesb.com/wsdl/RASPAService/" xmlns:ns22="http://stub.tagicesb.com/wsdl/RASHome/" xmlns:ns23="http://com.tagic.esb.RASRuralStub/wsdl/RASRuralService/" xmlns:ns24="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/" xmlns:ns25="http://stub.unotechsoft.com/wsdl/RASFinancialLines/" xmlns:ns26="http://stub.unotechsoft.com/wsdl/RASPersonalLines/" xmlns:ns27="http://stub.tagicesb.com/wsdl/RASMarineService/" xmlns:ns28="http://stub.tagicesb.com/wsdl/RASAIGService/" xmlns:ns29="http://stub.tagicesb.com/wsdl/RASAviation/" xmlns:ns3="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC" xmlns:ns30="http://stub.tagicesb.com/wsdl/RASCasualty/" xmlns:ns31="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/" xmlns:ns32="http://GCLibrary/org/aig/access/UpdateGCTransactionLog" xmlns:ns33="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/" xmlns:ns4="WebService_AccRefundRequest" xmlns:ns5="WebService_RefundCancellationDtls" xmlns:ns6="WebService_RefundCancellationLTA" xmlns:ns7="WebService_RefundCancellationHealth" xmlns:ns8="WebService_RefundCancellationMarine" xmlns:ns9="WebService_RefundCancellationAIG" xmlns:scdl="http://www.ibm.com/xmlns/prod/websphere/scdl/6.0.0" xmlns:wsdl="http://www.ibm.com/xmlns/prod/websphere/scdl/wsdl/6.0.0" displayName="MaintainGCMediationCmpt" name="MaintainGCMediationCmpt">
+  <interfaces>
+    <interface xsi:type="wsdl:WSDLPortType" portType="ns3:MaintainAccessGC">
+      <scdl:interfaceQualifier xsi:type="scdl:JoinTransaction" value="true"/>
+    </interface>
+  </interfaces>
+  <references>
+    <reference name="RASGenericServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns17:RASGenericService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASGenericServiceImport"/>
+    </reference>
+    <reference name="RASMotorServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns18:RASMotorService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASMotor_Cancellation"/>
+    </reference>
+    <reference name="RASHealthServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns19:RASHealthService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASHealth_Cancellation"/>
+    </reference>
+    <reference name="RASLTAServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns20:RASLTAService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASLTA_Cancellation"/>
+    </reference>
+    <reference name="RASPAServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns21:RASPAService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASPersonalAccident_Cancellation"/>
+    </reference>
+    <reference name="RASHomeServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns22:RASHomeService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASHome_Cancellation"/>
+    </reference>
+    <reference name="RASTradeCreditServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns24:RASTradeCreditService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASTradeCredit_Cancellation"/>
+    </reference>
+    <reference name="RASFinancialLinesServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns25:RASFinancialLinesService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASFinancialLines_Cancellation"/>
+    </reference>
+    <reference name="RASPersonalLinesServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns26:RASPersonalLinesService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASPersonalLines_Cancellation"/>
+    </reference>
+    <reference name="RASMarineServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns27:RASMarineService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASMarineCargo_Cancellation"/>
+    </reference>
+    <reference name="RASAIGServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns28:RASAIGService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASAIGCombined_Cancellation"/>
+    </reference>
+    <reference name="RASAviationServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns29:RASAviationService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASAviation_Cancellation"/>
+    </reference>
+    <reference name="RASCasualtyServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns30:RASCasualtyService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASLiability_Cancellation"/>
+    </reference>
+    <reference name="RASPropertyEnergyServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns31:RASPropertyEnergyService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASPropertyandEnergy_Cancellation"/>
+    </reference>
+    <reference name="UpdateGCTransactionLogPartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns32:UpdateGCTransactionLog"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt"/>
+      <wire target="GCTransactionLogging"/>
+    </reference>
+    <reference name="RASRefundCancellationKhokaServicePartner">
+      <interface xsi:type="wsdl:WSDLPortType" portType="ns33:RASRefundCancellationKhokaService"/>
+      <scdl:referenceQualifier xsi:type="scdl:SuspendTransaction" value="false"/>
+      <scdl:referenceQualifier xsi:type="scdl:Reliability"/>
+      <scdl:referenceQualifier xsi:type="scdl:DeliverAsyncAt" value="commit"/>
+      <wire target="RASRefundCancellationKhokaServiceImport1"/>
+    </reference>
+  </references>
+  <implementation xsi:type="mfc:MediationFlowImplementation" mfcFile="xslt/MaintainGCMediationCmpt.mfc">
+    <scdl:implementationQualifier xsi:type="scdl:Transaction" value="global"/>
+  </implementation>
+</scdl:component>

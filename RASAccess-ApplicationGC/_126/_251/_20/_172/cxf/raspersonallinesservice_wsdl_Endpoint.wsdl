@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="raspersonallinesservice_wsdl_Endpoint" targetNamespace="http://stub.unotechsoft.com/wsdl/RASPersonalLines/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASPersonalLines/">
+    <wsdl:import location="raspersonallinesservice_wsdl.wsdl" namespace="http://stub.unotechsoft.com/wsdl/RASPersonalLines/"/>
+  <wsdl:binding name="RASPersonalLinesServiceSoapBinding" type="tns:RASPersonalLinesService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationDtls">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationDtlsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationPersonalLines">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationPersonalLines">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationPersonalLinesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASPersonalLinesService">
+    <wsdl:port binding="tns:RASPersonalLinesServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASPersonalLinesService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://Access-ApplicationGC/xslt/update_Disbursement_InputMap_req_1" version="8.0.4.0" xmlns:map="http://Access-ApplicationGC/xslt/update_Disbursement_InputMap_req_1">
+    <input correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC}updateDisbursementRequestMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <output correlationContext="{http://Access-ApplicationGC}correlationBO" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}rasDataUpdate" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+        <namespace kind="supplement" prefix="in4" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="in3" uri="http://GCLibrary/org/aig/access/bo"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="in5" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="in" uri="http://GCDomain-v1.0.0/org/tataaig/access/MaintainAccessGC"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out2" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="out" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+    </namespaces>
+    <mappingDeclaration name="update_Disbursement_InputMap_req_1">
+        <input path="body"/>
+        <output path="body"/>
+        <move>
+            <input path="updateDisbursement/rasDataUpdateInput/source"/>
+            <output path="rasDataUpdate/source"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/rasDataUpdateInput/medium"/>
+            <output path="rasDataUpdate/medium"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/rasDataUpdateInput/campaign"/>
+            <output path="rasDataUpdate/campaign"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/rasDataUpdateInput/strServiceToken"/>
+            <output path="rasDataUpdate/strServiceToken"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/userId"/>
+            <output path="rasDataUpdate/UserId"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/policyNo"/>
+            <output path="rasDataUpdate/PolicyNo"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/utrReferenceNo"/>
+            <output path="rasDataUpdate/UTRReferenceNo"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/valueDate"/>
+            <output path="rasDataUpdate/ValueDate"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/amount"/>
+            <output path="rasDataUpdate/Amount"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/counterPartyName"/>
+            <output path="rasDataUpdate/CounterPartyName"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/orderPartyReference"/>
+            <output path="rasDataUpdate/OrderPartyReference"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/reasonDescription"/>
+            <output path="rasDataUpdate/ReasonDescription"/>
+        </move>
+        <move>
+            <input path="updateDisbursement/data/voucherNo"/>
+            <output path="rasDataUpdate/VoucherNo"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASTradeCreditService" targetNamespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/" xmlns:tns="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/" version="1.0" xmlns:ns1="WebService_RefundCancellationTradeCredit">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationTradeCredit"/>
+            <xs:include schemaLocation="../../../../../RASTradeCreditStub/esb/tagic/com/wsdl/RASTradeCreditService/webServiceRefundCancellationTradeCredit.xsd"/>
+            <xs:include schemaLocation="../../../../../RASTradeCreditStub/esb/tagic/com/wsdl/RASTradeCreditService/webServicePremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../RASTradeCreditStub/esb/tagic/com/wsdl/RASTradeCreditService/webServiceRefundCancellationTradeCreditResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../RASTradeCreditStub/esb/tagic/com/wsdl/RASTradeCreditService/webServicePremiumCalculationDtls.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationTradeCredit" version="1.0" xmlns:tns="WebService_RefundCancellationTradeCredit">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/WebService_PremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="UserId.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/WebService_RefundCancellationTradeCreditResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/WebService_PremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationTradeCredit/WebService_RefundCancellationTradeCredit.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRefundCancellationTradeCreditResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationTradeCreditResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationTradeCredit">
+    <wsdl:part element="tns:webServiceRefundCancellationTradeCredit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtlsResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationDtlsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtls">
+    <wsdl:part element="tns:webServicePremiumCalculationDtls" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASTradeCreditService">
+    <wsdl:operation name="webServiceRefundCancellationTradeCredit">
+      <wsdl:input message="tns:webServiceRefundCancellationTradeCredit" name="webServiceRefundCancellationTradeCredit">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationTradeCreditResponse" name="webServiceRefundCancellationTradeCreditResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <wsdl:input message="tns:webServicePremiumCalculationDtls" name="webServicePremiumCalculationDtls">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationDtlsResponse" name="webServicePremiumCalculationDtlsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

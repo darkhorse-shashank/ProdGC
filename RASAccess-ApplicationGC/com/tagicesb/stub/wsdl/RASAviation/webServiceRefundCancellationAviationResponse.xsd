@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASAviation/"
+	xmlns:ns1="WebService_RefundCancellationAviation"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASAviation/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationAviation"
+		schemaLocation="../../../../../WebService_RefundCancellationAviation/RefundCancellationRespns.xsd" />
+	<xs:complexType
+		name="webServiceRefundCancellationAviationResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RefundCancellationAviationResult"
+				type="ns1:RefundCancellationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationAviationResponse"
+		type="tns:webServiceRefundCancellationAviationResponse" />
+</xs:schema>

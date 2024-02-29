@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include
+		schemaLocation="rasGenericPremiumCalculationResponse.xsd" />
+	<xs:complexType
+		name="webServiceRASGenericPremiumCalculationResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebService_RASGenericPremiumCalculationResult"
+				type="tns:rasGenericPremiumCalculationResponse" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRASGenericPremiumCalculationResponse"
+		type="tns:webServiceRASGenericPremiumCalculationResponse" />
+</xs:schema>

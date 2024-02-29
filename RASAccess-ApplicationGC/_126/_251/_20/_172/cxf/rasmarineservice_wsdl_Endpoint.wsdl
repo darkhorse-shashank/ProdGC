@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rasmarineservice_wsdl_Endpoint" targetNamespace="http://stub.tagicesb.com/wsdl/RASMarineService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://stub.tagicesb.com/wsdl/RASMarineService/">
+    <wsdl:import location="rasmarineservice_wsdl.wsdl" namespace="http://stub.tagicesb.com/wsdl/RASMarineService/"/>
+  <wsdl:binding name="RASMarineServiceSoapBinding" type="tns:RASMarineService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServiceRefundCancellationMarine">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationMarine">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationMarineResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServicePremiumCalculationMarine">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationMarine">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationMarineResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASMarineService">
+    <wsdl:port binding="tns:RASMarineServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASMarineService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

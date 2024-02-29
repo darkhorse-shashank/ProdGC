@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundCancellationDtls"
+	xmlns:tns="WebService_RefundCancellationDtls"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="ArrayOfTotalLossPolicyData.xsd" />
+	<xs:complexType name="TotalLossPolicyDataRespns">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="objPolicyData"
+				type="tns:ArrayOfTotalLossPolicyData" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="TotalLossPolicyDataRespns"
+		type="tns:TotalLossPolicyDataRespns" />
+</xs:schema>

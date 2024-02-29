@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?><mappingRoot xmlns="http://www.ibm.com/2008/ccl/Mapping" domainID="com.ibm.msl.mapping.xml" targetNamespace="http://RASAccess-ApplicationGC/xslt/getCDDetailsOutputMap" version="8.0.4.0" xmlns:map="http://RASAccess-ApplicationGC/xslt/getCDDetailsOutputMap">
+    <input correlationContext="" message="{http://stub.tagicesb.com/wsdl/RASGenericService/}getDetailsOfCDRefundResponse" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <output correlationContext="" message="{http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC}findCDDetailsResponseMsg" sharedContext="" smoName="wsdl-primary" transientContext="" type="smo" types="" xpath="/body"/>
+    <namespaces>
+        <namespace kind="supplement" prefix="in2" uri="http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io5" uri="http://www.ibm.com/xmlns/prod/websphere/http/sca/6.1.0"/>
+        <namespace kind="supplement" prefix="io4" uri="http://www.w3.org/2003/05/soap-envelope"/>
+        <namespace kind="supplement" prefix="io3" uri="http://www.ibm.com/xmlns/prod/websphere/mq/sca/6.0.0"/>
+        <namespace kind="supplement" prefix="io2" uri="http://www.ibm.com/websphere/sibx/smo/v6.0.1"/>
+        <namespace kind="supplement" prefix="io6" uri="http://www.w3.org/2005/08/addressing"/>
+        <namespace kind="supplement" prefix="in" uri="wsdl.http://stub.tagicesb.com/wsdl/RASGenericService/"/>
+        <namespace kind="supplement" prefix="io" uri="http://schemas.xmlsoap.org/ws/2004/08/addressing"/>
+        <namespace kind="supplement" prefix="out3" uri="wsdl.http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out2" uri="http://RACASBO"/>
+        <namespace kind="supplement" prefix="out5" uri="http://GCDomain-v1.0.0/org/tataaig/access/RetrieveAccessGC"/>
+        <namespace kind="supplement" prefix="out4" uri="http://GCLibrary/org/aig/access/BO"/>
+        <namespace kind="supplement" prefix="out" uri="http://GCLibrary/org/aig/access/bo"/>
+    </namespaces>
+    <mappingDeclaration name="getCDDetailsOutputMap">
+        <input path="body"/>
+        <output path="body"/>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_PARTNER_TYPE"/>
+            <output path="findCDDetailsResponse/CDDetails/CDPartnerType"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_BALANCE"/>
+            <output path="findCDDetailsResponse/CDDetails/CDBalance"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_PARTNER_ID"/>
+            <output path="findCDDetailsResponse/CDDetails/CDPartnerId"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_PARTNER_NAME"/>
+            <output path="findCDDetailsResponse/CDDetails/CDPartnerName"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_VALIDITY_FROM"/>
+            <output path="findCDDetailsResponse/CDDetails/CDValidityFrom"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_VALIDITY_TO"/>
+            <output path="findCDDetailsResponse/CDDetails/CDValidaityTo"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/EMAIL_ID_CLIENT"/>
+            <output path="findCDDetailsResponse/CDDetails/EmailIDOfClient"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/NAME_OF_REQUESTOR"/>
+            <output path="findCDDetailsResponse/CDDetails/NameOfRequestor"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CHANNEL_OF_REQUESTOR"/>
+            <output path="findCDDetailsResponse/CDDetails/ChannelOfRequestor"/>
+        </move>
+        <move>
+            <input path="getDetailsOfCDRefundResponse/GetDetailsOfCDRefundResult/GetDetailsOfCDRefundData[1]/CD_STATUS"/>
+            <output path="findCDDetailsResponse/CDDetails/CDStatus"/>
+        </move>
+    </mappingDeclaration>
+</mappingRoot>

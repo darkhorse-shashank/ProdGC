@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/"
+	xmlns:ns1="WebService_RefundCancellationPE"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASPropertyEnergyService/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationPE"
+		schemaLocation="../../../../../WebService_RefundCancellationPE/PremiumCalculationRespns.xsd" />
+	<xs:complexType name="webServicePremiumCalculationPEResponse">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0"
+				name="WebServicePremiumCalculationPEResult"
+				type="ns1:PremiumCalculationRespns" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServicePremiumCalculationPEResponse"
+		type="tns:webServicePremiumCalculationPEResponse" />
+</xs:schema>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundCancellationCasualty"
+	xmlns:tns="WebService_RefundCancellationCasualty"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="RefundCancellationReq.xsd" />
+	<xs:element name="WebService_PremiumCalculationCasualty">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="UserId"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="RefundCancellation"
+					type="tns:RefundCancellationReq" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

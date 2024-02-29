@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundDetails"
+	xmlns:tns="WebService_RefundDetails"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="SubRecieptDtls">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="InsuredName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="InsuredID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="PayerAddress1"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="payerAddress2"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="payerAddress3"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="State" type="xs:string" />
+
+			<xs:element minOccurs="0" name="City" type="xs:string" />
+
+			<xs:element minOccurs="0" name="Area" type="xs:string" />
+
+			<xs:element minOccurs="0" name="Pincode" type="xs:string" />
+
+			<xs:element minOccurs="0" name="landmark" type="xs:string" />
+
+			<xs:element minOccurs="0" name="District" type="xs:string" />
+
+			<xs:element minOccurs="0" name="BankAccNo" type="xs:string" />
+
+			<xs:element minOccurs="0" name="BankName" type="xs:string" />
+
+			<xs:element minOccurs="0" name="BankIFSC" type="xs:string" />
+
+			<xs:element minOccurs="0" name="balance_amt"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="Tagged_amt"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="txt_status"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="instrument_amt"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="payment_source"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="payment_mode_cd"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="housebank_accno"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="payment_mode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="housebankname"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="policy_numbers"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="email" type="xs:string" />
+
+			<xs:element minOccurs="0" name="contact" type="xs:string" />
+
+			<xs:element minOccurs="0" name="transaction_num"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorMsg" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorCode" type="xs:string" />
+
+			<xs:element minOccurs="0" name="Sub_receipt_numbers"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="DrawerName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ReceiptLAN"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ReceiptAppNo"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ReceiptAccNo"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ReceiptIFSC"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="LOB" type="xs:string" />
+
+			<xs:element minOccurs="0" name="CDNumber" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ReceiptDate"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ReceiptPayerName"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="AuthCode" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+</xs:schema>

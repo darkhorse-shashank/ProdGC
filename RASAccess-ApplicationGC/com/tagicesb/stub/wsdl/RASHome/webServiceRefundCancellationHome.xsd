@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.tagicesb.com/wsdl/RASHome/"
+	xmlns:ns1="WebService_RefundCancellationHome"
+	xmlns:tns="http://stub.tagicesb.com/wsdl/RASHome/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:import namespace="WebService_RefundCancellationHome"
+		schemaLocation="../../../../../WebService_RefundCancellationHome/RefundCancellationReq.xsd" />
+	<xs:complexType name="webServiceRefundCancellationHome">
+
+		<xs:sequence>
+
+			<xs:element form="qualified" minOccurs="0" name="source"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="medium"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="campaingn"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="strServiceToken" type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0" name="UserId"
+				type="xs:string" />
+
+			<xs:element form="qualified" minOccurs="0"
+				name="RefundCancellation" type="ns1:RefundCancellationReq" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+	<xs:element name="webServiceRefundCancellationHome"
+		type="tns:webServiceRefundCancellationHome" />
+</xs:schema>

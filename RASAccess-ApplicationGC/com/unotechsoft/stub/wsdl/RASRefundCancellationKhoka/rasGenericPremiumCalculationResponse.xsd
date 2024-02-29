@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="unqualified"
+	targetNamespace="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:tns="http://stub.unotechsoft.com/wsdl/RASRefundCancellationKhoka/"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="rasGenericPremiumCalculationResponse">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="oErrorCode"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="oErrorDesc"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="oGst" type="xs:string" />
+
+			<xs:element minOccurs="0" name="oJkgst" type="xs:string" />
+
+			<xs:element minOccurs="0" name="oNetPremium"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="oStampDuty"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="oStatus" type="xs:string" />
+
+			<xs:element minOccurs="0" name="oTotalPremium"
+				type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+</xs:schema>

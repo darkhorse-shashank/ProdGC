@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_RefundCancellationLTA"
+	xmlns:tns="WebService_RefundCancellationLTA"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="RefundCancellationRespns">
+
+		<xs:sequence>
+
+			<xs:element minOccurs="0" name="ProposalNo"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ProposalStatus"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="ApprovalFlow"
+				type="xs:string" />
+
+			<xs:element minOccurs="0" name="Status" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorID" type="xs:string" />
+
+			<xs:element minOccurs="0" name="ErrorDesc" type="xs:string" />
+
+		</xs:sequence>
+
+	</xs:complexType>
+</xs:schema>

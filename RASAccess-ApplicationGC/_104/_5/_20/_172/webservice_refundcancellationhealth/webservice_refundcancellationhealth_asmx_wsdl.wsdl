@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="WebService_RefundCancellationHealth" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="WebService_RefundCancellationHealth">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationHealth">
+            <s:include schemaLocation="../../../../../WebService_RefundCancellationHealth/RefundCancellationRespns.xsd"/>
+            <s:include schemaLocation="../../../../../WebService_RefundCancellationHealth/RefundCancellationReq.xsd"/>
+            <s:include schemaLocation="../../../../../WebService_RefundCancellationHealth/PremiumCalculationRespns.xsd"/>
+            <s:element name="WebService_RefundCancellationHealth">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_RefundCancellationHealthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_RefundCancellationHealthResult" type="tns:RefundCancellationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_PremiumCalculationHealth">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="UserId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="RefundCancellation" type="tns:RefundCancellationReq"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="WebService_PremiumCalculationHealthResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="WebService_PremiumCalculationHealthResult" type="tns:PremiumCalculationRespns"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="WebService_RefundCancellationHealthSoapIn">
+    <wsdl:part element="tns:WebService_RefundCancellationHealth" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_RefundCancellationHealthSoapOut">
+    <wsdl:part element="tns:WebService_RefundCancellationHealthResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationHealthSoapIn">
+    <wsdl:part element="tns:WebService_PremiumCalculationHealth" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="WebService_PremiumCalculationHealthSoapOut">
+    <wsdl:part element="tns:WebService_PremiumCalculationHealthResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:portType name="WebService_RefundCancellationHealthSoap">
+    <wsdl:operation name="WebService_RefundCancellationHealth">
+      <wsdl:documentation>The service is used for Refund Cancellation of Health Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_RefundCancellationHealthSoapIn"/>
+      <wsdl:output message="tns:WebService_RefundCancellationHealthSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="WebService_PremiumCalculationHealth">
+      <wsdl:documentation>The service is used for Refund Cancellation of Health Products</wsdl:documentation>
+      <wsdl:input message="tns:WebService_PremiumCalculationHealthSoapIn"/>
+      <wsdl:output message="tns:WebService_PremiumCalculationHealthSoapOut"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="WebService_RefundCancellationHealthHttpGet"/>
+  <wsdl:portType name="WebService_RefundCancellationHealthHttpPost"/>
+</wsdl:definitions>

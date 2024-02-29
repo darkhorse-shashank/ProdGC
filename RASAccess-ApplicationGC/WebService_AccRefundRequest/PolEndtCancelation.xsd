@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	attributeFormDefault="unqualified" elementFormDefault="qualified"
+	targetNamespace="WebService_AccRefundRequest"
+	xmlns:tns="WebService_AccRefundRequest"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="PolEndtCancelation">
+
+		<xs:complexType>
+
+			<xs:sequence>
+
+				<xs:element minOccurs="0" name="UserId"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="OfficeCd"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="ReceiptNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="PolicyNo"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="CancellationType"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="StampAffixed"
+					type="xs:string" />
+
+				<xs:element minOccurs="0" name="Reason"
+					type="xs:string" />
+
+			</xs:sequence>
+
+		</xs:complexType>
+
+	</xs:element>
+</xs:schema>

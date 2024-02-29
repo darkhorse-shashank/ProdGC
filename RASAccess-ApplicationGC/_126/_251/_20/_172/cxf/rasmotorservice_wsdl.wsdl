@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASMotorService" targetNamespace="http://stub.unotechsoft.com/wsdl/RASMotor/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASMotor/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/RASMotor/" version="1.0" xmlns:ns1="WebService_RefundCancellationDtls">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationDtls"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASMotor/webServiceRefundCancellationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASMotor/webServiceRefundCancellationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASMotor/webServicePremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASMotor/webServicePremiumCalculationDtlsResponse.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationDtls" version="1.0" xmlns:tns="WebService_RefundCancellationDtls">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_PremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_RefundCancellationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_PremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/TotalLossPolicyDataRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_GetTotalLossPolicyData.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_GetTotalLossPolicyDataResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/ArrayOfTotalLossPolicyData.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/WebService_RefundCancellationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationDtls/TotalLossPolicyData.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRefundCancellationDtlsResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationDtlsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtlsResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationDtlsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtls">
+    <wsdl:part element="tns:webServicePremiumCalculationDtls" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationDtls">
+    <wsdl:part element="tns:webServiceRefundCancellationDtls" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASMotorService">
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <wsdl:input message="tns:webServicePremiumCalculationDtls" name="webServicePremiumCalculationDtls">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationDtlsResponse" name="webServicePremiumCalculationDtlsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationDtls">
+      <wsdl:input message="tns:webServiceRefundCancellationDtls" name="webServiceRefundCancellationDtls">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationDtlsResponse" name="webServiceRefundCancellationDtlsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

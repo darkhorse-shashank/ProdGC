@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="rastradecreditservice_wsdl_Endpoint" targetNamespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/">
+    <wsdl:import location="rastradecreditservice_wsdl.wsdl" namespace="http://com.tagic.esb.RASTradeCreditStub/wsdl/RASTradeCreditService/"/>
+  <wsdl:binding name="RASTradeCreditServiceSoapBinding" type="tns:RASTradeCreditService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServicePremiumCalculationDtls">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServicePremiumCalculationDtlsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationTradeCredit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="webServiceRefundCancellationTradeCredit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="webServiceRefundCancellationTradeCreditResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="RASTradeCreditService">
+    <wsdl:port binding="tns:RASTradeCreditServiceSoapBinding" name="SOAPOverHTTP">
+      <soap:address location="http://172.20.251.126:8182/cxf/RASTradeCreditService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

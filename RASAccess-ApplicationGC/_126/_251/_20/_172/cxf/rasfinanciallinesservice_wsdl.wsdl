@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" name="RASFinancialLinesService" targetNamespace="http://stub.unotechsoft.com/wsdl/RASFinancialLines/" xmlns:tns="http://stub.unotechsoft.com/wsdl/RASFinancialLines/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="unqualified" targetNamespace="http://stub.unotechsoft.com/wsdl/RASFinancialLines/" version="1.0" xmlns:ns1="WebService_RefundCancellationFinancialLines">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:import namespace="WebService_RefundCancellationFinancialLines"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASFinancialLines/webServiceRefundCancellationFinancialLines.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASFinancialLines/webServiceRefundCancellationFinancialLinesResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASFinancialLines/webServicePremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../com/unotechsoft/stub/wsdl/RASFinancialLines/webServicePremiumCalculationDtls.xsd"/>
+        </xs:schema>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="WebService_RefundCancellationFinancialLines" version="1.0" xmlns:tns="WebService_RefundCancellationFinancialLines">
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/PremiumCalculationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLinesResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/RefundCancellationRespns.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/WebService_PremiumCalculationDtls.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/WebService_PremiumCalculationDtlsResponse.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/RefundCancellationReq.xsd"/>
+            <xs:include schemaLocation="../../../../../WebService_RefundCancellationFinancialLines/WebService_RefundCancellationFinancialLines.xsd"/>
+        </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="webServiceRefundCancellationFinancialLines">
+    <wsdl:part element="tns:webServiceRefundCancellationFinancialLines" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServiceRefundCancellationFinancialLinesResponse">
+    <wsdl:part element="tns:webServiceRefundCancellationFinancialLinesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtls">
+    <wsdl:part element="tns:webServicePremiumCalculationDtls" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="webServicePremiumCalculationDtlsResponse">
+    <wsdl:part element="tns:webServicePremiumCalculationDtlsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="RASFinancialLinesService">
+    <wsdl:operation name="webServicePremiumCalculationDtls">
+      <wsdl:input message="tns:webServicePremiumCalculationDtls" name="webServicePremiumCalculationDtls">
+    </wsdl:input>
+      <wsdl:output message="tns:webServicePremiumCalculationDtlsResponse" name="webServicePremiumCalculationDtlsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="webServiceRefundCancellationFinancialLines">
+      <wsdl:input message="tns:webServiceRefundCancellationFinancialLines" name="webServiceRefundCancellationFinancialLines">
+    </wsdl:input>
+      <wsdl:output message="tns:webServiceRefundCancellationFinancialLinesResponse" name="webServiceRefundCancellationFinancialLinesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
